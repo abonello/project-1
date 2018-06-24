@@ -66,5 +66,6 @@ Noticed that links for bootstrap (both css and js are not loading.)
 8. Extra info is hidden when a new activity is selected Pass
 9. Page scrolls back to the top of the calling activity when extra info is closed. Pass
 10. When extra info is closed its height is reduced while scrolling. Pass - This makes the action smoother. Especially for the lower cards where the scrolling is slower and might not hide the place previously taken by the extra info just closed.
+11. Fixed problem created from unequal sizes of activities cards. Pass
 
 
