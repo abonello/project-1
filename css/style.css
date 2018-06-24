@@ -66,6 +66,22 @@ body {
     font-size: 1.04em;
 }
 
+/* Bio */
+
+#bio {
+    position: relative;
+}
+
+#bio::after {
+    content: '';
+    position: absolute;
+    top: 6%;
+    left: 5%;
+    height: 88%;
+    width: 90%;
+    box-shadow: 0 0 500px 10px #d6b1b130;
+    border-radius: 50%;
+}
 
 /* Portfolio */
 .padding {
