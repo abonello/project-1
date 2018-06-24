@@ -67,7 +67,7 @@ Noticed that links for bootstrap (both css and js are not loading.)
 9. Page scrolls back to the top of the calling activity when extra info is closed. Pass
 10. When extra info is closed its height is reduced while scrolling. Pass - This makes the action smoother. Especially for the lower cards where the scrolling is slower and might not hide the place previously taken by the extra info just closed.
 11. Fixed problem created from unequal sizes of activities cards. Pass
-
-12. Tested media query for margin in composition portfolio. Pass
+12. Hide images in portfolio in extra small. Pass
+13. Tested media query for margin in composition portfolio. Pass
 
 
