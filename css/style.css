@@ -8,6 +8,10 @@ body {
     height: 100px;
 }
 
+.section {
+    padding: 100px 0;
+}
+
 .row.display-flex {
     display: flex;
     flex-wrap: wrap;
