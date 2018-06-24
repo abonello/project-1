@@ -56,7 +56,7 @@ Document testing - will do manual testing using Chrome.
 
 
 1. css link - set body background color to red. Pass (before it was white)
-2. script.js link - append hello world div using jQuery. Checked in Chrome. Pass
+2. script.js link - append hello world div using jQuery. Checked in Chrome. Pass  
 Noticed that links for bootstrap (both css and js are not loading.)
 3. Changed links for bootstrap - now loading. Checked with Chrome.
 
