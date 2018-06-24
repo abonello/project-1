@@ -107,8 +107,13 @@ body {
 footer {
     min-height: 150px;
     background-color: #0E0E10;
-    color: rgb(225, 249, 252);
-    text-align: center;
-    padding-bottom: 200px;
+    /* color: rgb(225, 249, 252); */
+    color: #D5D5D5;
+    /* text-align: center; */
+    /* padding-bottom: 200px; */
+}
+
+footer .scroll {
+    /* text-align: center; */
 }
 

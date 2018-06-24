@@ -157,13 +157,22 @@
     <footer class="bgColor2">
         <div class="container">
             <hr>
-            <article>
-                <a href="https://github.com/abonello/project-1">This project is on GitHub</a>
-                <p>&copy; 2017 - <span class="year"></span>. This page was coded and created by Anthony Bonello, 2017.</p>
-                <script> var span = document.getElementsByClassName("year");
-                    span[0].innerText = (new Date).getFullYear();</script>
-                <a class="scroll" href="#home" id="home3">Back to top</a>
-            </article>
+            <div class = "row">
+                <div class="col-xs-12 text-center">
+                    <a class="scroll" href="#home" id="home3">Back to top</a>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class="col-sm-6 text-left">
+                    <p>&copy; 2017 - <span class="year"></span>. This page was coded and created by Anthony Bonello, 2017.</p>
+                    <script> var span = document.getElementsByClassName("year");
+                        span[0].innerText = (new Date).getFullYear();</script>
+                </div>
+                <div class="col-sm-6 text-center">
+                        <a href="https://github.com/abonello/project-1">This project is on GitHub</a>
+                </div>
+            </div>
         </div>
     </footer>
 
