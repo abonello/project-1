@@ -33,7 +33,9 @@ The menus will scroll up and down so that the user will know that they are still
 
 
 ## Technologies
-html5, CSS3, bootstrap, javascript
+html5, CSS3, bootstrap 3.3.7, javascript, jQuery 3.3.1
+
+I am using CDNs for bootstrap and jQuery.
 
 
 ## Ideas - brainstorming:
