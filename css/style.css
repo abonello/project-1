@@ -1,36 +1,88 @@
 body {
     /* background-color: red; */
+    
 }
 
-.temp {
+/* Backgrounds */
+.bgColor1 {
+    background-color: #6D7993;
+}
+
+.bgColor2 {
+    background-image: url('../img/dark-triangles.png');
+    background-attachment: fixed;
+}
+
+/* Buttons colors */
+.dusty {
+    background-color: #96858F;
+    border-color: #96858F;
+    box-shadow: 1px 1px 3px rgb(150, 137, 145);
+}
+
+.dusty:hover {
+    background-color: rgb(136, 117, 128);
+    border-color: #96858F;
+    box-shadow: 1px 1px 3px rgb(150, 137, 145);
+}
+
+.dusty:active {
+    background-color: rgb(136, 117, 128);
+    border-color: #96858F;
+    box-shadow: 1px 1px 3px rgb(150, 137, 145);
+}
+
+/* .temp {
     border: 1px solid black;
     border-radius: 10px;
     height: 100px;
-}
+} */
 
 .section {
     padding: 100px 0;
+    color: #D5D5D5;
+    font-size: 1.04em;
 }
 
-/* .row.display-flex {
-    display: flex;
-    flex-wrap: wrap;
+/* Activities */
+#activities {
+    /* background-color: #9099A2; */
+    /* background-color: #6D7993; */
+
+}
+#activities h2 {
+    color: #D5D5D5;
 }
 
-.row.display-flex > [class*='col-'] {
-    display: flex;
-    flex-direction: column;
-} */
-
+/* Extended Info */
 .hidden {
     display: none;
     height: 0;
 }
 
 .show {
-    padding: 30px 0;
+    padding: 30px 50px;
+    color: #D5D5D5;
+    font-size: 1.04em;
 }
 
-.extendedInfo {
-    
+
+/* Portfolio */
+.padding {
+    padding: 50px 0;
 }
+
+.textBG {
+    background-color: rgba(255,255,255,0.25);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    margin: 0 50px;
+}
+
+@media only screen and (min-width: 768px) {
+    .textBG {
+        margin: 0;
+    }
+}
+
