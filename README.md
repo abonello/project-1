@@ -69,5 +69,7 @@ Noticed that links for bootstrap (both css and js are not loading.)
 11. Fixed problem created from unequal sizes of activities cards. Pass
 12. Hide images in portfolio in extra small. Pass
 13. Tested media query for margin in composition portfolio. Pass
+14. Changed jQuery code that shows current year in copyright note with javaScript as it was waiting to load everything including the 
+code from SoundCloud. This was resulting in the page sitting note showing the correct copyright note. Pass
 
 

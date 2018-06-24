@@ -1,5 +1,6 @@
 $(document).ready(function() {
     // $('body').append('<div>Hello World!</div>');
+    // $('.year').text( (new Date).getFullYear() );
 
     $( "#btn-composition" ).on( "click", function() {
         $("#composition").removeClass( "hidden" ).addClass( "show" );
