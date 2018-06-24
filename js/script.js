@@ -31,10 +31,11 @@ $(document).ready(function() {
         // $(this).parent().removeClass( "show" ).addClass( "hidden" );
 
         $(this).parent().animate({
-            height: "0px"
-          }, 1000,
+            height: "0px",
+            padding: "0px"
+          }, 500,
             function() {
-              $( this ).removeClass( "show" ).addClass( "hidden" );
+                $( this ).removeClass( "show" ).addClass( "hidden" );
             }
           );
       });
