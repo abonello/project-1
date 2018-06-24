@@ -1,5 +1,5 @@
 body {
-    background-color: red;
+    /* background-color: red; */
 }
 
 .temp {
@@ -12,7 +12,7 @@ body {
     padding: 100px 0;
 }
 
-.row.display-flex {
+/* .row.display-flex {
     display: flex;
     flex-wrap: wrap;
 }
@@ -20,7 +20,7 @@ body {
 .row.display-flex > [class*='col-'] {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .hidden {
     display: none;
