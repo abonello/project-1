@@ -3,22 +3,41 @@ $(document).ready(function() {
 
     $( "#btn-composition" ).on( "click", function() {
         $("#composition").removeClass( "hidden" ).addClass( "show" );
+        $("#composition").siblings().removeClass( "show" ).addClass( "hidden" );
       });
     $( "#btn-soundDesign" ).on( "click", function() {
         $("#soundDesign").removeClass( "hidden" ).addClass( "show" );
+        $("#soundDesign").siblings().removeClass( "show" ).addClass( "hidden" );
     });
     $( "#btn-conducting" ).on( "click", function() {
         $("#conducting").removeClass( "hidden" ).addClass( "show" );
+        $("#conducting").siblings().removeClass( "show" ).addClass( "hidden" );
     });
     $( "#btn-performance" ).on( "click", function() {
         $("#performance").removeClass( "hidden" ).addClass( "show" );
+        $("#performance").siblings().removeClass( "show" ).addClass( "hidden" );
     });
     $( "#btn-musicTuition" ).on( "click", function() {
         $("#musicTuition").removeClass( "hidden" ).addClass( "show" );
+        $("#musicTuition").siblings().removeClass( "show" ).addClass( "hidden" );
     });
     $( "#btn-research" ).on( "click", function() {
         $("#research").removeClass( "hidden" ).addClass( "show" );
+        $("#research").siblings().removeClass( "show" ).addClass( "hidden" );
     });
+
+    $( ".btn-card" ).on( "click", function() {
+        // $(this).parent().fadeOut(1000);
+        // $(this).parent().removeClass( "show" ).addClass( "hidden" );
+
+        $(this).parent().animate({
+            height: "0px"
+          }, 1000,
+            function() {
+              $( this ).removeClass( "show" ).addClass( "hidden" );
+            }
+          );
+      });
 
 
     // The notes below are for learning the functionality of this code

@@ -63,10 +63,8 @@ Noticed that links for bootstrap (both css and js are not loading.)
 5. When I click the Tell me more button for the composition section, a new div is displayed below the activities section. Pass  
 6. Test that all other buttons work. Pass. All 
 7. The code for scrolling to the newly displayed info is working well. Pass. Checked with Chrome
-
-
-
-
-I want to be able to hide this when another section is selected or the extra info is dismissed. When this happens I want the page to scroll to the top of the activities if the extra info is dismissed.
+8. Extra info is hidden when a new activity is selected Pass
+9. Page scrolls back to the top of the calling activity when extra info is closed. Pass
+10. When extra info is closed its height is reduced while scrolling. Pass - This makes the action smoother. Especially for the lower cards where the scrolling is slower and might not hide the place previously taken by the extra info just closed.
 
 
