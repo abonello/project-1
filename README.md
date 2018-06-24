@@ -59,6 +59,14 @@ Document testing - will do manual testing using Chrome.
 2. script.js link - append hello world div using jQuery. Checked in Chrome. Pass  
 Noticed that links for bootstrap (both css and js are not loading.)
 3. Changed links for bootstrap - now loading. Checked with Chrome.
+4. Gave (main sections) divs a temp class with a border and some height. Pass Checked with Chrome.
+5. When I click the Tell me more button for the composition section, a new div is displayed below the activities section. Pass  
+6. Test that all other buttons work. Pass. All 
+7. The code for scrolling to the newly displayed info is working well. Pass. Checked with Chrome
 
+
+
+
+I want to be able to hide this when another section is selected or the extra info is dismissed. When this happens I want the page to scroll to the top of the activities if the extra info is dismissed.
 
 

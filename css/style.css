@@ -1,3 +1,18 @@
 body {
     background-color: red;
 }
+
+.temp {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 100px;
+}
+
+.hidden {
+    display: none;
+    height: 0;
+}
+
+.show {
+    
+}
