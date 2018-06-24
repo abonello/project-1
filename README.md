@@ -7,7 +7,7 @@ This project will form part of my submission for the Fullstack Web Developer cou
 This the the [github repository](https://github.com/abonello/project-1),  
 and this project is deployed as a github page [here](https://abonello.github.io/project-1/).
 
-I am basing this project on an earlier exploratory exercise that I did where I explored the jumbotron and other parts of bootstrap. This previous exercise was meant to be a draft to practice the techniques and skills I need for this project. It can be found [here](https://github.com/abonello/JumbotronExperiment).
+I am basing this project on an earlier exploratory exercise that I did where I explored the jumbotron and other parts of bootstrap. This previous exercise was meant to be a draft to practice the techniques and skills I need for this project. It can be found [here](https://github.com/abonello/JumbotronExperiment). Definitely I want to change the color scheme of the header and activities sections. I like the background of the portfolio section but not that of the header. I need to add another section, a sort of About Me or Bio.
 
 The plan is to have a single page website with a parallax background. The design is responsive.
 
@@ -46,7 +46,6 @@ use googlefonts
 
 use pseudo classes and pseudo elements  
 
-Not sure if I need to use jQuery  
 
 conduct and document tests 
 
@@ -54,6 +53,12 @@ conduct and document tests
 
 ## Testing
 Document testing - will do manual testing using Chrome.
+
+
+1. css link - set body background color to red. Pass (before it was white)
+2. script.js link - append hello world div using jQuery. Checked in Chrome. Pass
+Noticed that links for bootstrap (both css and js are not loading.)
+3. Changed links for bootstrap - now loading. Checked with Chrome.
 
 
 
