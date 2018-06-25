@@ -27,7 +27,7 @@ $(document).ready(function() {
         $("#research").siblings().removeClass( "show" ).addClass( "hidden" );
     });
 
-    $( ".btn-card" ).on( "click", function() {
+    $( ".btn-card" ).on("click", function() {
         // $(this).parent().fadeOut(1000);
         // $(this).parent().removeClass( "show" ).addClass( "hidden" );
 
@@ -35,12 +35,30 @@ $(document).ready(function() {
             height: "0px",
             padding: "0px"
           }, 500,
-            function() {
-                $( this ).removeClass( "show" ).addClass( "hidden" );
-            }
+            function() { $( this )
+                .removeClass( "show" )
+                .addClass( "hidden" );}
           );
       });
 
+
+
+    $("#btn-submit").on("click", function() {
+    // $("#btn-submit").submit(function() {
+        var inputs = $('#contact :input');
+        var values = {};
+        var alertPrepare = "Form was submitted.\n";
+        inputs.each(function() {
+            values[this.name] = $(this).val();
+            alertPrepare += this.name + ": " + this.value + "\n";
+            console.log($(this).val());
+        });
+
+        alertText = alertPrepare.slice(0, -4);
+        console.log(alertText);
+
+        alert(alertText);
+    });  
 
     // The notes below are for learning the functionality of this code
     // This method is well documented both on youtube and stackflow

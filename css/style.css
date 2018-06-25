@@ -38,21 +38,25 @@ body {
     height: 100px;
 } */
 
+.padding {
+    padding: 70px 0;
+}
+
 .section {
-    padding: 100px 0;
+    /* padding: 100px 0; */
     color: #D5D5D5;
     font-size: 1.04em;
 }
 
 /* Activities */
-#activities {
+/* #activities {
     /* background-color: #9099A2; */
     /* background-color: #6D7993; */
 
-}
-#activities h2 {
+/* } */
+/* #activities h2 {
     color: #D5D5D5;
-}
+} */
 
 /* Extended Info */
 .hidden {
@@ -91,10 +95,6 @@ body {
 }
 
 /* Portfolio */
-.padding {
-    padding: 50px 0;
-}
-
 .textBG {
     background-color: rgba(255,255,255,0.25);
     border-radius: 5px;
@@ -109,6 +109,12 @@ body {
     }
 }
 
+/* Form */
+#btn-submit {
+    width: 50%;
+    color: #D5D5D5;
+    font-size: 1.04em;
+}
 
 /* Footer */
 #footer {
@@ -119,10 +125,6 @@ body {
     /* text-align: center; */
     /* padding-bottom: 200px; */
     position: relative;
-}
-
-footer .scroll {
-    /* text-align: center; */
 }
 
 #footer::before {
