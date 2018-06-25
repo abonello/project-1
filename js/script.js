@@ -44,19 +44,11 @@ $(document).ready(function() {
 
 
     $("#btn-submit").on("click", function() {
-    // $("#btn-submit").submit(function() {
-        var inputs = $('#contact :input');
-        var values = {};
         var alertPrepare = "Form was submitted with the following content.\n";
-        inputs.each(function() {
-            values[this.name] = $(this).val();
+        $('#contact :input').each(function() {
             alertPrepare += this.name + ": " + this.value + "\n";
-            // console.log($(this).val());
         });
-
         alertText = alertPrepare.slice(0, -4);
-        // console.log(alertText);
-
         alert(alertText);
     });  
 
