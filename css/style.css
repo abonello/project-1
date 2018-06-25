@@ -104,16 +104,28 @@ body {
 
 
 /* Footer */
-footer {
+#footer {
     min-height: 150px;
     background-color: #0E0E10;
     /* color: rgb(225, 249, 252); */
     color: #D5D5D5;
     /* text-align: center; */
     /* padding-bottom: 200px; */
+    position: relative;
 }
 
 footer .scroll {
     /* text-align: center; */
+}
+
+#footer::before {
+    content: '';
+    position: absolute;
+    top: 6%;
+    left: 5%;
+    height: 88%;
+    width: 90%;
+    box-shadow: 0 0 500px 10px #d6b1b130;
+    border-radius: 50% 50% 5% 5%;
 }
 
