@@ -47,15 +47,15 @@ $(document).ready(function() {
     // $("#btn-submit").submit(function() {
         var inputs = $('#contact :input');
         var values = {};
-        var alertPrepare = "Form was submitted.\n";
+        var alertPrepare = "Form was submitted with the following content.\n";
         inputs.each(function() {
             values[this.name] = $(this).val();
             alertPrepare += this.name + ": " + this.value + "\n";
-            console.log($(this).val());
+            // console.log($(this).val());
         });
 
         alertText = alertPrepare.slice(0, -4);
-        console.log(alertText);
+        // console.log(alertText);
 
         alert(alertText);
     });  

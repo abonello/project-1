@@ -71,5 +71,6 @@ Noticed that links for bootstrap (both css and js are not loading.)
 13. Tested media query for margin in composition portfolio. Pass
 14. Changed jQuery code that shows current year in copyright note with javaScript as it was waiting to load everything including the 
 code from SoundCloud. This was resulting in the page sitting note showing the correct copyright note. Pass
-
+15. The contact form itself is has no back end and will not submit anything. 
+    To indicate some activity I added jQuery code to display an alert when the contact form is submitted. This was tested. Pass
 
