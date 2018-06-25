@@ -74,3 +74,4 @@ code from SoundCloud. This was resulting in the page sitting note showing the co
 15. The contact form itself is has no back end and will not submit anything. 
     To indicate some activity I added jQuery code to display an alert when the contact form is submitted. This was tested. Pass
 16. Added validation code. Tested - Pass
+17. Added code that will hide the collapsed menu when an item is selected. Pass

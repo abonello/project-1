@@ -2,6 +2,14 @@ $(document).ready(function() {
     // $('body').append('<div>Hello World!</div>');
     // $('.year').text( (new Date).getFullYear() );
 
+    // Responsive Menu Button collapse the menu when selection made.
+    $(document).on('click','.navbar-collapse.in',function(e) {
+        if( $(e.target).is('a') ) {
+            $(this).collapse('hide');
+        }
+    });
+
+    // show Extra Information when button in activities is clicked
     $( "#btn-composition" ).on( "click", function() {
         $("#composition").removeClass( "hidden" ).addClass( "show" );
         $("#composition").siblings().removeClass( "show" ).addClass( "hidden" );
@@ -27,6 +35,7 @@ $(document).ready(function() {
         $("#research").siblings().removeClass( "show" ).addClass( "hidden" );
     });
 
+    // Close extra information div
     $( ".btn-card" ).on("click", function() {
         // $(this).parent().fadeOut(1000);
         // $(this).parent().removeClass( "show" ).addClass( "hidden" );
@@ -42,7 +51,7 @@ $(document).ready(function() {
       });
 
 
-
+    // Form Validation and alert
     $("#btn-submit").on("click", function() {
         if (validateForm()) {
             var alertPrepare = "Form was submitted with the following content.\n";
@@ -91,7 +100,7 @@ $(document).ready(function() {
             return true; 
     }   
 
-
+    // SCROLLING
     // The notes below are for learning the functionality of this code
     // This method is well documented both on youtube and stackflow
     // Make array of all elements having scroll class.
