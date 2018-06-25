@@ -15,18 +15,22 @@ body {
 
 /* Buttons colors */
 .dusty {
-    background-color: #96858F;
+    background-color:  #96858F;
     border-color: #96858F;
     box-shadow: 1px 1px 3px rgb(150, 137, 145);
 }
 
-.dusty:hover {
-    background-color: rgb(136, 117, 128);
-    border-color: #96858F;
-    box-shadow: 1px 1px 3px rgb(150, 137, 145);
+.dusty:hover { 
+    background-color: rgb(255, 233, 184);
+    border-color: rgb(255, 233, 184);
+    box-shadow: 1px 1px 3px rgb(255, 233, 184);
+    color: rgb(136, 117, 128)
+    /* background-color: rgb(136, 117, 128); */
+    /* border-color: #96858F; */
+    /* box-shadow: 1px 1px 3px rgb(150, 137, 145); */
 }
 
-.dusty:active {
+.dusty:active .dusty:visited .dusy:focus {
     background-color: rgb(136, 117, 128);
     border-color: #96858F;
     box-shadow: 1px 1px 3px rgb(150, 137, 145);
@@ -46,6 +50,41 @@ body {
     /* padding: 100px 0; */
     color: #D5D5D5;
     font-size: 1.04em;
+}
+
+/* Jumbotron */
+.jumbotron {
+    min-height: 500px;
+    margin-bottom: 0;
+}
+
+.jumbotron .container {
+    padding: 20px  40px 50px 40px;
+    border-radius: 50px;
+    margin-bottom:100px;
+    position: relative;
+    overflow: hidden;
+    min-height: 350px;
+    /* color: rgb(136, 117, 128); */
+    color: rgb(255, 233, 184);
+    text-shadow: 0 0 2px #D5D5D5;
+}
+
+.jumbotron .container::before {
+    content: ' ';
+    display: block;
+    background-image: url('../img/music1.png');
+    background-size: cover;
+    filter: blur(1px) sepia(100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.2;
+    border-radius: 50% 50% 30% 30%;
+    -webkit-box-shadow: 0px 0px 100px #d6b1b130;
+            box-shadow: 0px 0px 100px #d6b1b130;
 }
 
 /* Activities */
@@ -79,6 +118,7 @@ body {
 #bio::before {
     content: '';
     position: absolute;
+    display: block;
     top: 6%;
     left: 10%;
     height: 88%;
@@ -144,8 +184,8 @@ input:focus:invalid {
 
 #btn-submit {
     width: 50%;
-    color: #D5D5D5;
-    font-size: 1.04em;
+    /* color: #D5D5D5; */
+    font-size: 1.2em;
 }
 
 /* Footer */
