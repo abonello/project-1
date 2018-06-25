@@ -44,13 +44,53 @@ $(document).ready(function() {
 
 
     $("#btn-submit").on("click", function() {
-        var alertPrepare = "Form was submitted with the following content.\n";
-        $('#contact :input').each(function() {
-            alertPrepare += this.name + ": " + this.value + "\n";
-        });
-        alertText = alertPrepare.slice(0, -4);
-        alert(alertText);
-    });  
+        if (validateForm()) {
+            var alertPrepare = "Form was submitted with the following content.\n";
+            $('#contact :input').each(function() {
+                alertPrepare += this.name + ": " + this.value + "\n";
+            });
+            alertText = alertPrepare.slice(0, -4);
+            alert(alertText);
+        }
+        
+    }); 
+    
+    function validateForm(){
+
+        var nameReg = /^[A-Za-z ]+$/;
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var message = $('#message').val();
+        var inputVal = new Array(email, name, message);
+    
+            $('.error').hide();
+
+            if(inputVal[0] == ""){
+                $('#emailLabel').after('<span class="error"> Please enter your email</span>');
+                return false;
+            } 
+            else if(!emailReg.test(email)){
+                $('#emailLabel').after('<span class="error"> Please enter a valid email address</span>');
+                return false;
+            }
+
+            if(inputVal[1] == ""){
+                $('#nameLabel').after('<span class="error"> Please enter your name</span>');
+                return false;
+            } 
+            else if(!nameReg.test(name)){
+                $('#nameLabel').after('<span class="error"> Letters only</span>');
+                return false;
+            }
+    
+            if(inputVal[2] == ""){
+                $('#messageLabel').after('<span class="error"> Please enter your message</span>');
+                return false;
+            }
+            return true; 
+    }   
+
 
     // The notes below are for learning the functionality of this code
     // This method is well documented both on youtube and stackflow

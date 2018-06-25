@@ -160,16 +160,16 @@
                 I would like to hear from you. </p>
             <form action="" role="form">
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com" autocomplete="off"/>
+                    <label for="email" id="emailLabel">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com" required validate/>
                 </div>
                 <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name here" />
+                    <label for="name" id="nameLabel">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name here" required validate/>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="please write your message here"></textarea>
+                    <label for="message" id="messageLabel">Message:</label>
+                    <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="please write your message here" required minlength="3" validate></textarea>
                 </div>
                 <!-- <div class="form-group">
                     <input type="checkbox" /> Send me promotional content.
