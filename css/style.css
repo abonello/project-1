@@ -23,13 +23,15 @@ body {
     background-color: rgb(255, 233, 184);
     border-color: rgb(255, 233, 184);
     box-shadow: 1px 1px 3px rgb(255, 233, 184);
-    color: rgb(136, 117, 128)
+    /* color: rgb(136, 117, 128) */
     /* background-color: rgb(136, 117, 128); */
     /* border-color: #96858F; */
     /* box-shadow: 1px 1px 3px rgb(150, 137, 145); */
 }
 
-.dusty:active .dusty:visited .dusy:focus {
+.dusty:active,
+.dusty:visited,
+.dusy:focus {
     background-color: rgb(136, 117, 128);
     border-color: #96858F;
     box-shadow: 1px 1px 3px rgb(150, 137, 145);
