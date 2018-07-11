@@ -11,27 +11,27 @@ $(document).ready(function() {
 
     // show Extra Information when button in activities is clicked
     $( "#btn-composition" ).on( "click", function() {
-        $("#composition").removeClass( "hidden" ).addClass( "show" );
+        $("#composition").removeClass( "hidden" ).addClass( "show" ).css('height', 'auto');
         $("#composition").siblings().removeClass( "show" ).addClass( "hidden" );
       });
     $( "#btn-soundDesign" ).on( "click", function() {
-        $("#soundDesign").removeClass( "hidden" ).addClass( "show" );
+        $("#soundDesign").removeClass( "hidden" ).addClass( "show" ).css('height', 'auto');
         $("#soundDesign").siblings().removeClass( "show" ).addClass( "hidden" );
     });
     $( "#btn-conducting" ).on( "click", function() {
-        $("#conducting").removeClass( "hidden" ).addClass( "show" );
+        $("#conducting").removeClass( "hidden" ).addClass( "show" ).css('height', 'auto');
         $("#conducting").siblings().removeClass( "show" ).addClass( "hidden" );
     });
     $( "#btn-performance" ).on( "click", function() {
-        $("#performance").removeClass( "hidden" ).addClass( "show" );
+        $("#performance").removeClass( "hidden" ).addClass( "show" ).css('height', 'auto');
         $("#performance").siblings().removeClass( "show" ).addClass( "hidden" );
     });
     $( "#btn-musicTuition" ).on( "click", function() {
-        $("#musicTuition").removeClass( "hidden" ).addClass( "show" );
+        $("#musicTuition").removeClass( "hidden" ).addClass( "show" ).css('height', 'auto');
         $("#musicTuition").siblings().removeClass( "show" ).addClass( "hidden" );
     });
     $( "#btn-research" ).on( "click", function() {
-        $("#research").removeClass( "hidden" ).addClass( "show" );
+        $("#research").removeClass( "hidden" ).addClass( "show" ).css('height', 'auto');
         $("#research").siblings().removeClass( "show" ).addClass( "hidden" );
     });
 
@@ -41,8 +41,8 @@ $(document).ready(function() {
         // $(this).parent().removeClass( "show" ).addClass( "hidden" );
 
         $(this).parent().animate({
-            height: "0px",
-            padding: "0px"
+            height: "0px"
+            // padding: "0px"
           }, 500,
             function() { $( this )
                 .removeClass( "show" )
