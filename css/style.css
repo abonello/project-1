@@ -287,6 +287,13 @@ input:focus:invalid {
     font-size: 1.2em;
 }
 
+/* Form */
+input:invalid { 
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    box-shadow: none;
+}
+
 /* Footer */
 #footer {
     min-height: 150px;
