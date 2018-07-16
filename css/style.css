@@ -53,6 +53,15 @@ body {
     font-size: 1.04em;
 }
 
+.jumbotron h1 {
+    margin-top: 70px;
+
+}
+.jumbotron h2 {
+    opacity: 0.65;
+    margin-top:50px;
+}
+
 .navbar-fixed-top {
     color: ivory;
 }
@@ -200,6 +209,12 @@ body {
         margin: 0;
     }
 }
+
+/* #slideShowVideo {
+    max-width: 600px;
+    margin: 0 auto;
+} */
+
 
 /* Form */
 /* Code from https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation */
