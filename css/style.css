@@ -71,6 +71,12 @@ body {
     font-size: 1.04em;
 }
 
+p {
+    padding: 10px 0;
+    opacity: 0.75;
+    font-size: 1.1em;
+}
+
 .navbar-fixed-top {
     color: ivory;
 }
