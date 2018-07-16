@@ -23,13 +23,10 @@ The menus will scroll up and down so that the user will know that they are still
 
 
 ## Features
-### Existing Features
-* None yet!
-### Features Left to Implement
-    * read information
+    * read information about my activites
+    * portfolio of compositions
     * menu system
     * contact
-
 
 
 ## Technologies
@@ -75,3 +72,11 @@ code from SoundCloud. This was resulting in the page sitting note showing the co
     To indicate some activity I added jQuery code to display an alert when the contact form is submitted. This was tested. Pass
 16. Added validation code. Tested - Pass
 17. Added code that will hide the collapsed menu when an item is selected. Pass
+
+
+## Code from other sources
+
+Apart from the code from Bootstrap, I am using code provided by soundcloud and youtube to access the material on
+these sites.  
+The code for scrolling is adapted from various tutorials. I have modified it and used it before in various projects.
+It is heavily documented on youtube and elsewhere.
