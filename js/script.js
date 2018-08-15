@@ -68,14 +68,24 @@ $(document).ready(function() {
 
         var nameReg = /^[A-Za-z ]+$/;
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        var subjectReg = /^[A-Za-z0-9 ]+$/;
         var name = $('#name').val();
         var email = $('#email').val();
+        var subject = $('#subject').val();
         var message = $('#message').val();
         var inputVal = new Array(email, name, message);
     
             $('.error').hide();
-
             if(inputVal[0] == ""){
+                $('#nameLabel').after('<span class="error"> Please enter your name</span>');
+                return false;
+            } 
+            else if(!nameReg.test(name)){
+                $('#nameLabel').after('<span class="error"> Letters only</span>');
+                return false;
+            }
+
+            if(inputVal[1] == ""){
                 $('#emailLabel').after('<span class="error"> Please enter your email</span>');
                 return false;
             } 
@@ -84,16 +94,16 @@ $(document).ready(function() {
                 return false;
             }
 
-            if(inputVal[1] == ""){
-                $('#nameLabel').after('<span class="error"> Please enter your name</span>');
+            if(inputVal[2] == ""){
+                $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
                 return false;
             } 
-            else if(!nameReg.test(name)){
-                $('#nameLabel').after('<span class="error"> Letters only</span>');
+            else if(!subjectReg.test(subject)){
+                $('#subjectLabel').after('<span class="error"> Letters or numbers only</span>');
                 return false;
             }
     
-            if(inputVal[2] == ""){
+            if(inputVal[3] == ""){
                 $('#messageLabel').after('<span class="error"> Please enter your message</span>');
                 return false;
             }
