@@ -58,13 +58,13 @@ $(document).ready(function() {
     $("#btn-submit").on("click", function() {
         if (validateForm()) {
             // event.preventDefault();
-            var alertPrepare = "Form was submitted with the following content.\n";
+            // var alertPrepare = "Form was submitted with the following content.\n";
             var params = {};
             $('#contact :input').each(function() {
-                alertPrepare += this.name + ": " + this.value + "\n";
+                // alertPrepare += this.name + ": " + this.value + "\n";
                 params[this.name] = this.value;
             });
-            alertText = alertPrepare.slice(0, -4);
+            // alertText = alertPrepare.slice(0, -4);
 
             // Change to your service ID, or keep using the default service
             var service_id = "default_service";
