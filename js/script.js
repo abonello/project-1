@@ -2,6 +2,10 @@ $(document).ready(function() {
     // $('body').append('<div>Hello World!</div>');
     // $('.year').text( (new Date).getFullYear() );
 
+    (function(){
+        emailjs.init("user_MV94f6Xs0GmNusEwKfXoL");
+    })();
+
     // Responsive Menu Button collapse the menu when selection made.
     $(document).on('click','.navbar-collapse.in',function(e) {
         if( $(e.target).is('a') ) {
@@ -50,16 +54,36 @@ $(document).ready(function() {
           );
       });
 
-
     // Form Validation and alert
     $("#btn-submit").on("click", function() {
         if (validateForm()) {
+            // event.preventDefault();
             var alertPrepare = "Form was submitted with the following content.\n";
+            var params = {};
             $('#contact :input').each(function() {
                 alertPrepare += this.name + ": " + this.value + "\n";
+                params[this.name] = this.value;
             });
             alertText = alertPrepare.slice(0, -4);
-            alert(alertText);
+
+            // Change to your service ID, or keep using the default service
+            var service_id = "default_service";
+            var template_id = "template1";
+
+            (function(){
+                $("#btn-submit").text("Sending...");
+                emailjs.init("user_MV94f6Xs0GmNusEwKfXoL");
+                emailjs.send(service_id,template_id,params)
+                    .then(function(){ 
+                        alert("Message sent!");
+                        $("#btn-submit").text("Submit");
+                        location.reload();
+                    }, function(err) {
+                        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+                        $("#btn-submit").text("Submit");
+                    });
+            })();
+            return false;
         }
         
     }); 
