@@ -73,7 +73,7 @@ $(document).ready(function() {
         var email = $('#email').val();
         var subject = $('#subject').val();
         var message = $('#message').val();
-        var inputVal = new Array(email, name, message);
+        var inputVal = new Array(name, email, subject, message);
     
             $('.error').hide();
             if(inputVal[0] == ""){
