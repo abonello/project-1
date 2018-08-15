@@ -77,10 +77,18 @@ $(document).ready(function() {
                     .then(function(){ 
                         alert("Message sent!");
                         $("#btn-submit").text("Submit");
-                        location.reload();
+                        $("#name").val("");
+                        $("#email").val("");
+                        $("#subject").val("");
+                        $("#message").val("");
+                        // location.reload();
                     }, function(err) {
-                        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
                         $("#btn-submit").text("Submit");
+                        $("#name").val("");
+                        $("#email").val("");
+                        $("#subject").val("");
+                        $("#message").val("");
+                        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
                     });
             })();
             return false;
