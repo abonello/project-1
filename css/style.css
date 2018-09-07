@@ -148,7 +148,8 @@ p {
 .jumbotron .container::before {
     content: ' ';
     display: block;
-    background-image: url('../img/music1.png');
+    /* background-image: url('../img/music1.png'); */
+    background-image: url('../img/music1-min.png');
     background-size: cover;
     filter: blur(1px) sepia(100%);
     width: 100%;
