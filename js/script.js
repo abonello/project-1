@@ -1,6 +1,4 @@
 $(document).ready(function() {
-    // $('body').append('<div>Hello World!</div>');
-    // $('.year').text( (new Date).getFullYear() );
 
     (function(){
         emailjs.init("user_MV94f6Xs0GmNusEwKfXoL");
@@ -41,12 +39,9 @@ $(document).ready(function() {
 
     // Close extra information div
     $( ".btn-card" ).on("click", function() {
-        // $(this).parent().fadeOut(1000);
-        // $(this).parent().removeClass( "show" ).addClass( "hidden" );
 
         $(this).parent().animate({
             height: "0px"
-            // padding: "0px"
           }, 500,
             function() { $( this )
                 .removeClass( "show" )
@@ -57,14 +52,10 @@ $(document).ready(function() {
     // Form Validation and alert
     $("#btn-submit").on("click", function() {
         if (validateForm()) {
-            // event.preventDefault();
-            // var alertPrepare = "Form was submitted with the following content.\n";
             var params = {};
             $('#contact :input').each(function() {
-                // alertPrepare += this.name + ": " + this.value + "\n";
                 params[this.name] = this.value;
             });
-            // alertText = alertPrepare.slice(0, -4);
 
             // Change to your service ID, or keep using the default service
             var service_id = "default_service";
@@ -143,32 +134,22 @@ $(document).ready(function() {
     }   
 
     // SCROLLING
-    // The notes below are for learning the functionality of this code
     // This method is well documented both on youtube and stackflow
-    // Make array of all elements having scroll class.
     var scrollLink = $(".scroll");
-    // console.log(scrollLink);
     scrollLink.click(function(e) {
-        e.preventDefault(); //ie. do not jump to the link.
-        //console.log($(this.hash));
+        e.preventDefault();
         $("body,html").animate({
-            scrollTop:$(this.hash).offset().top - 40 //Find this object's offset from the top,
-        }, 1000); // and scroll to that place in 1000ms.
+            scrollTop:$(this.hash).offset().top - 40 
+        }, 1000);
     });
-    // Switching Active Link
     $(window).scroll(function() {
         var scrollbarLocation = $(this).scrollTop();
         scrollLink.each(function() {
             var sectionOffset = $(this.hash).offset().top - 40;
-            // console.log(sectionOffset);
             if (sectionOffset <= scrollbarLocation) {
                 $(this).parent().addClass("active");
                 $(this).parent().siblings().removeClass("active");
             }
         })
     })
-
-      
-
-
 });

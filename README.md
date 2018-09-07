@@ -121,3 +121,18 @@ found at [Pexels](https://www.pexels.com/photo/curve-industry-photography-vintag
 Use: Pexels License
 Free for personal and commercial use, No attribution required
 Image is cropped and resized.
+
+
+## Cleaning and validating code
+
+* **HTML** - https://validator.w3.org/  
+There are a number of warnings for the iframes realted to the code from soundcloud. The validator complains about width beign set to 100%. I tried removing this and the iframe will only occupy half the width I want. With width="100%" it works and fills all the space available.
+
+* **CSS** - https://validator.w3.org/  
+It complains about vendor prefixes in code that comes from colorzilla (re background gradient) or was added by form validator. I am goind to leave these as they are.  
+There is also another warning about two classes having the same background and border colors. I will keep these as they are.
+
+* **Form Validator** - https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation
+
+* **JavaScript** - http://esprima.org/demo/validate.html
+Code is syntactically valid.
