@@ -80,3 +80,10 @@ Apart from the code from Bootstrap, I am using code provided by soundcloud and y
 these sites.  
 The code for scrolling is adapted from various tutorials. I have modified it and used it before in various projects.
 It is heavily documented on youtube and elsewhere.
+
+
+## Colors 
+
+Heading color rgb(255, 233, 184) is taken from music background image.  
+Background Grey color #50596d, trial and error. Not fully happy with it will probably change later.  
+Button colors - what felt right to me.
