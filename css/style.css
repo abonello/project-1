@@ -4,7 +4,12 @@ body {
 
 /* Backgrounds */
 .bgColor1 {
-    background-color: #50596d;
+    /* background-color: #50596d; */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#50596d+0,50596d+100,50596d+100&0.31+0,0.49+15,0.49+87,0.31+100 */
+    background: -moz-linear-gradient(top, rgba(80,89,109,0.31) 0%, rgba(80,89,109,0.49) 15%, rgba(80,89,109,0.49) 87%, rgba(80,89,109,0.31) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(80,89,109,0.31) 0%,rgba(80,89,109,0.49) 15%,rgba(80,89,109,0.49) 87%,rgba(80,89,109,0.31) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(80,89,109,0.31) 0%,rgba(80,89,109,0.49) 15%,rgba(80,89,109,0.49) 87%,rgba(80,89,109,0.31) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f50596d', endColorstr='#4f50596d',GradientType=0 ); /* IE6-9 */
 }
 
 .bgColor2 {
@@ -66,9 +71,16 @@ body {
 }
 
 .section {
-    /* padding: 100px 0; */
-    color: #D5D5D5;
     font-size: 1.04em;
+}
+
+.textColor1 {
+    color: rgb(25, 39, 51);
+}
+
+.textColor2 {
+    /* color: rgb(79, 116, 148); */
+    color: rgb(255, 233, 184);
 }
 
 p {
@@ -165,7 +177,6 @@ p {
 
 .jumbotron h1 {
     margin-top: 70px;
-
 }
 .jumbotron h2 {
     opacity: 0.65;
@@ -279,7 +290,7 @@ input:focus:invalid {
 /* End code from https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation */
 
 .error {
-    color: #ffb68e;;
+    color: #e2631f;
 }
 
 #btn-submit {
@@ -300,7 +311,7 @@ input:invalid {
     min-height: 150px;
     background-color: #0E0E10;
     /* color: rgb(225, 249, 252); */
-    color: #D5D5D5;
+    /* color: #D5D5D5; */
     /* text-align: center; */
     /* padding-bottom: 200px; */
     position: relative;
@@ -315,5 +326,15 @@ input:invalid {
     width: 90%;
     box-shadow: 0 0 500px 10px #d6b1b130;
     border-radius: 50% 50% 5% 5%;
+}
+
+#footer a {
+    color: rgb(255, 233, 184);
+}
+
+#footer a:hover {
+    color: rgb(255, 195, 66);
+    text-decoration: none;
+    font-size: 1.1em;
 }
 

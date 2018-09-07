@@ -85,5 +85,11 @@ It is heavily documented on youtube and elsewhere.
 ## Colors 
 
 Heading color rgb(255, 233, 184) is taken from music background image.  
-Background Grey color #50596d, trial and error. Not fully happy with it will probably change later.  
+Background Grey ~~color #50596d, trial and error. Not fully happy with it will probably change later.~~  
+Changed this to a gradient (from colorzilla) which I like better. Now need to change color of text from #D5D5D5 to  rgb(25, 39, 51) for grey gradient backgrounds and color: rgb(255, 233, 184) (same as header) for text on triangular background, including footer. 
+
+footer a color: rgb(255, 233, 184) and rgb(255, 195, 66) when hovered. Text of links will slightly increase in size on hover too.  
+
+Form error color: #e2631f  
+
 Button colors - what felt right to me.
