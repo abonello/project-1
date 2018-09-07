@@ -232,6 +232,11 @@ p {
     border-radius: 50% 50% 40% 40%;
 }
 
+#bioInfo {
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
 @media only screen and (min-width: 768px) {
     #bio::before {
         left: 5%;
