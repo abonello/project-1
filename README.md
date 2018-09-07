@@ -94,6 +94,8 @@ Form error color: #e2631f
 
 Button colors - what felt right to me.
 
+Set all buttons in soundcloud to value %2364746c (a sort of green).
+
 
 ## IMAGES
 
