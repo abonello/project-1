@@ -86,10 +86,38 @@ It is heavily documented on youtube and elsewhere.
 
 Heading color rgb(255, 233, 184) is taken from music background image.  
 Background Grey ~~color #50596d, trial and error. Not fully happy with it will probably change later.~~  
-Changed this to a gradient (from colorzilla) which I like better. Now need to change color of text from #D5D5D5 to  rgb(25, 39, 51) for grey gradient backgrounds and color: rgb(255, 233, 184) (same as header) for text on triangular background, including footer. 
+Changed this to a gradient (from [colorzilla](http://www.colorzilla.com/gradient-editor/)) which I like better. Now need to change color of text from #D5D5D5 to  rgb(25, 39, 51) for grey gradient backgrounds and color: rgb(255, 233, 184) (same as header) for text on triangular background, including footer. 
 
 footer a color: rgb(255, 233, 184) and rgb(255, 195, 66) when hovered. Text of links will slightly increase in size on hover too.  
 
 Form error color: #e2631f  
 
 Button colors - what felt right to me.
+
+
+## IMAGES
+
+**Dark Triangles** fro background:  
+Downloaded from [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/tag/dark/)  
+Image notes: JUNE 7, 2017 Playful triangle pattern, this time in black.  
+Use: All patterns on this site can be used free of charge, but please read this before using them: CC BY-SA 3.0 - Subtle Patterns © Toptal Designers.
+
+**fast-min.jpg**
+[Pexels](https://www.pexels.com/photo/light-trails-on-city-street-327345/)
+Use: CC0 License  
+Image is cropped, rotated, sheared, resized.
+
+**Ringtone.jpg**  
+found at https://blog.ambient-mixer.com/sound/what-your-ringtone-says-about-your-personality/  
+Image Credit by = http://bit.ly/1HLbWKi  
+
+**battle.jpg**
+found at [Wikipedia](https://en.wikipedia.org/wiki/Mahdist_War#/media/File:Bataille_d%27Ondurman_2.jpg)
+Use: Public Domain
+Image cropped and resized.
+
+**Slideshow.png**
+found at [Pexels](https://www.pexels.com/photo/curve-industry-photography-vintage-65128/)
+Use: Pexels License
+Free for personal and commercial use, No attribution required
+Image is cropped and resized.
