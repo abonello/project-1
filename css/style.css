@@ -294,11 +294,18 @@ input:invalid {
 
 #footer a {
     color: rgb(255, 233, 184);
+    display:relative;
+    font-size: 1.2em;
 }
 
 #footer a:hover {
     color: rgb(255, 195, 66);
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.3em;
+}
+
+.fa-github::before {
+    font-size: 1.6em;
+    padding-right: 10px;
 }
 
