@@ -267,6 +267,69 @@ input:focus:invalid {
     font-size: 1.2em;
 }
 
+/* Quote */
+blockquote {
+    width: 80%;
+    border: 0;
+    font-size: 1.5em;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+blockquote::before,
+blockquote::after {
+    content: '';
+    display: block;
+    position: absolute;
+    font-size: 4em;
+    color: #e2ddcf;
+    padding: 0;
+}
+
+blockquote::before {
+    content: '“';
+    top: -20px;
+    left: -20px;
+}
+
+blockquote::after {
+    content: '”';
+    bottom: -20px;
+    right: -20px;
+}
+
+@media only screen and (min-width: 768px) {
+    blockquote {
+        max-width: 800px;
+        font-size: 2em;
+        margin: 0 auto;
+    }
+
+    blockquote::before {
+        top: -20px;
+        left: -40px;
+    }
+    
+    blockquote::after {
+        bottom: -20px;
+        right: -40px;
+    }
+}
+
+
+
+
+
+blockquote footer {
+    color: rgba(255, 238, 203, 0.53);
+    
+}
+
+
+
+
+
 /* Form */
 input:invalid { 
     -webkit-box-shadow: none;
