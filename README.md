@@ -31,6 +31,10 @@ does it provide? so for example in terms of focus you're a software developer
 looking for work opportunities, you're looking for projects, collaboration ideas,
 contract work and working with startups for example. You decide to build an
 
+* Usage Context - Where
+* User Constituency - Who
+* Business Goals - Why / Targets
+
 
 --------
 Internet presence  
@@ -43,6 +47,8 @@ Brief info about my activities
 
 
 **Scope** - (based on information from the strategy plane) Which features will be include in the design? Which features are in and which is out (at least for now)? Minimum Viable Product
+
+* User Tasks - A User Story is used to describe a number of tasks that may be completed in an any order in pursuit of a general goal.
 
 
 Ex: allow people to request collaboration, provide a traditional CV or resume
@@ -68,7 +74,7 @@ projects undertaken.
 
 Interaction Design / Information Architecture
 
-
+* Navigation / Routing
 
 projects undertaken. Interaction design is concerned with patterns and sequences
 that provide options to the user the patterns might be the navigation, the
