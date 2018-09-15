@@ -89,6 +89,7 @@ a CV. Next having put the bulk of the tasks and assignments required at the
 Content relationship / Priority (position of content)
 
 Responsive design
+Different parts instead of separate pages  
 
 
 the two key areas
@@ -168,6 +169,18 @@ Facebook, Pinterest, LinkedIn and so on
 
 ## WIREFRAMES
 
+Done using  
+![Pencil](img/Pencil-logo-shadow.png)[**Pencil Project**](https://pencil.evolus.vn/)
+
+
+LINK
+  
+    
+    .
+    .
+
+
+
 *Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.*
 
 *In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:*
@@ -177,25 +190,33 @@ Facebook, Pinterest, LinkedIn and so on
 *This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.*
 
 ## FEATURES
-*In this section, you should go over the different parts of your project, and describe each in a sentence or so.*
 
-## Existing Features
-*Feature 1 - allows users X to achieve Y, by having them fill out Z*
-...
-*For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.*
+### Existing Features
 
-*In addition, you may also use this section to discuss plans for additional features to be implemented in the future:*
+Navigation is through a menu which appears as a button for mobiles and tablets, and as a fixed menu at the top of the page in desktop view. 
+Clicking on a menu item will start a smooth scrolling to the top of that section within the page. This is done in order not to confuse the user in thinking that this is a new page.
 
-Different parts instead of separate pages  
-Smooth scrolling to show the user that they are on different sections of the same page.  
-Menu shows in which section the user is at present. (Darker color for background of active menu item)
-Parallax background.  
-Contact form - through email.js  a modal will appear to confirm to the user that the message has been sent.
+Also the menu keeps track of which section a user is currently in. The menu item for the current section is highlighted with a darker background. This acts as a sort of breadcrumb.
 
-## Features Left to Implement
-*Another feature idea*
-As time passes, more content will be added.
-I might introudce another section between the portfolio and the contact form (with parallax background) - either a quote, or something visual - to break the two grey backgrounds.
+Parallax background gives the page a feel of progressing since the foreground scrolls against something which is fixed. To a lesser extent the gradient background helps create a sense of movement while scrollign too.
+
+Each section in the activities allow the user to read about that particular activity. The *Tell me more . . .* button displays further information.
+
+The About me section is a short bio. The link to my linked in allows a reader to find more.
+
+# ADD link to linked in HERE.
+
+The portfolio allows the user to listen to some examples of my music from soundcloud and youtube.
+
+The contact form - through email.js  allows the user to get in touch with me enabling all the tasks which depend on this, asking for scores, performance / conducting opportunities, composition / sound design / arrangement / collaboration propositions, questions about tuition.
+A modal will appear to confirm to the user that the message has been sent.
+Since I am actually using this project, I did make the contact form functional.
+
+
+### Features Left to Implement
+
+1. In the future I might add a complete list of my compositions with details of instrumentation and details about performances.
+2. Add current and future activities.
 
 
 
@@ -204,16 +225,10 @@ I might introudce another section between the portfolio and the contact form (wi
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - used to build the sctructure and the content of this project.
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - used for styling this project.
 describing the presentation of a document written in a markup language like HTML.
-- [jQuery v3.3.1](https://jquery.com)
+- [jQuery v3.3.1](https://jquery.com) - simplifies accessing the DOM
 - [Bootstrap v3.3.7](https://getbootstrap.com/docs/3.3/) - used for some of the styles (modified) as well as layout of the content.
 - [Font Awesome v4.7.0](https://fontawesome.com/v4.7.0/) - used to display the GitHub Icon
 - [email.js](http://www.emailjs.com/) - used to enable the contact form to send emails to me.
-
-
-*In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.*
-
-*JQuery*
-*The project uses JQuery to simplify DOM manipulation.*
 
 ## TESTING
 *In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.*
