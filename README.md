@@ -32,7 +32,13 @@ looking for work opportunities, you're looking for projects, collaboration ideas
 contract work and working with startups for example. You decide to build an
 
 
+--------
+Internet presence  
+Means to communicate with me  
+Portfoilio  
+Brief info about my activities  
 
+-----------
 
 
 
