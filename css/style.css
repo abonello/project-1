@@ -372,3 +372,8 @@ input:invalid {
     padding-right: 10px;
 }
 
+.fa-linkedin::before {
+    font-size: 1.6em;
+    padding-right: 10px;
+}
+
