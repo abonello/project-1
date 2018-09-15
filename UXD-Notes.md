@@ -1,44 +1,30 @@
-# Milestone Project 1 - My Website as a Musician
-
-*Developer: Anthony Bonello*
-
--------
-* [INTRODUCTION](#INTRODUCTION)
-* [UX](#UX)  
-* [WIREFRAMES](#WIREFRAMES)
-* [FEATURES](#FEATURES)
-* [TECHNOLOGIES USED](#TECHNOLOGIES-USED)
-* [TESTING](#TESTING)
-* [DEPLOYMENT](#DEPLOYMENT)
-* [CREDITS](#CREDITS)
----------
-  
-## INTRODUCTION
-
-I have had a personal website for over 15 years. Initially it was very simple, single page, hand coded html with very little styling. It was hosted on various free services. Then I improved the styling and content leading to getting my own hosting. Following that I used joomla for my site for a number of years. Now I built the current single-page site.
-
 ## UXD
 
 This is the latest incarnation of my website. Its main function is to be an extension of my CV and having a place of contact if someone wants to get in touch but does not know my email address.
 
-**Strategy** 
+**Strategy** - Project aims (what to achieve) and target audience
+Design strategy + Business strategy
+
+
+can be broken down into three main areas of interest so you've got the focus
+what's worth doing the definition what are we creating? and value what value
+does it provide? so for example in terms of focus you're a software developer
+looking for work opportunities, you're looking for projects, collaboration ideas,
+contract work and working with startups for example. You decide to build an
+
+* Usage Context - Where
+* User Constituency - Who
+* Business Goals - Why / Targets
+
 
 --------
-**What do I want as the owner of the site?**
-* Internet presence  
-* Means to communicate with me  
-* Portfoilio  
-* Brief info about my activities  
+Internet presence  
+Means to communicate with me  
+Portfoilio  
+Brief info about my activities  
 
 -----------
-This is my personal website as a musician. It need to serve as an extension of my CV for music related activities.
 
-People who might use the website are:
-* someone wanting to learn music; beginners / continuing / pick up an instrument which they played when they were younger  
-* performers wanting to perform one of my pieces  
-* people wanting to commission a new composition or arrangement 
-* artists wanting to collaborate on an art piece which include music or audio  
-* someone looking for a conductor for an orchestra or a band.
 
 
 **Scope** - (based on information from the strategy plane) Which features will be include in the design? Which features are in and which is out (at least for now)? Minimum Viable Product
@@ -162,93 +148,3 @@ split our footer information into thirds as well so we have another about me
 another opportunity to download the CV and the social icons which could link to
 Facebook, Pinterest, LinkedIn and so on 
 
-
-
-
-
-## WIREFRAMES
-
-*Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.*
-
-*In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:*
-
-*As a user type, I want to perform an action, so that I can achieve a goal.*
-
-*This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.*
-
-## FEATURES
-*In this section, you should go over the different parts of your project, and describe each in a sentence or so.*
-
-## Existing Features
-*Feature 1 - allows users X to achieve Y, by having them fill out Z*
-...
-*For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.*
-
-*In addition, you may also use this section to discuss plans for additional features to be implemented in the future:*
-
-Different parts instead of separate pages  
-Smooth scrolling to show the user that they are on different sections of the same page.  
-Menu shows in which section the user is at present. (Darker color for background of active menu item)
-Parallax background.  
-Contact form - through email.js  a modal will appear to confirm to the user that the message has been sent.
-
-## Features Left to Implement
-*Another feature idea*
-As time passes, more content will be added.
-I might introudce another section between the portfolio and the contact form (with parallax background) - either a quote, or something visual - to break the two grey backgrounds.
-
-
-
-## TECHNOLOGIES USED
-
-- [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - used to build the sctructure and the content of this project.
-- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - used for styling this project.
-describing the presentation of a document written in a markup language like HTML.
-- [jQuery v3.3.1](https://jquery.com)
-- [Bootstrap v3.3.7](https://getbootstrap.com/docs/3.3/) - used for some of the styles (modified) as well as layout of the content.
-- [Font Awesome v4.7.0](https://fontawesome.com/v4.7.0/) - used to display the GitHub Icon
-- [email.js](http://www.emailjs.com/) - used to enable the contact form to send emails to me.
-
-
-*In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.*
-
-*JQuery*
-*The project uses JQuery to simplify DOM manipulation.*
-
-## TESTING
-*In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.*
-
-*Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.*
-
-*For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:*
-
-*Contact form:*
-*Go to the "Contact Us" page*
-*Try to submit the empty form and verify that an error message about the required fields appears*
-*Try to submit the form with an invalid email address and verify that a relevant error message appears*
-*Try to submit the form with all inputs valid and verify that a success message appears.*
-*In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.*
-
-*You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.*
-
-*If this section grows too long, you may want to split it off into a separate file and link to it from here.*
-
-## DEPLOYMENT
-*This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).*
-
-*In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:*
-
-*Different values for environment variables (Heroku Config Vars)?*
-*Different configuration files?*
-*Separate git branch?*
-*In addition, if it is not obvious, you should also describe how to run your code locally.*
-
-## CREDITS
-*Content*
-*The text for section Y was copied from the Wikipedia article Z*
-
-*Media*
-*The photos used in this site were obtained from ...*
-
-*Acknowledgements*
-*I received inspiration for this project from X*
