@@ -259,9 +259,7 @@ Parallax background gives the page a feel of progressing since the foreground sc
 
 Each section in the activities allow the user to read about that particular activity. The *Tell me more . . .* button displays further information.
 
-The About me section is a short bio. The link to my linked in allows a reader to find more.
-
-# ADD link to linked in HERE.
+The About me section is a short bio. The link to my linkedin allows a reader to find more about me.
 
 The portfolio allows the user to listen to some examples of my music from soundcloud and youtube.
 
