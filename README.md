@@ -5,10 +5,10 @@
 -------
 **INDEX**
 
-* [INTRODUCTION](#INTRODUCTION)
-* [UXD](#UXD)  
-    * [Strategy](#Strategy)
-    * [Scope](#Scope)
+* [INTRODUCTION](#introduction)
+* [UXD](#uxd)  
+    * [Strategy](#strategy)
+    * [Scope](#scope)
     * [Structure]
     * [Skeleton]
     * [Surface]
