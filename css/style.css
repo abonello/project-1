@@ -13,16 +13,25 @@
     background-attachment: fixed;
 
     /* testing to see if parallax will work on all mobile browsers */
-    position: sticky;   
-    overflow-x: hidden;
+    /* position: sticky;    */
+    /* overflow-x: hidden;
     overflow-y: scroll;
     perspective: 1px;
-    perspective-origin: 0 0;
+    perspective-origin: 0 0; */
 }
 .parallax-child {
-    transform-origin: 0 0;
-    transform: translateZ(-2px) scale(3);
+    /* transform-origin: 0 0; */
+    /* transform: translateZ(-2px) scale(3); */
   }
+
+/* ===== Style for smartphone and iPad in portrait & landscape== =  */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 1024px)  {  
+.sp-page-builder .page-content #noparallax {
+    background-attachment: unset !important;
+    background-position: center top !important; }
+}
 
 /* Buttons colors */
 .dusty {
