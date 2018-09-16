@@ -61,9 +61,6 @@ $(document).ready(function() {
             );
         });
 
-
-
-
     // Form Validation and alert
     $("#btn-submit").on("click", function() {
         if (validateForm()) {
