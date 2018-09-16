@@ -72,24 +72,27 @@ The menus will scroll up and down so that the user will know that they are still
 * User Tasks - A User Story is used to describe a number of tasks that may be completed in an any order in pursuit of a general goal.
 
 
-Ex: allow people to request collaboration, provide a traditional CV or resume
-download option for recruiters or more traditional employers. In terms of
-content you might decide on providing personal details also a personal pitch
-for collaborators, your work history, a summary of your skill sets, maybe some
-groups meetups and conferences that you have attended or a part of and also the
-projects that you've undertaken so in terms of these content requirements how
-do they provide value well you've done some research
-recruiters say they wanted a traditional CV format downloadable possibly a PDF so
-you can supply your content in that format. Agencies want proof of ability so
-the resume itself stands as proof and everybody wants to see your github
-repository. 
 
-at the scope level we decided on our features and our content so that
-features for example are the ability to request a collaboration and the ability
-to download our resume in a more traditional format and the content will
-be working with personal details, a personal pitch, work history, skill set
-summary, groups, meetups and organizations that the developer is a part of and the
-projects undertaken. 
+
+Features to implement
+
+* Activities - some sort of list with some details and possibly extending the information
+* A short Bio
+* Examples of my compositions with the possibility for the user to listen to these examples
+* A way for the user to get in touch without revealing my email address.
+* Links to Github and Linkedin
+
+
+            People who might use the website are:
+            * someone wanting to learn music; beginners / continuing / pick up an instrument which they played when they were younger  
+            * performers wanting to perform one of my pieces  
+            * people wanting to commission a new composition or arrangement 
+            * artists wanting to collaborate on an art piece which include music or audio  
+            * someone looking for a conductor for an orchestra or a band.
+
+### User stories
+A potential student wanting to learn an instrument can read about my teaching and then directed to  get in touch through the online form.
+
 
 **Structure** - Structure and logical grouping of the information
 
