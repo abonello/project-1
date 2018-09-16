@@ -49,6 +49,21 @@ $(document).ready(function() {
           );
       });
 
+      // CTA call: Close extra information div
+        $( ".cta" ).on("click", function() {
+
+            $(this).parent().parent().parent().animate({
+                height: "0px"
+            }, 500,
+                function() { $( this )
+                    .removeClass( "show" )
+                    .addClass( "hidden" );}
+            );
+        });
+
+
+
+
     // Form Validation and alert
     $("#btn-submit").on("click", function() {
         if (validateForm()) {
