@@ -26,14 +26,14 @@
 I have had a personal website for over 15 years. Initially it was very simple, single page, hand coded html with very little styling. It was hosted on various free services. Then I improved the styling and content leading to getting my own hosting. Following that I used joomla for my site for a number of years. Now I built the current single-page site.
 
 ## UXD
-* [Back to top](#Milestone-Project-1---My-Website-as-a-Musician)
+* [Back to top](#milestone-project-1---my-website-as-a-musician)
 
 This is the latest incarnation of my website. Its main function is to be an extension of my CV and having a place of contact if someone wants to get in touch but does not know my email address.
 
 The plan is to have a single page website with a parallax background. The design should be responsive.
 
 ### **Strategy** 
-* [Back to top](#Milestone-Project-1---My-Website-as-a-Musician)
+* [Back to top](#milestone-project-1---my-website-as-a-musician)
 
 --------
 **What do I want as the owner of the site?**
@@ -65,7 +65,7 @@ The menus will scroll up and down so that the user will know that they are still
 
 
 ### **Scope** 
-* [Back to top](#Milestone-Project-1---My-Website-as-a-Musician)
+* [Back to top](#milestone-project-1---my-website-as-a-musician)
 
 *(based on information from the strategy plane) Which features will be include in the design? Which features are in and which is out (at least for now)? Minimum Viable Product*
 
