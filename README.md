@@ -196,17 +196,29 @@ Facebook, Pinterest, LinkedIn and so on
 
 ### Colors 
 
-Heading color rgb(255, 233, 184) is taken from music background image.  
-Background Grey ~~color #50596d, trial and error. Not fully happy with it will probably change later.~~  
-Changed this to a gradient (from [colorzilla](http://www.colorzilla.com/gradient-editor/)) which I like better. Now need to change color of text from #D5D5D5 to  rgb(25, 39, 51) for grey gradient backgrounds and color: rgb(255, 233, 184) (same as header) for text on triangular background, including footer. 
+**Heading color**:  
+rgb(255, 233, 184) is taken from music background image.  
 
-footer a color: rgb(255, 233, 184) and rgb(255, 195, 66) when hovered. Text of links will slightly increase in size on hover too.  
+**Background color** (For non-parallax sections):  
+Using a gradient (from [colorzilla](http://www.colorzilla.com/gradient-editor/)) which I like better. (*changed from a fixed #50596d*)
 
-Form error color: #e2631f  
+**Text color**:  
+rgb(25, 39, 51) (*changed from #D5D5D5*) for grey gradient backgrounds and color: rgb(255, 233, 184) (same as header) for text on triangular background, including about me, quote and footer. 
 
-Button colors - what felt right to me.
+**footer &lt;a&gt; color**:  
+rgb(255, 233, 184) and rgb(255, 195, 66) when hovered. Text of links will slightly increase in size on hover too.    
+Same colors are used for links in **About Me**.
 
-Set all buttons in soundcloud to value %2364746c (a sort of green).
+**Form error color**:  
+#e2631f  
+
+**Button colors** (complementary colors):  
+* **Primary CTA** : rgb(253, 134, 29) #fd861d
+* **Secondary CTA** : rgb(92, 123, 128) #5c7b80
+
+Set all buttons in soundcloud to value %2364746c (a sort of green). This color code is one of the standard soundcloud colors.
+
+
 
 
 
