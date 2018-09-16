@@ -67,14 +67,7 @@ The menus will scroll up and down so that the user will know that they are still
 ### **Scope** 
 * [Back to top](#milestone-project-1---my-website-as-a-musician)
 
-*(based on information from the strategy plane) Which features will be include in the design? Which features are in and which is out (at least for now)? Minimum Viable Product*
-
-* User Tasks - A User Story is used to describe a number of tasks that may be completed in an any order in pursuit of a general goal.
-
-
-
-
-Features to implement
+### Features to implement
 
 * Activities - some sort of list with some details and possibly extending the information
 * A short Bio
@@ -82,17 +75,19 @@ Features to implement
 * A way for the user to get in touch without revealing my email address.
 * Links to Github and Linkedin
 
-
-            People who might use the website are:
-            * someone wanting to learn music; beginners / continuing / pick up an instrument which they played when they were younger  
-            * performers wanting to perform one of my pieces  
-            * people wanting to commission a new composition or arrangement 
-            * artists wanting to collaborate on an art piece which include music or audio  
-            * someone looking for a conductor for an orchestra or a band.
-
 ### User stories
-A potential student wanting to learn an instrument can read about my teaching and then directed to  get in touch through the online form.
+A potential student (or a parent) wanting to learn an instrument can read about my teaching and then directed to  get in touch through the online form.
 
+A performer wanting to play one of my pieces comes to the site to get in touch and ask for scores. The performer is given the opportunity to find out more and directed to the contact form.
+
+A fixer for a music group is looking for a french horn player. The fixer will be directed to the contact form.
+
+A person is interested in commissioning a new piece (acoustic / electroacoustic / mixed). This person will have the opportunity to read about me as a musician and offered the possibility to start communicating and ask questions through the contact form.
+
+A music group representative needs a conductor, perhaps to step in for their regular conductor. This person will have the opportunity to read about me as a musician and in particular, me as a conductor. There will also be the opportunity to get in touch and ask questions.
+
+An artist (ex visual artist) has an idea to build an installation and would like to include sound, perhaps self-generating sound depending on the movement of people within the installation space.
+This artist will have the opportunity to read about my compositions and also to listen to some examples. There will be the opportunity to get in touch through the online contact form.
 
 **Structure** - Structure and logical grouping of the information
 
@@ -462,10 +457,11 @@ It is heavily documented on youtube and elsewhere.
 
 
 ### IMAGES
-**Dark Triangles** fro background:  
+**Dark Triangles** for background:  
 Downloaded from [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/tag/dark/)  
-Image notes: JUNE 7, 2017 Playful triangle pattern, this time in black.  
-Use: All patterns on this site can be used free of charge, but please read this before using them: CC BY-SA 3.0 - Subtle Patterns © Toptal Designers.
+Image notes: JUNE 7, 2017  
+Playful triangle pattern, this time in black.  
+Use: All patterns on this site can be used free of charge, but please [read this](https://creativecommons.org/licenses/by-sa/3.0/) before using them: CC BY-SA 3.0 - Subtle Patterns © Toptal Designers.
 
 **fast-min.jpg**
 [Pexels](https://www.pexels.com/photo/light-trails-on-city-street-327345/)
@@ -477,13 +473,13 @@ found at https://blog.ambient-mixer.com/sound/what-your-ringtone-says-about-your
 Image Credit by = http://bit.ly/1HLbWKi  
 
 **battle.jpg**
-found at [Wikipedia](https://en.wikipedia.org/wiki/Mahdist_War#/media/File:Bataille_d%27Ondurman_2.jpg)
-Use: Public Domain
+found at [Wikipedia](https://en.wikipedia.org/wiki/Mahdist_War#/media/File:Bataille_d%27Ondurman_2.jpg)  
+Use: Public Domain  
 Image cropped and resized.
 
 **Slideshow.png**
-found at [Pexels](https://www.pexels.com/photo/curve-industry-photography-vintage-65128/)
-Use: Pexels License
-Free for personal and commercial use, No attribution required
+found at [Pexels](https://www.pexels.com/photo/curve-industry-photography-vintage-65128/)  
+Use: Pexels License  
+Free for personal and commercial use, No attribution required  
 Image is cropped and resized.
 
