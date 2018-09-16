@@ -330,7 +330,13 @@ code from SoundCloud. This was resulting in the page sitting note showing the co
 
 
 
+### Mobile / Tablet testing
 
+Apart from using Chrome developer tools to test the layout and functionality of the page in a mobile and tablet layouts, I also tested the site on my mobile phone and that of my friend. Both are android phones.  
+
+The site is responsive and everything seems to work well in chrome developer tools. However when viewed on a real phone I noticed that the parallax background is not working as intended. In these cases it gracefully degrades to a normal background that scrolls with the page.
+
+I found that this is browser dependent. Google Chrome (Mobile v68.03440.91) does not display the parallax background as intended, but Firefox (Mobile v61.0.2) does.
 
 
 

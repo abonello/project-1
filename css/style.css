@@ -11,7 +11,18 @@
 .bgColor2 {
     background-image: url('../img/dark-triangles.png');
     background-attachment: fixed;
+
+    /* testing to see if parallax will work on all mobile browsers */
+    position: sticky;   
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 1px;
+    perspective-origin: 0 0;
 }
+.parallax-child {
+    transform-origin: 0 0;
+    transform: translateZ(-2px) scale(3);
+  }
 
 /* Buttons colors */
 .dusty {
