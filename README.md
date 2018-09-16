@@ -12,16 +12,16 @@
     * [Structure]
     * [Skeleton]
     * [Surface]
-* [WIREFRAMES](#WIREFRAMES)
-* [FEATURES](#FEATURES)
-* [TECHNOLOGIES USED](#TECHNOLOGIES-USED)
-* [TESTING](#TESTING)
-* [DEPLOYMENT](#DEPLOYMENT)
-* [CREDITS](#CREDITS)
+* [WIREFRAMES](#wireframes)
+* [FEATURES](#features)
+* [TECHNOLOGIES USED](#technologies-used)
+* [TESTING](#testing)
+* [DEPLOYMENT](#deployment)
+* [CREDITS](#credits)
 ---------
   
 ## INTRODUCTION
-* [Back to top](#Milestone-Project-1---My-Website-as-a-Musician)
+* [Back to top](#milestone-project-1---my-website-as-a-musician)
 
 I have had a personal website for over 15 years. Initially it was very simple, single page, hand coded html with very little styling. It was hosted on various free services. Then I improved the styling and content leading to getting my own hosting. Following that I used joomla for my site for a number of years. Now I built the current single-page site.
 
