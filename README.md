@@ -21,7 +21,9 @@ I have had a personal website for over 15 years. Initially it was very simple, s
 
 This is the latest incarnation of my website. Its main function is to be an extension of my CV and having a place of contact if someone wants to get in touch but does not know my email address.
 
-**Strategy** 
+The plan is to have a single page website with a parallax background. The design should be responsive.
+
+### **Strategy** 
 
 --------
 **What do I want as the owner of the site?**
@@ -40,30 +42,21 @@ People who might use the website are:
 * artists wanting to collaborate on an art piece which include music or audio  
 * someone looking for a conductor for an orchestra or a band.
 
-
-The plan is to have a single page website with a parallax background. The design should be responsive.
-
-
-### What does it do?
-This website gives visitors information about my various activities related to myself as an active independent musician.
+#### What does it do?
+This website gives visitors information about my various activities related to myself as an active musician.
 It is targeted at potential clients who would like to use my services as a composer/sound desgner, conductor, performer or teacher.
-Visitors have the ability to contact me by using a contact form. (Note: the contact form in this project is not functional as it is beyond the scope of this project to develop a back end.)
+Visitors have the ability to contact me by using a contact form.
 
-### How does it work
+#### How does it work
 The website is planned as a single page site. Each section is well separated from the others so that the material is distinct. Extra information can be accessed through more information buttons.  
 
-The menus will scroll up and down so that the user will know that they are still on the same page rather than taken to a different page. This helps the users to keep trakc of where they are.
-
-
-### Features
-    * read information about my activites
-    * portfolio of compositions
-    * menu system
-    * contact
+The menus will scroll up and down so that the user will know that they are still on the same page rather than taken to a different page. This helps the users to keep track of where they are.
 
 
 
-**Scope** - (based on information from the strategy plane) Which features will be include in the design? Which features are in and which is out (at least for now)? Minimum Viable Product
+### **Scope** 
+
+*(based on information from the strategy plane) Which features will be include in the design? Which features are in and which is out (at least for now)? Minimum Viable Product*
 
 * User Tasks - A User Story is used to describe a number of tasks that may be completed in an any order in pursuit of a general goal.
 
