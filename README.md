@@ -10,7 +10,7 @@
     * [Strategy](#strategy)
     * [Scope](#scope)
     * [Structure](#structure)
-    * [Skeleton]
+    * [Skeleton](#skeleton)
     * [Surface]
 * [WIREFRAMES](#wireframes)
 * [FEATURES](#features)
@@ -24,6 +24,7 @@
 * [Back to top](#milestone-project-1---my-website-as-a-musician)
 
 I have had a personal website for over 15 years. Initially it was very simple, single page, hand coded html with very little styling. It was hosted on various free services. Then I improved the styling and content leading to getting my own hosting. Following that I used joomla for my site for a number of years. Now I built the current single-page site.
+____
 
 ## UXD
 * [Back to top](#milestone-project-1---my-website-as-a-musician)
@@ -99,7 +100,7 @@ The plan is to have a Single Page Application (SPA) website. It will be divided 
 
 There will also be a fixed navigation at the top, a **header** just below the navigation, a **contact form** and a **footer** with links.
 
-I will also add a quote section between the About me section and the contact form. This will form a natural break of an otherwise two sections using the greyish gradient background.
+I will also add a quote section between the portfolio section and the contact form. This will form a natural break of an otherwise two sections using the greyish gradient background.
 
 **Navigation** will be through the nav buttons at the top, the buttons (Primary and Secondary CTA) as well as through scrolling.
 
@@ -121,88 +122,40 @@ The **Portfolio** part will contain a few examples based on the sounds I have av
 >I plan to have these stack one on top of each other in mobile view. In tablet and desktop view there will be enough space to include an image which is evocative of an idea related to the music. (Images to alternate left - right)
 
 
-**Skeleton** - Representation of the information, Navigation around the site to locate the information and reach the features.
-Content relationship / Priority (position of content)
+### Skeleton
+* [Back to top](#milestone-project-1---my-website-as-a-musician)
 
-        Responsive design
-        Different parts instead of separate pages  
+The overall plan is to have a Single Page Application with a fixed navigation at the top. This allows the user to reach all main sections of the site.
 
+There will also be buttons to open the *more information* sections related to different activities.
 
-        the two key areas
-        of interest here are interface design and navigation design. 
-        Interface design
-        is concerned with the best arrangement and visual presentation of the elements
-        navigation design is concerned with intuitive navigation and the completion
-        of tasks. At this point we also create what are called mock-ups. Mock-ups give us a
-        good idea of how well constructed our information architecture is and also the
-        arrangement of our features.
+CTA buttons will be placed in strategic parts of the site to allow the user to directly reach the contact form.
 
-        Placement of things
-        Ex: we'll place our navigation in the upper region which is common and conventional
+Priority was given to the various activities that I engage in, followed by the bio and then the portfolio. The quote is only there as a visual separation between the portfolio and the form.
 
-        so based on our
-        information architecture we prioritized our personal info and our pitch as being
-        priority one so when a prospective employer arrives at your site for the
-        first time they'll immediately be able to determine your personal info and your
-        personal pitch we arranged these also using roughly the law of thirds so the
-        personal info takes up one third of the width of the screen and the pitch takes
-        up two thirds. The same arrangement is put in place for the profile image
-        and the name, the title and the menu items associated with a developer and we
-        maintain that structure and arrangement throughout the site. The header and the
-        footer are the same and our main content areas the shape of those areas is the
-        same what's changed is the actual content. This reassures the user they've already
-        been exposed to this pattern on the home page now in the resume page this pattern
-        is repeated so the work history takes up one third, my skills takes up two thirds
-        now while they project submission our project request form is slightly
-        different it's still balanced we still have the header at the top we still have
-        the footer at the bottom the navigation hasn't changed also in terms of
-        navigation let's go back here the priority of our content is reflected in
-        the navigation so home represents our personal info on our pitch that's on the
-        left and then we move to resume to contact to download CV now you might be
-        wondering well there's only four menu items here where is the links to our
-        github repositories and the links to meetups and our organizations and so on
-        well the reason they're not shown here is because in this particular module
-        we're using solely CSS and HTML now we are using bootstrap as well with it but
-        only in the context of CSS and HTML itself for the grid in the next module
-        we'll build up our JavaScript skills to the point where we can implement the
-        meetups and they github repositories because those sections will require
-        JavaScript and having carried out the tasks the activities and the information
-        gathering an organization across the strategy, the scope, the structure and the
-        skeleton planes we then move on to the final plane which is the surface
+* [wireframe](#wireframes) - follow this link for further reading
 
 
+### Surface - Look and feel of the finished product; Colors, Typography; Images; Design Elements - animations, transitions, effects
 
+The overall design is unified by the alternating dark triangle background with the greyish gradient background sections. The colors are monochromatic with some contrasting collors for CTA (buttons). 
+        
+Use parallax background in alternating sections to create interest and break the grey background as well as to give this SPA a form.
 
+All navigation is animated and controlled by javascript to give a smooth scroll effect. This enables the users to feel that they are like moving on a map rather than thrown from one place to another without knowing where they landed. The navigation acts as a sort of breadcrumbs as a javascript keeps track of the page position and highlight the appropriate menu item.
 
+Overall, the content will be dispalyed in one column spanning the whole width of the screen in mobile view.
+On tablets there will be a general two column view (half each) in the tablet view. At this point I will add images next to each portfolio item in alternate positions (left - right). In desktop view, the activites will display in two rows of three equal columns.
 
-**Surface** - Look and feel of the finished product; Colors, Typography; Images; Design Elements - animations, transitions, effects
+The images used are related to the feel, emotions, philosophy of the adjacent composition.
 
-        Monochromatic with some contrasting collors for CTA (buttons). Use gradients in background to avoid the monotony of a flat gray background. 
-        Use parallax background in alternating sections to create interest and break the grey background.
+In all views, the About Me and the Contact form will be full width.
 
+The footer will be stacked in one column in mobile view and will get a two column layout for the tablet and desktop views. (Note that the back to top link will remain centered for all views.)
 
+The quote was added to facilitate the flow of the overall structure of the page by breaking two adjacent sections which have the greyish gradient background and also helps in the form, akin to a Rondo musical structure.
 
-        The surface is the most concrete plane this is what the user gets to see the final
-        product so it's concerned with color, typography,
-        effects and imagery. It tries to reinforce the meaning of the
-        content and guide the user to tasks and information in an intuitive way. It's
-        also concerned with minimising cognitive overload and maximizing intuitive
-        learning and it's also concerned with the appropriate content.
-
-        example  dark band on the top a dark band at the bottom so our
-        header and our footer have similar colors and they will be repeated across
-        the homepage, the resume, the contact
-        The content itself our main content across each page
-        will take the format of 1/3 and 2/3 
-        providing a visual balance 
-        we've also
-        split our footer information into thirds as well so we have another about me
-        another opportunity to download the CV and the social icons which could link to
-        Facebook, Pinterest, LinkedIn and so on 
-
-
-
-### Colors 
+#### Colors 
 
 **Heading color**:  
 rgb(255, 233, 184) is taken from music background image.  
@@ -226,33 +179,19 @@ Same colors are used for links in **About Me**.
 
 Set all buttons in soundcloud to value %2364746c (a sort of green). This color code is one of the standard soundcloud colors.
 
-
-
-
-
+#### Typography
 
 
 ## WIREFRAMES
+* [Back to top](#milestone-project-1---my-website-as-a-musician)
 
-Done using  
+Wireframes for mobile, tablet and desktop views have been prepared using  
 ![Pencil](img/Pencil-logo-shadow.png)[**Pencil Project**](https://pencil.evolus.vn/)
 
 
-LINK
-  
-    
-    .
-    .
+You can reach these [here](wireframe/index.html)
 
 
-
-        *Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.*
-
-        *In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:*
-
-        *As a user type, I want to perform an action, so that I can achieve a goal.*
-
-        *This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.*
 
 ## FEATURES
 * [Back to top](#milestone-project-1---my-website-as-a-musician)
@@ -279,7 +218,7 @@ Since I am actually using this project, I did make the contact form functional.
 
 ### Features Left to Implement
 
-1. Improve the functionality of the CTA button on mobiles. It should direct the user to the top of the contact form. Instead it is directing the user to the submit button. The user has to scroll back up.
+1. FIXED: ~~Improve the functionality of the CTA button on mobiles. It should direct the user to the top of the contact form. Instead it is directing the user to the submit button. The user has to scroll back up.~~
 2. In the future I might add a complete list of my compositions with details of instrumentation and details about performances.
 3. Add current and future activities.
 4. Fix parallax for mobiles
@@ -439,7 +378,7 @@ This bug is now fixed. It took me about 8hrs of work and testing but it was wort
 ----
 
 2. 
-The other bug is the background parallax effect. It does not work on all mobile browsers. I researched this on google but none of the fixes I came across weem to work. This is not a high priority bug as the site still looks and functions well without the parallax effect.
+The other bug is the background parallax effect. It does not work on all mobile browsers. I researched this on google but none of the fixes I came across seem to work. This is not a high priority bug as the site still looks and functions well without the parallax effect.
 
 
 ### Cleaning and validating code
