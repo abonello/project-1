@@ -243,6 +243,10 @@ describing the presentation of a document written in a markup language like HTML
 ## TESTING
 * [Back to top](#milestone-project-1---my-website-as-a-musician)
 
+### Final check on desktop
+
+I tested the various scrollings on desktop using Safari v8.0.8, Chrome v68.0.3440.106 and Firefox v62.0.
+
 ### Manual testing using Chrome.
 Example of testing steps:  
 1. css link - set body background color to red. Pass (before it was white)
