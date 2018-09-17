@@ -67,7 +67,7 @@ The menus will scroll up and down so that the user will know that they are still
 ### **Scope** 
 * [Back to top](#milestone-project-1---my-website-as-a-musician)
 
-### Features to implement
+#### Features to implement
 
 * Activities - some sort of list with some details and possibly extending the information
 * A short Bio
@@ -75,18 +75,18 @@ The menus will scroll up and down so that the user will know that they are still
 * A way for the user to get in touch without revealing my email address.
 * Links to Github and Linkedin
 
-### User stories
-A potential student (or a parent) wanting to learn an instrument can read about my teaching and then directed to  get in touch through the online form.
+#### User stories
+* A potential student (or a parent) wanting to learn an instrument can read about my teaching and then directed to  get in touch through the online form.
 
-A performer wanting to play one of my pieces comes to the site to get in touch and ask for scores. The performer is given the opportunity to find out more and directed to the contact form.
+* A performer wanting to play one of my pieces comes to the site to get in touch and ask for scores. The performer is given the opportunity to find out more and directed to the contact form.
 
-A fixer for a music group is looking for a french horn player. The fixer will be directed to the contact form.
+* A fixer for a music group is looking for a french horn player. The fixer will be directed to the contact form.
 
-A person is interested in commissioning a new piece (acoustic / electroacoustic / mixed). This person will have the opportunity to read about me as a musician and offered the possibility to start communicating and ask questions through the contact form.
+* A person is interested in commissioning a new piece (acoustic / electroacoustic / mixed). This person will have the opportunity to read about me as a musician and offered the possibility to start communicating and ask questions through the contact form.
 
-A music group representative needs a conductor, perhaps to step in for their regular conductor. This person will have the opportunity to read about me as a musician and in particular, me as a conductor. There will also be the opportunity to get in touch and ask questions.
+* A music group representative needs a conductor, perhaps to step in for their regular conductor. This person will have the opportunity to read about me as a musician and in particular, me as a conductor. There will also be the opportunity to get in touch and ask questions.
 
-An artist (ex visual artist) has an idea to build an installation and would like to include sound, perhaps self-generating sound depending on the movement of people within the installation space.
+* An artist (ex visual artist) has an idea to build an installation and would like to include sound, perhaps self-generating sound depending on the movement of people within the installation space.
 This artist will have the opportunity to read about my compositions and also to listen to some examples. There will be the opportunity to get in touch through the online contact form.
 
 **Structure** - Structure and logical grouping of the information
