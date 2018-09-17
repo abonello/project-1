@@ -256,7 +256,7 @@ Parallax background gives the page a feel of progressing since the foreground sc
 
 Each section in the activities allow the user to read about that particular activity. The *Tell me more ...* button displays further information.
 
-The About me section is a short bio. The link to my linkedin allows a reader to find more about me.
+The About me section is a short bio. The link to my linkedin allows a reader to find more about me. There is also a CTA button.
 
 The portfolio allows the user to listen to some examples of my music from soundcloud and youtube.
 
@@ -267,7 +267,7 @@ Since I am actually using this project, I did make the contact form functional.
 
 ### Features Left to Implement
 
-1. Improve the functionality of the CTA button on mobiles. It should direct teh user to the top of the contact form. Instead it is directing the user to the submit button. The user has to scroll back up.
+1. Improve the functionality of the CTA button on mobiles. It should direct the user to the top of the contact form. Instead it is directing the user to the submit button. The user has to scroll back up.
 2. In the future I might add a complete list of my compositions with details of instrumentation and details about performances.
 3. Add current and future activities.
 4. Fix parallax for mobiles
@@ -414,10 +414,19 @@ I found that this is browser dependent. Google Chrome (Mobile v68.03440.91) does
 
 I also noted that the CTA button on mobiles will direct the user to the submit button of the form. The user will have to scroll back up. (This functionality works well on desktop.) It is something that I will work on later.
 
-### bugs 
+### BUGS
 
-As mentioned in the testing section above, when the CTA button is clicked in mobile devices the user is taken to the submit button instead of the top of the contact form. I tried to look into this but I cannot find a way to improve on this at the moment. I consider this bug as high priority to fix.
+1. 
 
+~~As mentioned in the testing section above, when the CTA button is clicked in mobile devices the user is taken to the submit button instead of the top of the contact form. I tried to look into this but I cannot find a way to improve on this at the moment. I consider this bug as high priority to fix.~~
+
+**FIXED**
+
+This bug is now fixed. It took me about 8hrs of work and testing but it was worth going through the process. All I had to do is to get the height of the extended info section that was going to be set to 0px and take that amount in consideration the scrolling to the top of the contact form. The complexity arises from the fact that I used the CTA buttons in two other places, out side of the extended info. These are not meant to collapse. I solved this by separating the actions in different functions, something that I should have done from the start. NOTE: The reason why I want to reduce the height of the extended section to 0px is a visual one. I want to animate this in order to avoid a sudden jump that would otherwise happen. This is in keeping with the overall feel of the site that all movements are done smoothly.
+
+----
+
+2. 
 The other bug is the background parallax effect. It does not work on all mobile browsers. I researched this on google but none of the fixes I came across weem to work. This is not a high priority bug as the site still looks and functions well without the parallax effect.
 
 
