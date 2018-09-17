@@ -11,7 +11,7 @@
     * [Scope](#scope)
     * [Structure](#structure)
     * [Skeleton](#skeleton)
-    * [Surface]
+    * [Surface](#surface)
 * [WIREFRAMES](#wireframes)
 * [FEATURES](#features)
 * [TECHNOLOGIES USED](#technologies-used)
@@ -136,7 +136,8 @@ Priority was given to the various activities that I engage in, followed by the b
 * [wireframe](#wireframes) - follow this link for further reading
 
 
-### Surface - Look and feel of the finished product; Colors, Typography; Images; Design Elements - animations, transitions, effects
+### Surface
+* [Back to top](#milestone-project-1---my-website-as-a-musician)
 
 The overall design is unified by the alternating dark triangle background with the greyish gradient background sections. The colors are monochromatic with some contrasting collors for CTA (buttons). 
         
@@ -180,6 +181,8 @@ Same colors are used for links in **About Me**.
 Set all buttons in soundcloud to value %2364746c (a sort of green). This color code is one of the standard soundcloud colors.
 
 #### Typography
+
+Fonts used are from [google fonts](https://fonts.google.com/). The main font is **Roboto** with a fall-back to sans-serif. The other font used is **Lobster** with a fall-back to Cursive. This was chosen as it contrasts well with roboto and sans-serif. This is used in two places, the logo and the main header of the page.
 
 
 ## WIREFRAMES
@@ -234,6 +237,7 @@ describing the presentation of a document written in a markup language like HTML
 - [jQuery v3.3.1](https://jquery.com) - simplifies accessing the DOM
 - [Bootstrap v3.3.7](https://getbootstrap.com/docs/3.3/) - used for some of the styles (modified) as well as layout of the content.
 - [Font Awesome v4.7.0](https://fontawesome.com/v4.7.0/) - used to display the GitHub Icon
+- [Google Fonts](https://fonts.google.com/) - Lobster and Roboto
 - [email.js](http://www.emailjs.com/) - used to enable the contact form to send emails to me.
 
 ## TESTING
@@ -373,7 +377,9 @@ I also noted that the CTA button on mobiles will direct the user to the submit b
 
 **FIXED**
 
-This bug is now fixed. It took me about 8hrs of work and testing but it was worth going through the process. All I had to do is to get the height of the extended info section that was going to be set to 0px and take that amount in consideration the scrolling to the top of the contact form. The complexity arises from the fact that I used the CTA buttons in two other places, out side of the extended info. These are not meant to collapse. I solved this by separating the actions in different functions, something that I should have done from the start. NOTE: The reason why I want to reduce the height of the extended section to 0px is a visual one. I want to animate this in order to avoid a sudden jump that would otherwise happen. This is in keeping with the overall feel of the site that all movements are done smoothly.
+This bug is now fixed. It took me about 8hrs of work and testing but it was worth going through the process. All I had to do is to get the height of the extended info section that was going to be set to 0px and take that amount in consideration the scrolling to the top of the contact form. The complexity arises from the fact that I used the CTA buttons in two other places, out side of the extended info. These are not meant to collapse. I solved this by separating the actions in different functions, something that I should have done from the start. NOTE: The reason why I want to reduce the height of the extended section to 0px is a visual one. I want to animate this in order to avoid a sudden jump that would otherwise happen. This is in keeping with the overall feel of the site that all movements are done smoothly.  
+
+Tested manually on google chrome and my mobile (Android) and it works well.
 
 ----
 
@@ -442,4 +448,7 @@ found at [Pexels](https://www.pexels.com/photo/curve-industry-photography-vintag
 Use: Pexels License  
 Free for personal and commercial use, No attribution required  
 Image is cropped and resized.
+
+### FONTS
+**Lobster** and **Roboto** fonts from [google fonts](https://fonts.google.com/).
 

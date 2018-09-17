@@ -1,3 +1,7 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Backgrounds */
 .bgColor1 {
     /* background-color: #50596d; */
@@ -96,6 +100,7 @@ p {
 
 .navbar-brand {
     margin-left: 0px;
+    font-family: 'Lobster', cursive;
 }
 
 @media only screen and (min-width: 768px) {
@@ -178,6 +183,8 @@ p {
 
 .jumbotron h1 {
     margin-top: 70px;
+    font-family: 'Lobster', cursive;
+    font-size: 4em;
 }
 .jumbotron h2 {
     opacity: 0.65;
