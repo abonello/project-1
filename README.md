@@ -9,7 +9,7 @@
 * [UXD](#uxd)  
     * [Strategy](#strategy)
     * [Scope](#scope)
-    * [Structure]
+    * [Structure](#structure)
     * [Skeleton]
     * [Surface]
 * [WIREFRAMES](#wireframes)
@@ -89,24 +89,36 @@ The menus will scroll up and down so that the user will know that they are still
 * An artist (ex visual artist) has an idea to build an installation and would like to include sound, perhaps self-generating sound depending on the movement of people within the installation space.
 This artist will have the opportunity to read about my compositions and also to listen to some examples. There will be the opportunity to get in touch through the online contact form.
 
-**Structure** - Structure and logical grouping of the information
+### **Structure**
+* [Back to top](#milestone-project-1---my-website-as-a-musician)
 
-        Interaction Design / Information Architecture
+The plan is to have a Single Page Application (SPA) website. It will be divided into three main sections:
+1. Activities
+2. About Me (short bio)
+3. Portfolio
 
-        * Navigation / Routing
+There will also be a fixed navigation at the top, a **header** just below the navigation, a **contact form** and a **footer** with links.
 
-        projects undertaken. Interaction design is concerned with patterns and sequences
-        that provide options to the user the patterns might be the navigation, the
-        order of the menu items, the navigation we tend to read from left to right so
-        you might want to prioritize your top level information on the on the left
-        with diminishing priority as you moved from left to right. You might decide on
-        the relationships between the information you might decide that
-        personal information should go beside a personal pitch. You might decide that
-        work history sits really well with skills summary. You might decide that the
-        request for a collaboration go on its own area you might decide that the
-        developer is a part of and finally priority six is the ability to download
-        a CV. Next having put the bulk of the tasks and assignments required at the
+I will also add a quote section between the About me section and the contact form. This will form a natural break of an otherwise two sections using the greyish gradient background.
 
+**Navigation** will be through the nav buttons at the top, the buttons (Primary and Secondary CTA) as well as through scrolling.
+
+The overall feel of the page should be of soft scrolling, avoiding instant jumps which might imply to the user that they are on a different page.
+
+----
+The **Activities** part will be divided into 6 activities:
+1. Composition
+2. Sound Design
+3. Conducting
+4. Performance
+5. Music Tuition
+6. Research
+
+>These activities will stack on top of each other in mobile view, but will be displayed in three rows of two for tablets and two rows of three on desktop.
+
+The **Portfolio** part will contain a few examples based on the sounds I have available on soundcloud as well as an example from my youtube channel.
+
+>I plan to have these stack one on top of each other in mobile view. In tablet and desktop view there will be enough space to include an image which is evocative of an idea related to the music. (Images to alternate left - right)
 
 
 **Skeleton** - Representation of the information, Navigation around the site to locate the information and reach the features.
