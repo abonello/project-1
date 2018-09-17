@@ -398,7 +398,7 @@ There are a number of warnings for the iframes realted to the code from soundclo
 There is a Error saying that | is an illegal character. This is found in code copied from google fonts. I am leaving this as is.
 There are errors saying: "The element button must not appear as a descendant of the a element". These are properly nested and work well as they are and they ensure that no matter where the user clicks on the button it will elicit a response.
 
-* **CSS** - https://validator.w3.org/  
+* **CSS** - https://jigsaw.w3.org/css-validator/  
 It complains about vendor prefixes in code that comes from colorzilla (re background gradient) or was added by form validator. I am goind to leave these as they are.  
 There is also another warning about two classes having the same background and border colors. I will keep these as they are.
 

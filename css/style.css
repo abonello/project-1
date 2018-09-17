@@ -211,13 +211,15 @@ p {
     height: auto;
 }
 
-/* Bio */
+/* Bio / Quote */
 
-#bio {
+#bio,
+#quote {
     position: relative;
 }
 
-#bio::before {
+#bio::before,
+#quote::before {
     content: '';
     position: absolute;
     display: block;
@@ -229,7 +231,8 @@ p {
     border-radius: 50% 50% 40% 40%;
 }
 
-#bioInfo {
+#bioInfo,
+#quoteInfo {
     padding-top: 50px;
     padding-bottom: 70px;
 }
@@ -330,6 +333,7 @@ blockquote::after {
     font-size: 4em;
     color: #e2ddcf;
     padding: 0;
+    font-family: 'Lobster', cursive;
 }
 
 blockquote::before {
