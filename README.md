@@ -192,7 +192,7 @@ Wireframes for mobile, tablet and desktop views have been prepared using
 ![Pencil](img/Pencil-logo-shadow.png)[**Pencil Project**](https://pencil.evolus.vn/)
 
 
-You can reach these [here](wireframe/index.html)
+You can reach these [here](wireframe/version2/index_v2.html)
 
 
 
