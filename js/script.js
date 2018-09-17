@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    // Code from email.js
     (function(){
         emailjs.init("user_MV94f6Xs0GmNusEwKfXoL");
     })();
@@ -51,7 +52,6 @@ $(document).ready(function() {
 
     $( ".btn-card-cta" ).on("click", function() {
         currentHeight = $(this).parent().parent().parent().height();
-        // console.log(currentHeight);
         $(this).parent().parent().parent().animate({
             height: "0px"
             }, 500,
@@ -61,16 +61,6 @@ $(document).ready(function() {
             );
     });
 
-    // CTA call: Close extra information div
-    // $( ".ctaDisplay" ).on("click", function() {
-    //     $(this).parent().parent().parent().animate({
-    //         height: "0px"
-    //     }, 500,
-    //         function() { $( this )
-    //             .removeClass( "show" )
-    //             .addClass( "hidden" );}
-    //     );
-    // });
 
     $( ".scrollCTA" ).on("click", function(e) {
         e.preventDefault();
@@ -81,9 +71,7 @@ $(document).ready(function() {
     });
 
 
-
     // SCROLLING
-    // This method is well documented both on youtube and stackflow
     var scrollLink = $(".scroll");
     scrollLink.click(function(e) {
         e.preventDefault();
@@ -94,7 +82,6 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
         var scrollbarLocation = $(this).scrollTop();
-        // console.log(scrollbarLocation);
         scrollLink.each(function() {
             var sectionOffset = $(this.hash).offset().top - 40;
             if (sectionOffset <= scrollbarLocation) {
@@ -127,7 +114,6 @@ $(document).ready(function() {
                         $("#email").val("");
                         $("#subject").val("");
                         $("#message").val("");
-                        // location.reload();
                     }, function(err) {
                         $("#btn-submit").text("Submit");
                         $("#name").val("");
