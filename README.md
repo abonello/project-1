@@ -23,7 +23,7 @@
 ## INTRODUCTION
 * [Back to top](#milestone-project-1---my-website-as-a-musician)
 
-I have had a personal website for over 15 years. Initially it was very simple, single page, hand coded html with very little styling. It was hosted on various free services. Then I improved the styling and content leading to getting my own hosting. Following that I used joomla for my site for a number of years. Now I built the current single-page site.
+I have had a personal website for over 15 years. Initially it was very simple, single page, hand coded html with very little styling. It was hosted on various free services. Then I improved the styling and content leading to getting my own hosting. Following that, I used joomla for my site for a number of years. Now I built the current single-page site.
 ____
 
 ## UXD
@@ -44,7 +44,7 @@ The plan is to have a single page website with a parallax background. The design
 * Brief info about my activities  
 
 -----------
-This is my personal website as a musician. It need to serve as an extension of my CV for music related activities.
+This is my personal website as a musician. It needs to serve as an extension of my CV for music related activities.
 
 People who might use the website are:
 * someone wanting to learn music; beginners / continuing / pick up an instrument which they played when they were younger  
@@ -59,9 +59,9 @@ It is targeted at potential clients who would like to use my services as a compo
 Visitors have the ability to contact me by using a contact form.
 
 #### How does it work
-The website is planned as a single page site. Each section is well separated from the others so that the material is distinct. Extra information can be accessed through more information buttons.  
+The website is planned as a single page application. Each section is well separated from the others through the use of alternating background so that the material is distinct. Extra information about my activities can be accessed through the *Tell me more ...* buttons.  
 
-The menus will scroll up and down so that the user will know that they are still on the same page rather than taken to a different page. This helps the users to keep track of where they are.
+The navigation will smoothly scroll up and down so that the users will know that they are still on the same page rather than taken to a different page. This helps the users to keep track of where they are.
 
 
 
@@ -70,14 +70,14 @@ The menus will scroll up and down so that the user will know that they are still
 
 #### Features to implement
 
-* Activities - some sort of list with some details and possibly extending the information
-* A short Bio
-* Examples of my compositions with the possibility for the user to listen to these examples
-* A way for the user to get in touch without revealing my email address.
-* Links to Github and Linkedin
+* Activities - some sort of list with some details and possibly extending the information,
+* A short Bio,
+* Examples of my compositions with the possibility for the user to listen to these examples,
+* A way for the user to get in touch without revealing my email address,
+* Links to Github and Linkedin.
 
 #### User stories
-* A potential student (or a parent) wanting to learn an instrument can read about my teaching and then directed to  get in touch through the online form.
+* A potential student (or a parent) wanting to learn an instrument can read about my teaching and then be directed to get in touch through the online form.
 
 * A performer wanting to play one of my pieces comes to the site to get in touch and ask for scores. The performer is given the opportunity to find out more and directed to the contact form.
 
@@ -98,13 +98,13 @@ The plan is to have a Single Page Application (SPA) website. It will be divided 
 2. About Me (short bio)
 3. Portfolio
 
-There will also be a fixed navigation at the top, a **header** just below the navigation, a **contact form** and a **footer** with links.
+There will also be a fixed **navigation** at the top, a **header** just below the navigation, a **contact form** and a **footer** with links.
 
 I will also add a quote section between the portfolio section and the contact form. This will form a natural break of an otherwise two sections using the greyish gradient background.
 
 **Navigation** will be through the nav buttons at the top, the buttons (Primary and Secondary CTA) as well as through scrolling.
 
-The overall feel of the page should be of soft scrolling, avoiding instant jumps which might imply to the user that they are on a different page.
+The overall feel of the page should be one of soft scrolling, avoiding instant jumps which might imply to the user that they are on a different page.
 
 ----
 The **Activities** part will be divided into 6 activities:
@@ -117,9 +117,9 @@ The **Activities** part will be divided into 6 activities:
 
 >These activities will stack on top of each other in mobile view, but will be displayed in three rows of two for tablets and two rows of three on desktop.
 
-The **Portfolio** part will contain a few examples based on the sounds I have available on soundcloud as well as an example from my youtube channel.
+The **Portfolio** part will contain a few examples based on the music I have available on soundcloud, as well as an example from my youtube channel.
 
->I plan to have these stack one on top of each other in mobile view. In tablet and desktop view there will be enough space to include an image which is evocative of an idea related to the music. (Images to alternate left - right)
+>I plan to have these stack one on top of each other in mobile view. In tablet and desktop views, there will be enough space to include an image which is evocative of an idea related to the music. (Images to alternate left - right)
 
 
 ### Skeleton
@@ -127,11 +127,11 @@ The **Portfolio** part will contain a few examples based on the sounds I have av
 
 The overall plan is to have a Single Page Application with a fixed navigation at the top. This allows the user to reach all main sections of the site.
 
-There will also be buttons to open the *more information* sections related to different activities.
+There will also be buttons to open the *Tell me more ...* sections related to different activities.
 
 CTA buttons will be placed in strategic parts of the site to allow the user to directly reach the contact form.
 
-Priority was given to the various activities that I engage in, followed by the bio and then the portfolio. The quote is only there as a visual separation between the portfolio and the form.
+Priority was given to the various activities that I engage in, followed by the bio and then the portfolio. The quote is only there as a visual separation between the portfolio and the contact form.
 
 * [wireframe](#wireframes) - follow this link for further reading
 
@@ -139,50 +139,51 @@ Priority was given to the various activities that I engage in, followed by the b
 ### Surface
 * [Back to top](#milestone-project-1---my-website-as-a-musician)
 
-The overall design is unified by the alternating dark triangle background with the greyish gradient background sections. The colors are monochromatic with some contrasting collors for CTA (buttons). 
+The overall design is unified by the alternating dark triangle background with the greyish gradient background sections. The color scheme is monochromatic with some contrasting collors for CTA (buttons). 
         
-Use parallax background in alternating sections to create interest and break the grey background as well as to give this SPA a form.
+The use of parallax background in alternating sections creates an interesting break to the grey gradient background as well as to give this SPA a structure (form).
 
-All navigation is animated and controlled by javascript to give a smooth scroll effect. This enables the users to feel that they are like moving on a map rather than thrown from one place to another without knowing where they landed. The navigation acts as a sort of breadcrumbs as a javascript keeps track of the page position and highlight the appropriate menu item.
+All navigation is animated and controlled by javascript to give a smooth scroll effect. This enables the users to feel that they are like moving on a map rather than thrown from one place to another without knowing where they landed. The navigation acts as a sort of breadcrumbs as javascript keeps track of the page position and highlight the appropriate menu item.
 
 Overall, the content will be dispalyed in one column spanning the whole width of the screen in mobile view.
-On tablets there will be a general two column view (half each) in the tablet view. At this point I will add images next to each portfolio item in alternate positions (left - right). In desktop view, the activites will display in two rows of three equal columns.
+On tablets, this will change to a two column view (half each) for the activities. At this point I will also add images next to each portfolio item in alternate positions (left - right). In desktop view, the activites will display in two rows of three equal columns.
 
-The images used are related to the feel, emotions, philosophy of the adjacent composition.
+The images used are related to the feel, emotions, and/or philosophy of the adjacent composition.
 
 In all views, the About Me and the Contact form will be full width.
 
-The footer will be stacked in one column in mobile view and will get a two column layout for the tablet and desktop views. (Note that the back to top link will remain centered for all views.)
+The footer will be stacked in one column in mobile view and will get a two column layout for the tablet and desktop views. (Note that the *back to top* link will remain centered for all views.)
 
-The quote was added to facilitate the flow of the overall structure of the page by breaking two adjacent sections which have the greyish gradient background and also helps in the form, akin to a Rondo musical structure.
+The quote was added to facilitate the flow of the overall structure of the page by breaking two adjacent sections which have the greyish gradient background and also helps in the form, akin to a **Rondo** musical structure.
 
 #### Colors 
 
-**Heading color**:  
+* **Heading color**:  
 rgb(255, 233, 184) is taken from music background image.  
 
-**Background color** (For non-parallax sections):  
+* **Background color** (For non-parallax sections):  
 Using a gradient (from [colorzilla](http://www.colorzilla.com/gradient-editor/)) which I like better. (*changed from a fixed #50596d*)
 
-**Text color**:  
-rgb(25, 39, 51) (*changed from #D5D5D5*) for grey gradient backgrounds and color: rgb(255, 233, 184) (same as header) for text on triangular background, including about me, quote and footer. 
+* **Text color**:  
+rgb(0, 0, 0) (*changed from #D5D5D5*) for grey gradient backgrounds and color: rgb(255, 233, 184) (same as header) for text on triangular background, including about me, quote and footer. 
+NB: *text color for grey gradient background changed again from rgb(25, 39, 51); to aid readability*.
 
-**footer &lt;a&gt; color**:  
+* **footer &lt;a&gt; color**:  
 rgb(255, 233, 184) and rgb(255, 195, 66) when hovered. Text of links will slightly increase in size on hover too.    
 Same colors are used for links in **About Me**.
 
-**Form error color**:  
+* **Form error color**:  
 #e2631f  
 
-**Button colors** (complementary colors):  
-* **Primary CTA** : rgb(253, 134, 29) #fd861d
-* **Secondary CTA** : rgb(92, 123, 128) #5c7b80
+* **Button colors** (complementary colors):  
+    * **Primary CTA** : rgb(253, 134, 29) #fd861d
+    * **Secondary CTA** : rgb(92, 123, 128) #5c7b80
 
-Set all buttons in soundcloud to value %2364746c (a sort of green). This color code is one of the standard soundcloud colors.
+* Set all buttons in soundcloud to value %2364746c (a sort of green). This color code is one of the standard soundcloud colors.
 
 #### Typography
 
-Fonts used are from [google fonts](https://fonts.google.com/). The main font is **Roboto** with a fall-back to sans-serif. The other font used is **Lobster** with a fall-back to Cursive. This was chosen as it contrasts well with roboto and sans-serif. This is used in two places, the logo and the main header of the page.
+Fonts used are from [google fonts](https://fonts.google.com/). The main font is **Roboto** with a fall-back to sans-serif. The other font used is **Lobster** with a fall-back to Cursive. The latter was chosen as it contrasts well with roboto and sans-serif. This is used in two places, the logo and the main header of the page.
 
 
 ## WIREFRAMES
@@ -192,7 +193,8 @@ Wireframes for mobile, tablet and desktop views have been prepared using
 ![Pencil](img/Pencil-logo-shadow.png)[**Pencil Project**](https://pencil.evolus.vn/)
 
 
-You can reach these [here](wireframe/version2/index_v2.html)
+You can reach these [here](https://abonello.github.io/project-1_wireframe/)  
+Please note that a copy of the files for this wireframe are in this repository too at wireframe/version2/index_v2.html
 
 
 
@@ -206,7 +208,7 @@ Clicking on a menu item will start a smooth scrolling to the top of that section
 
 Also the menu keeps track of which section a user is currently in. The menu item for the current section is highlighted with a darker background. This acts as a sort of breadcrumb.
 
-Parallax background gives the page a feel of progressing since the foreground scrolls against something which is fixed. To a lesser extent the gradient background helps create a sense of movement while scrollign too.
+Parallax background gives the page a feel of progressing since the foreground scrolls against something which is fixed. To a lesser extent the gradient background helps create a sense of movement as well while scrolling.
 
 Each section in the activities allow the user to read about that particular activity. The *Tell me more ...* button displays further information.
 
@@ -214,9 +216,9 @@ The About me section is a short bio. The link to my linkedin allows a reader to 
 
 The portfolio allows the user to listen to some examples of my music from soundcloud and youtube.
 
-The contact form - through email.js  allows the user to get in touch with me enabling all the tasks which depend on this, asking for scores, performance / conducting opportunities, composition / sound design / arrangement / collaboration propositions, questions about tuition.
-A modal will appear to confirm to the user that the message has been sent.
-Since I am actually using this project, I did make the contact form functional.
+The contact form - through email.js,  allows the user to get in touch with me, enabling all the tasks which depend on this, asking for scores, performance / conducting opportunities, composition / sound design / arrangement / collaboration propositions, questions about tuition.  
+A modal will appear to confirm to the user that the message has been sent.  
+Please note: Since I am actually using this project on my site, I did make the contact form functional.
 
 
 ### Features Left to Implement
@@ -233,11 +235,10 @@ Since I am actually using this project, I did make the contact form functional.
 
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - used to build the sctructure and the content of this project.
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - used for styling this project.
-describing the presentation of a document written in a markup language like HTML.
-- [jQuery v3.3.1](https://jquery.com) - simplifies accessing the DOM
-- [Bootstrap v3.3.7](https://getbootstrap.com/docs/3.3/) - used for some of the styles (modified) as well as layout of the content.
-- [Font Awesome v4.7.0](https://fontawesome.com/v4.7.0/) - used to display the GitHub Icon
-- [Google Fonts](https://fonts.google.com/) - Lobster and Roboto
+- [jQuery v3.3.1](https://jquery.com) - simplifies accessing the DOM.
+- [Bootstrap v3.3.7](https://getbootstrap.com/docs/3.3/) - used for some of the styles (modified), as well as layout of the content.
+- [Font Awesome v4.7.0](https://fontawesome.com/v4.7.0/) - used to display the GitHub and Linkedin Icons.
+- [Google Fonts](https://fonts.google.com/) - Lobster and Roboto.
 - [email.js](http://www.emailjs.com/) - used to enable the contact form to send emails to me.
 
 ## TESTING
@@ -265,7 +266,7 @@ Noticed that links for bootstrap (both css and js are not loading.)
 13. Tested media query for margin in composition portfolio. Pass
 14. Changed jQuery code that shows current year in copyright note with javaScript as it was waiting to load everything including the 
 code from SoundCloud. This was resulting in the page sitting note showing the correct copyright note. Pass
-15. The contact form itself is has no back end and will not submit anything. 
+15. The contact form itself has no back end and will not submit anything. 
     To indicate some activity I added jQuery code to display an alert when the contact form is submitted. This was tested. Pass
 16. Added validation code. Tested - Pass
 17. Added code that will hide the collapsed menu when an item is selected. Pass
@@ -279,20 +280,22 @@ code from SoundCloud. This was resulting in the page sitting note showing the co
     4. Clicks on the *Tell me more ...* button (secondary CTA)
     5. Reads the content
     6. Press the *get in touch* button (primary CTA)
+    7. Fills in the form and press the submit button
 
-**Test pass on desktop. FIXED: ~~On mobiles I found that the user is taken to the submit button. I would like to improve on this later.~~**
+**Test pass on desktop.**
 
 -----
 
-* A performer wants to play one of my pieces: *could have heard it someone else or looking for anything I can provide*  
+* A performer wants to play one of my pieces: *could have heard it somewhere else or looking for anything I can provide*  
     1. The user comes to the page
     2. Clicks on activites in the menu (or scrolls down manually to the activities section)
     3. Reaches the Composition part
     4. Clicks on the *Tell me more ...* button (secondary CTA)
     5. Reads the content
     6. Press the *get in touch* button (primary CTA)
+    7. Fills in the form and press the submit button
 
-**Test pass on desktop. FIXED: ~~On mobiles I found that the user is taken to the submit button. I would like to improve on this later.~~**
+**Test pass on desktop.**
 
 -----
 
@@ -301,8 +304,9 @@ code from SoundCloud. This was resulting in the page sitting note showing the co
     2. Clicks on activites in the menu (or scrolls down manually to the activities section)
     3. Reaches the Performance part
     4. Press the *get in touch* button (primary CTA)
+    5. Fills in the form and press the submit button
 
-**Test pass on desktop. FIXED: ~~On mobiles I found that the user is taken to the submit button. I would like to improve on this later.~~**
+**Test pass on desktop.**
 
 -----
 
@@ -315,7 +319,8 @@ code from SoundCloud. This was resulting in the page sitting note showing the co
     2. Click on the Portfolio in the menu
     3. The user will click on the various buttons to listen to some of my music.
     4. When the user has listened enough, they might choose to contact me.  
-        They will reach the contact form either through the contact menu item or by scrolling to the bottom of the page. Listeneing to music takes time and if the user is ready to stay and listen they will have all the time to explore the whole page.
+        They will reach the contact form either through the contact menu item or by scrolling to the bottom of the page.  
+        Listeneing to music takes time and if the user is ready to stay and listen they will have all the time to explore the whole page.
 
     In any case commissioning a piece of music is not a decision taken there and then but will involve a lengthy communication.
 
@@ -323,12 +328,12 @@ code from SoundCloud. This was resulting in the page sitting note showing the co
 
 -----
 
-* Someone is looking for a conductor
+* Someone is looking for a conductor.  
     1. Come to the page
     2. Click on Activities from the menu
-    3. Read various sections such as conducting / composition /sound design
+    3. Read various sections such as conducting / composition /sound design  
         Each extended section has a close button that will take the user back to the calling activity.
-        There is a primary CTA button in case the user is ready to get in touch.
+        There is also a primary CTA button in case the user is ready to get in touch.
     4. The user might also choose to read more about me and possibly extend to the Linkein profile.
     5. When the user is ready, they can use the contact form to contact me (or if they are in linked in, they might choose to contact me from there).
 
@@ -336,21 +341,21 @@ code from SoundCloud. This was resulting in the page sitting note showing the co
 
 -----
 
-* An visual artist wants to collaborate on a multimedia project:
+* A visual artist wants to collaborate on a multimedia project:
 
     1. The artist comes to my site
-    2. Read various sections from my activities including the extended sections. Possibilities include composition / sound design / research
-    3. If the user feels ready to contact me, a CTA button is available
+    2. Reads various sections from my activities including the extended sections. Possibilities include composition / sound design / research.
+    3. If the user feels ready to contact me, a CTA button is available.
     4. Alternatively the artist might want to read more about me in which case s/he will go to the About Me either by scrolling or by using the navigation buttons. There is the possibility to reach my Linkein.
-    5. The artist might decide to listen to some of my music from the portfolio
-    6. When the artist want to get in touch there are various routes available. In the section where the CTA button is available this will take the user straight to the contact form. Otherwise they user can scroll to the contact form or use the Contact link in the navigation bar.
+    5. The artist might decide to listen to some of my music from the portfolio.
+    6. When the artist wants to get in touch there are various routes available. In the section where the CTA button is available this will take the user straight to the contact form. Otherwise, the user can scroll to the contact form or use the Contact link in the navigation bar.
 
 **All tested and works well**
 
 -----
 
-* Testing the contact form
-Test reaching the contact form from various places. PASS with the exception that the CTA buttons will take the user to the submit button on mobile devices.
+* Testing the contact form  
+Test reaching the contact form from various places. PASS with the exception that ~~the CTA buttons will take the user to the submit button on mobile devices~~. This has now been fixed.
     1. Submitting empty form: **Error message shown to user prompting to fill in the name**
     2. User fills in only name and trying to submit: **Error message shown prompting user to fill in email**
     3. User fills in first part of email only (Ex. asdf): **Error message showing that the email lacks an @ symbol**
@@ -365,13 +370,13 @@ Test reaching the contact form from various places. PASS with the exception that
 
 ### Mobile / Tablet testing
 
-Apart from using Chrome developer tools to test the layout and functionality of the page in a mobile and tablet layouts, I also tested the site on my mobile phone and that of my friend. Both are android phones.  
+Apart from using Chrome developer tools to test the layout and functionality of the page in mobile and tablet layouts, I also tested the site on my mobile phone and that of my friend. Both are android phones.  
 
-The site is responsive and everything seems to work well in chrome developer tools. However when viewed on a real phone I noticed that the parallax background is not working as intended. In these cases it gracefully degrades to a normal background that scrolls with the page.
+The site is responsive and everything seems to work well in chrome developer tools. However, when viewed on a real phone, I noticed that the parallax background is not working as intended. In these cases it gracefully degrades to a normal background that scrolls with the page.
 
-I found that this is browser dependent. Google Chrome (Mobile v68.03440.91) does not display the parallax background as intended, but Firefox (Mobile v61.0.2) does. I googled for any solutions but none suggested are working.
+I found that this is browser dependent. Google Chrome (Mobile v68.03440.91) does not display the parallax background as intended, but Firefox (Mobile v61.0.2) does. I googled for any possible solutions but none of the suggestions work.
 
-I also noted that the CTA button on mobiles will direct the user to the submit button of the form. The user will have to scroll back up. (This functionality works well on desktop.) It is something that I will work on later.
+FIXED: ~~I also noticed that the CTA button on mobiles will direct the user to the submit button of the form. The user will have to scroll back up.~~ (This functionality works well on desktop.)
 
 ### BUGS
 
@@ -381,21 +386,21 @@ I also noted that the CTA button on mobiles will direct the user to the submit b
 
 **FIXED**
 
-This bug is now fixed. It took me about 8hrs of work and testing but it was worth going through the process. All I had to do is to get the height of the extended info section that was going to be set to 0px and take that amount in consideration the scrolling to the top of the contact form. The complexity arises from the fact that I used the CTA buttons in two other places, out side of the extended info. These are not meant to collapse. I solved this by separating the actions in different functions, something that I should have done from the start. NOTE: The reason why I want to reduce the height of the extended section to 0px is a visual one. I want to animate this in order to avoid a sudden jump that would otherwise happen. This is in keeping with the overall feel of the site that all movements are done smoothly.  
+This bug is now fixed. It took me about 8hrs of work and testing but it was worth going through the process. All I had to do is to get the height of the extended info section that will be set to 0px on closing, and take that amount in consideration when scrolling to the top of the contact form. The complexity arises from the fact that I used the CTA buttons in two other places, outside of the extended info. These are not meant to collapse. I solved this by separating the actions in different functions, something that I should have done from the start. NOTE: The reason why I want to reduce the height of the extended section to 0px is a visual one. I want to animate this in order to avoid a sudden jump that would otherwise happen. This is in keeping with the overall feel of the site that all movements are done smoothly.  
 
 Tested manually on google chrome and my mobile (Android) and it works well.
 
 ----
 
 2. 
-The other bug is the background parallax effect. It does not work on all mobile browsers. I researched this on google but none of the fixes I came across seem to work. This is not a high priority bug as the site still looks and functions well without the parallax effect.
+The other bug is the background parallax effect. It does not work on all mobile browsers. I researched this on google but none of the fixes I came across seems to work. This is not a high priority bug as the site still looks and functions well without the parallax effect.
 
 
 ### Cleaning and validating code
 
 * **HTML** - https://validator.w3.org/  
 There are a number of warnings for the iframes realted to the code from soundcloud. The validator complains about width beign set to 100%. I tried removing this and the iframe will only occupy half the width I want. With width="100%" it works and fills all the space available.  
-There is a Error saying that | is an illegal character. This is found in code copied from google fonts. I am leaving this as is.
+There is an Error saying that | is an illegal character. This is found in code copied from google fonts. I am leaving this as is.
 There are errors saying: "The element button must not appear as a descendant of the a element". These are properly nested and work well as they are and they ensure that no matter where the user clicks on the button it will elicit a response.
 
 * **CSS** - https://jigsaw.w3.org/css-validator/  
@@ -414,15 +419,14 @@ Code is syntactically valid.
 The repository of this project is at [**github repository**](https://github.com/abonello/project-1),  
 and it is deployed as a github page [**here**](https://abonello.github.io/project-1/).
 
-I am also deploying this website as my [live site](anthonybonello.co.uk). This will eventually differ from the project I am submitting for this course.
+I am also deploying this website as my [live site](http://www.anthonybonello.co.uk). This will eventually differ from the project I am submitting for this course.
 
 
 ## CREDITS
 * [Back to top](#milestone-project-1---my-website-as-a-musician)
 
 ### Code from other sources
-Apart from the code from Bootstrap, I am using code provided by soundcloud and youtube to access the material on
-these sites.  
+Apart from some code based on examples in Bootstrap, I am using code provided by soundcloud and youtube to access the material on these sites.  
 The code for scrolling is adapted from various tutorials. I have modified it and used it before in various projects.
 It is heavily documented on youtube and elsewhere.  
 [colorzilla](http://colorzilla.com/gradient-editor) to create background gradients.
