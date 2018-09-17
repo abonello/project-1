@@ -321,7 +321,7 @@ code from SoundCloud. This was resulting in the page sitting note showing the co
     5. Reads the content
     6. Press the *get in touch* button (primary CTA)
 
-**Test pass on desktop. On mobiles I found that the user is taken to the submit button. I would like to improve on this later.**
+**Test pass on desktop. FIXED: ~~On mobiles I found that the user is taken to the submit button. I would like to improve on this later.~~**
 
 -----
 
@@ -333,7 +333,7 @@ code from SoundCloud. This was resulting in the page sitting note showing the co
     5. Reads the content
     6. Press the *get in touch* button (primary CTA)
 
-**Test pass on desktop. On mobiles I found that the user is taken to the submit button. I would like to improve on this later.**
+**Test pass on desktop. FIXED: ~~On mobiles I found that the user is taken to the submit button. I would like to improve on this later.~~**
 
 -----
 
@@ -343,7 +343,7 @@ code from SoundCloud. This was resulting in the page sitting note showing the co
     3. Reaches the Performance part
     4. Press the *get in touch* button (primary CTA)
 
-**Test pass on desktop. On mobiles I found that the user is taken to the submit button. I would like to improve on this later.**
+**Test pass on desktop. FIXED: ~~On mobiles I found that the user is taken to the submit button. I would like to improve on this later.~~**
 
 -----
 
