@@ -402,6 +402,8 @@ There are errors saying: "The element button must not appear as a descendant of 
 It complains about vendor prefixes in code that comes from colorzilla (re background gradient) or was added by form validator. I am goind to leave these as they are.  
 There is also another warning about two classes having the same background and border colors. I will keep these as they are.
 
+* **Form Validator** - https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation
+
 * **JavaScript** - http://esprima.org/demo/validate.html
 Code is syntactically valid.
 
