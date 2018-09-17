@@ -46,7 +46,8 @@
     transition: 200ms ease-out all;
 }
 
-.cta:hover {
+.cta:hover,
+.cta:focus {
     padding: 10px 15px;
     background-color: #fd861d;
     border: none;

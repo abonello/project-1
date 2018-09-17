@@ -39,27 +39,70 @@ $(document).ready(function() {
 
     // Close extra information div
     $( ".btn-card" ).on("click", function() {
-
         $(this).parent().animate({
             height: "0px"
-          }, 500,
+            }, 500,
             function() { $( this )
                 .removeClass( "show" )
                 .addClass( "hidden" );}
-          );
-      });
-
-      // CTA call: Close extra information div
-        $( ".cta" ).on("click", function() {
-
-            $(this).parent().parent().parent().animate({
-                height: "0px"
-            }, 500,
-                function() { $( this )
-                    .removeClass( "show" )
-                    .addClass( "hidden" );}
             );
-        });
+    });
+    var currentHeight = 0;
+
+    $( ".btn-card-cta" ).on("click", function() {
+        currentHeight = $(this).parent().parent().parent().height();
+        // console.log(currentHeight);
+        $(this).parent().parent().parent().animate({
+            height: "0px"
+            }, 500,
+            function() { $( this )
+                .removeClass( "show" )
+                .addClass( "hidden" );}
+            );
+    });
+
+    // CTA call: Close extra information div
+    // $( ".ctaDisplay" ).on("click", function() {
+    //     $(this).parent().parent().parent().animate({
+    //         height: "0px"
+    //     }, 500,
+    //         function() { $( this )
+    //             .removeClass( "show" )
+    //             .addClass( "hidden" );}
+    //     );
+    // });
+
+    $( ".scrollCTA" ).on("click", function(e) {
+        e.preventDefault();
+        var here = $(this.hash).offset().top;
+        $("body,html").animate({
+            scrollTop:here -100 - currentHeight
+        }, 1000);
+    });
+
+
+
+    // SCROLLING
+    // This method is well documented both on youtube and stackflow
+    var scrollLink = $(".scroll");
+    scrollLink.click(function(e) {
+        e.preventDefault();
+        $("body,html").animate({
+            scrollTop:$(this.hash).offset().top - 40 
+        }, 1000);
+    });
+
+    $(window).scroll(function() {
+        var scrollbarLocation = $(this).scrollTop();
+        // console.log(scrollbarLocation);
+        scrollLink.each(function() {
+            var sectionOffset = $(this.hash).offset().top - 40;
+            if (sectionOffset <= scrollbarLocation) {
+                $(this).parent().addClass("active");
+                $(this).parent().siblings().removeClass("active");
+            }
+        })
+    })
 
     // Form Validation and alert
     $("#btn-submit").on("click", function() {
@@ -144,24 +187,4 @@ $(document).ready(function() {
             }
             return true; 
     }   
-
-    // SCROLLING
-    // This method is well documented both on youtube and stackflow
-    var scrollLink = $(".scroll");
-    scrollLink.click(function(e) {
-        e.preventDefault();
-        $("body,html").animate({
-            scrollTop:$(this.hash).offset().top - 40 
-        }, 1000);
-    });
-    $(window).scroll(function() {
-        var scrollbarLocation = $(this).scrollTop();
-        scrollLink.each(function() {
-            var sectionOffset = $(this.hash).offset().top - 40;
-            if (sectionOffset <= scrollbarLocation) {
-                $(this).parent().addClass("active");
-                $(this).parent().siblings().removeClass("active");
-            }
-        })
-    })
 });
