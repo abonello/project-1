@@ -394,7 +394,9 @@ The other bug is the background parallax effect. It does not work on all mobile 
 ### Cleaning and validating code
 
 * **HTML** - https://validator.w3.org/  
-There are a number of warnings for the iframes realted to the code from soundcloud. The validator complains about width beign set to 100%. I tried removing this and the iframe will only occupy half the width I want. With width="100%" it works and fills all the space available.
+There are a number of warnings for the iframes realted to the code from soundcloud. The validator complains about width beign set to 100%. I tried removing this and the iframe will only occupy half the width I want. With width="100%" it works and fills all the space available.  
+There is a Error saying that | is an illegal character. This is found in code copied from google fonts. I am leaving this as is.
+There are errors saying: "The element button must not appear as a descendant of the a element". These are properly nested and work well as they are and they ensure that no matter where the user clicks on the button it will elicit a response.
 
 * **CSS** - https://validator.w3.org/  
 It complains about vendor prefixes in code that comes from colorzilla (re background gradient) or was added by form validator. I am goind to leave these as they are.  
