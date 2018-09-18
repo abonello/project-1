@@ -151,6 +151,9 @@ $(document).ready(function() {
         if(name == ""){
             $('#nameLabel').after('<span class="error"> Please enter your name</span>');
             return false;
+        } else if(name.replace(/\s+/g, ' ') == " ") {
+            $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
+            return false;
         } else if(!nameReg.test(name)){
             $('#nameLabel').after('<span class="error"> Letters only</span>');
             return false;
@@ -172,23 +175,26 @@ $(document).ready(function() {
 
     function validateSubject(subject) {
         var subjectReg = /^[A-Za-z0-9 ]+$/;
-
+    
         if(subject == ""){
             $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
             return false;
-        } 
-        else if(!subjectReg.test(subject)){
+        }  else if(subject.replace(/\s+/g, ' ') == " ") {
+            $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
+            return false;
+        } else if(!subjectReg.test(subject)){
             $('#subjectLabel').after('<span class="error"> Letters or numbers only</span>');
             return false;
-        }
-        return true;
+        } else { return true; }
     }
 
     function validateMessage(message) {
         if(message == ""){
             $('#messageLabel').after('<span class="error"> Please enter your message</span>');
             return false;
-        }
-        return true;
+        } else if(message.replace(/\s+/g, ' ') == " ") {
+            $('#subjectLabel').after('<span class="error"> Please enter your message. Cannot read spaces alone!</span>');
+            return false;
+        } else { return true; }
     }
 });
