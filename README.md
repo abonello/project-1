@@ -447,6 +447,9 @@ There is also another warning about two classes having the same background and b
 * **JavaScript** - http://esprima.org/demo/validate.html
 Code is syntactically valid.
 
+* **jshint Linter** - http://jshint.com/
+Note: *Linter complains that there are 2 undefined variables, namely* **$** *and* **emailjs**. *These are defined in imported files,* **jquery-3.3.1.min.js** *and* **email.min.js** *respectively.* 
+
 
 ## DEPLOYMENT
 * [Back to top](#milestone-project-1---my-website-as-a-musician)
