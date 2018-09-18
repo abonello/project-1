@@ -158,8 +158,7 @@ $(document).ready(function() {
     }
 
     function validateEmail(email) {
-        // var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        var emailReg = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/;
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
         if(email == ""){
             $('#emailLabel').after('<span class="error"> Please enter your email</span>');
