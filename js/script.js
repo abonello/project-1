@@ -124,6 +124,9 @@ $(document).ready(function() {
                     });
             })();
             return false;
+        } else {
+            alert("Please check the form. There is an error that needs fixing.");
+            return false;
         }
         
     }); 
