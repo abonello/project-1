@@ -88,8 +88,8 @@ $(document).ready(function() {
                 $(this).parent().addClass("active");
                 $(this).parent().siblings().removeClass("active");
             }
-        })
-    })
+        });
+    });
 
     // Form Validation and alert
     $("#btn-submit").on("click", function() {
