@@ -129,48 +129,67 @@ $(document).ready(function() {
     }); 
     
     function validateForm(){
-
-        var nameReg = /^[A-Za-z ]+$/;
-        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        var subjectReg = /^[A-Za-z0-9 ]+$/;
         var name = $('#name').val();
         var email = $('#email').val();
         var subject = $('#subject').val();
         var message = $('#message').val();
-        var inputVal = new Array(name, email, subject, message);
     
             $('.error').hide();
-            if(inputVal[0] == ""){
-                $('#nameLabel').after('<span class="error"> Please enter your name</span>');
-                return false;
-            } 
-            else if(!nameReg.test(name)){
-                $('#nameLabel').after('<span class="error"> Letters only</span>');
-                return false;
+            if (
+                validateName(name) &&
+                validateEmail(email) &&
+                validateSubject(subject) &&
+                validateMessage(message)) {
+                    return true; 
             }
-
-            if(inputVal[1] == ""){
-                $('#emailLabel').after('<span class="error"> Please enter your email</span>');
-                return false;
-            } 
-            else if(!emailReg.test(email)){
-                $('#emailLabel').after('<span class="error"> Please enter a valid email address</span>');
-                return false;
-            }
-
-            if(inputVal[2] == ""){
-                $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
-                return false;
-            } 
-            else if(!subjectReg.test(subject)){
-                $('#subjectLabel').after('<span class="error"> Letters or numbers only</span>');
-                return false;
-            }
+            return false;
+    }  
     
-            if(inputVal[3] == ""){
-                $('#messageLabel').after('<span class="error"> Please enter your message</span>');
-                return false;
-            }
-            return true; 
-    }   
+    function validateName(name) {
+        var nameReg = /^[A-Za-z ]+$/;
+
+        if(name == ""){
+            $('#nameLabel').after('<span class="error"> Please enter your name</span>');
+            return false;
+        } else if(!nameReg.test(name)){
+            $('#nameLabel').after('<span class="error"> Letters only</span>');
+            return false;
+        } else { return true; }
+    }
+
+    function validateEmail(email) {
+        // var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        var emailReg = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/;
+
+        if(email == ""){
+            $('#emailLabel').after('<span class="error"> Please enter your email</span>');
+            return false;
+        } 
+        else if(!emailReg.test(email)){
+            $('#emailLabel').after('<span class="error"> Please enter a valid email address</span>');
+            return false;
+        } else { return true; }
+    }
+
+    function validateSubject(subject) {
+        var subjectReg = /^[A-Za-z0-9 ]+$/;
+
+        if(subject == ""){
+            $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
+            return false;
+        } 
+        else if(!subjectReg.test(subject)){
+            $('#subjectLabel').after('<span class="error"> Letters or numbers only</span>');
+            return false;
+        }
+        return true;
+    }
+
+    function validateMessage(message) {
+        if(message == ""){
+            $('#messageLabel').after('<span class="error"> Please enter your message</span>');
+            return false;
+        }
+        return true;
+    }
 });
