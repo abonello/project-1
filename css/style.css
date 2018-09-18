@@ -17,7 +17,8 @@ body {
     background-attachment: fixed;
 }
 
-/* Buttons colors */
+
+/* Secondary CTA Buttons */
 .dusty {
     background-color:  rgb(92, 123, 128);
     border-color: #5C7B80;
@@ -40,6 +41,7 @@ body {
     color: white;
 }
 
+/* Primary CTA button */
 .cta {
     background-color: #fd861d; /* #e68e41;*/
     border: none;
@@ -60,6 +62,7 @@ body {
     box-shadow: 0 0 5px rgba(97, 97, 78, 0.5) inset, 0 0 15px rgba(222, 223, 208, 0.89) inset, 0 0 1px 2px yellow;
 }    
 
+/* colors and general styling */
 .padding {
     padding: 70px 0;
 }
@@ -87,6 +90,8 @@ p {
     font-size: 1.15em;
 }
 
+
+/* nav */
 .navbar-fixed-top {
     color: ivory;
 }
@@ -111,6 +116,7 @@ p {
     margin-right: 50px;
 }
 
+/* nav menu button */
 #btn-menu {
     position: relative;
     border-radius: 25px;
@@ -143,6 +149,7 @@ p {
     border-radius: 20px;
     box-shadow: 0px 0px 5px 3px rgba(255, 238, 203, 0.53);
 }
+
 
 /* Jumbotron */
 .jumbotron {
@@ -211,8 +218,21 @@ p {
     height: auto;
 }
 
-/* Bio / Quote */
+#conducting>p>a {
+    color: rgb(29, 27, 27);
+    position: relative;
+    font-size: 1.2em;
+}
 
+#conducting>p>a:hover {
+    color: black;
+    background:#cfd0d3;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+
+/* Bio / Quote */
 #bio,
 #quote {
     position: relative;
@@ -246,7 +266,6 @@ p {
 
 #bio a {
     color: rgb(255, 233, 184);
-    /* display: relative; */
     position: relative;
     font-size: 1.2em;
 }
@@ -256,6 +275,62 @@ p {
     text-decoration: none;
     font-size: 1.3em;
 }
+
+
+/* Quote */
+blockquote {
+    width: 80%;
+    border: 0;
+    font-size: 1.5em;
+    margin: 0 auto;
+    position: relative;
+}
+
+blockquote::before,
+blockquote::after {
+    content: '';
+    display: block;
+    position: absolute;
+    font-size: 4em;
+    color: #e2ddcf;
+    padding: 0;
+    font-family: 'Lobster', cursive;
+}
+
+blockquote::before {
+    content: '“';
+    top: -20px;
+    left: -20px;
+}
+
+blockquote::after {
+    content: '”';
+    bottom: -20px;
+    right: -20px;
+}
+
+@media only screen and (min-width: 768px) {
+    blockquote {
+        max-width: 800px;
+        font-size: 2em;
+        margin: 0 auto;
+    }
+
+    blockquote::before {
+        top: -20px;
+        left: -40px;
+    }
+    
+    blockquote::after {
+        bottom: -20px;
+        right: -40px;
+    }
+}
+
+blockquote footer {
+    color: rgba(255, 238, 203, 0.53);
+}
+
 
 /* Portfolio */
 .textBG {
@@ -316,68 +391,12 @@ input:focus:invalid {
     font-size: 1.2em;
 }
 
-/* Quote */
-blockquote {
-    width: 80%;
-    border: 0;
-    font-size: 1.5em;
-    margin: 0 auto;
-    position: relative;
-}
-
-
-blockquote::before,
-blockquote::after {
-    content: '';
-    display: block;
-    position: absolute;
-    font-size: 4em;
-    color: #e2ddcf;
-    padding: 0;
-    font-family: 'Lobster', cursive;
-}
-
-blockquote::before {
-    content: '“';
-    top: -20px;
-    left: -20px;
-}
-
-blockquote::after {
-    content: '”';
-    bottom: -20px;
-    right: -20px;
-}
-
-@media only screen and (min-width: 768px) {
-    blockquote {
-        max-width: 800px;
-        font-size: 2em;
-        margin: 0 auto;
-    }
-
-    blockquote::before {
-        top: -20px;
-        left: -40px;
-    }
-    
-    blockquote::after {
-        bottom: -20px;
-        right: -40px;
-    }
-}
-
-blockquote footer {
-    color: rgba(255, 238, 203, 0.53);
-    
-}
-
-/* Form */
 input:invalid { 
     -webkit-box-shadow: none;
 	-moz-box-shadow: none;
     box-shadow: none;
 }
+
 
 /* Footer */
 #footer {
