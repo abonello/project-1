@@ -378,6 +378,22 @@ I found that this is browser dependent. Google Chrome (Mobile v68.03440.91) does
 
 FIXED: ~~I also noticed that the CTA button on mobiles will direct the user to the submit button of the form. The user will have to scroll back up.~~ (This functionality works well on desktop.)
 
+
+### Unit testing Code for Form Validation
+
+I refactored the code related to the form validation and used **Jasmine** (v2.4.1) to unit test the functions. I noticed that I could not unit test the code straight in the javascript file I was using due to the code being in a $(document).ready function. For this reason I copied the code to a separate file for testing, copying back any changes I make.
+
+The code beign tested, the spec code and the html which runs the unit tests are in [this folder](/Users/anthonybonello/Documents/FullStackWebDeveloper/CI_MilestoneProjects/project_1/jasmine). I am also including a zip of the version of jasmine I used. If you would like to run the unit tests, you will need to unzip this in addition to the files I made.
+
+Note: I had to add jQuery (v3.3.1) to the html file.
+
+
+While doing the unit tests I did uncover two bugs. The first one allowed a user to send the form by just filling spaces for the name, subject and message, together with an email.
+The second one allowed a user to ignore the error messages and still try to send the form. More on these two bugs below, in the BUGS section.
+
+
+
+
 ### BUGS
 
 1. 
@@ -391,8 +407,26 @@ This bug is now fixed. It took me about 8hrs of work and testing but it was wort
 Tested manually on google chrome and my mobile (Android) and it works well.
 
 ----
+2.
+~~While unit testing, I noticed that I can just filling spaces for the name, subject and message, together with an email and still be able to send the form. I did not like this and consider it a bug.~~
 
-2. 
+**FIXED**
+
+This is now fixed. I added code that would reject a white space. Adjacent white spaces would be collapsed to a single space and thus reject too.
+
+----
+
+3.
+~~A Bug allowed a user to ignore the error messages and still try to send the form. Example, If I fill in the name and email and then add a subject containing a special character that I am not accepting, I can fill in the message, ignore the error and try to submit the form. On doing this, the page would refresh. Apart from this the user would not get any feedback on what has happened and why.~~
+
+**FIXED**
+
+This bug is now fixed and an alert will be displayed whenever a error is displayed including this particular case. When the user dismisses the alert, s/he will be taken back to the form to do the necessary edits.
+
+----
+
+
+4. 
 The other bug is the background parallax effect. It does not work on all mobile browsers. I researched this on google but none of the fixes I came across seems to work. This is not a high priority bug as the site still looks and functions well without the parallax effect.
 
 
