@@ -240,6 +240,7 @@ Please note: Since I am actually using this project on my site, I did make the c
 - [Font Awesome v4.7.0](https://fontawesome.com/v4.7.0/) - used to display the GitHub and Linkedin Icons.
 - [Google Fonts](https://fonts.google.com/) - Lobster and Roboto.
 - [email.js](http://www.emailjs.com/) - used to enable the contact form to send emails to me.
+- [jasmine v2.4.1](https://github.com/jasmine/jasmine) - behavior-driven development framework, used to unit test the functions related to form validation.
 
 ## TESTING
 * [Back to top](#milestone-project-1---my-website-as-a-musician)
