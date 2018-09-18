@@ -100,6 +100,10 @@ The plan is to have a Single Page Application (SPA) website. It will be divided 
 
 There will also be a fixed **navigation** at the top, a **header** just below the navigation, a **contact form** and a **footer** with links.
 
+I decided against having obvious headers for the activites and the portfolio sections. If someone reaches them from the navigation they will know before arriving. For someone arriving there through scrolling, the subheadings in the activites and the content of the portfolio is easy to distinguish.   
+
+I feel that adding blaring titles to these sections will be overkill and sort of corny.
+
 I will also add a quote section between the portfolio section and the contact form. This will form a natural break of an otherwise two sections using the greyish gradient background.
 
 **Navigation** will be through the nav buttons at the top, the buttons (Primary and Secondary CTA) as well as through scrolling.
