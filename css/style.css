@@ -4,12 +4,24 @@ body {
 
 /* Backgrounds */
 .bgColor1 {
-    /* background-color: #50596d; */
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#50596d+0,50596d+100,50596d+100&0.31+0,0.49+15,0.49+87,0.31+100 */
-    background: -moz-linear-gradient(top, rgba(80,89,109,0.31) 0%, rgba(80,89,109,0.49) 15%, rgba(80,89,109,0.49) 87%, rgba(80,89,109,0.31) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(80,89,109,0.31) 0%,rgba(80,89,109,0.49) 15%,rgba(80,89,109,0.49) 87%,rgba(80,89,109,0.31) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(80,89,109,0.31) 0%,rgba(80,89,109,0.49) 15%,rgba(80,89,109,0.49) 87%,rgba(80,89,109,0.31) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(top, rgba(80,89,109,0.31) 0%, rgba(80,89,109,0.49) 25%, rgba(80,89,109,0.49) 60%, rgba(80,89,109,0.31) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(80,89,109,0.31) 0%,rgba(80,89,109,0.49) 25%,rgba(80,89,109,0.49) 60%,rgba(80,89,109,0.31) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(80,89,109,0.31) 0%,rgba(80,89,109,0.49) 25%,rgba(80,89,109,0.49) 60%,rgba(80,89,109,0.31) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f50596d', endColorstr='#4f50596d',GradientType=0 ); /* IE6-9 */
+    position: relative;
+}
+.bgColor1::before {
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(80,89,109,0.31) 0%,rgba(80,89,109,0.49) 25%,rgba(80,89,109,0.49) 60%,rgba(80,89,109,0.31) 100%), url("../img/background-board-construction-269035-Repeating-small-min.jpg") repeat top;
+    background-blend-mode: color-dodge;
+    filter: opacity(0.15);
+    z-index: -1;
 }
 
 .bgColor2 {
