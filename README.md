@@ -247,6 +247,7 @@ Please note: Since I am actually using this project on my site, I did make the c
 - [Google Fonts](https://fonts.google.com/) - Lobster and Roboto.
 - [email.js](http://www.emailjs.com/) - used to enable the contact form to send emails to me.
 - [jasmine v2.4.1](https://github.com/jasmine/jasmine) - behavior-driven development framework, used to unit test the functions related to form validation.
+- [Compress JPEG ](compressjpeg.com) - I use GIMP to manipulate images. Once I export them as jpg, I use Compress Jpeg to minify them. Usually, I can gain between 25% and 50% reduction in file size.
 
 ## TESTING
 * [Back to TOP](#milestone-project-1---my-website-as-a-musician)
