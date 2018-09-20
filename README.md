@@ -485,7 +485,7 @@ Playful triangle pattern, this time in black.
 Use: All patterns on this site can be used free of charge, but please [read this](https://creativecommons.org/licenses/by-sa/3.0/) before using them: CC BY-SA 3.0 - Subtle Patterns © Toptal Designers.
 
 **Wood Image** for background of grey areas:  
-Downloaded from [Pexels](https://www.pexels.com/photo/background-board-construction-dirty-269035/)
+Downloaded from [Pexels](https://www.pexels.com/photo/background-board-construction-dirty-269035/)  
 Use: CC0 License  
 Image is cropped to create a seamlessly horizontally tiling image;  
 copied, inverted and pasted below to created a seamlessly vertically tiling image.
