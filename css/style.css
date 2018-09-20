@@ -42,6 +42,8 @@ body {
     border-color: #5C7B80;
     box-shadow: 1px 1px 3px rgb(98, 128, 133);
     color: white;
+    margin: 5px auto;
+
 }
 
 .btn:active,
@@ -218,6 +220,25 @@ p {
     margin-top: 50px;
 }
 
+.flex-container {
+    display:flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activityBtn {
+    width: 100%;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+}
 
 /* Extended Info */
 .hidden {
