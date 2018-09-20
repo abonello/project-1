@@ -21,20 +21,20 @@
 ---------
   
 ## INTRODUCTION
-* [Back to top](#milestone-project-1---my-website-as-a-musician)
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
 
 I have had a personal website for over 15 years. Initially it was very simple, single page, hand coded html with very little styling. It was hosted on various free services. Then I improved the styling and content leading to getting my own hosting. Following that, I used joomla for my site for a number of years. Now I built the current single-page site.
 ____
 
 ## UXD
-* [Back to top](#milestone-project-1---my-website-as-a-musician)
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
 
 This is the latest incarnation of my website. Its main function is to be an extension of my CV and having a place of contact if someone wants to get in touch but does not know my email address.
 
 The plan is to have a single page website with a parallax background. The design should be responsive.
 
 ### **Strategy** 
-* [Back to top](#milestone-project-1---my-website-as-a-musician)
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
 
 --------
 **What do I want as the owner of the site?**
@@ -66,7 +66,7 @@ The navigation will smoothly scroll up and down so that the users will know that
 
 
 ### **Scope** 
-* [Back to top](#milestone-project-1---my-website-as-a-musician)
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
 
 #### Features to implement
 
@@ -91,7 +91,7 @@ The navigation will smoothly scroll up and down so that the users will know that
 This artist will have the opportunity to read about my compositions and also to listen to some examples. There will be the opportunity to get in touch through the online contact form.
 
 ### **Structure**
-* [Back to top](#milestone-project-1---my-website-as-a-musician)
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
 
 The plan is to have a Single Page Application (SPA) website. It will be divided into three main sections:
 1. Activities
@@ -127,7 +127,7 @@ The **Portfolio** part will contain a few examples based on the music I have ava
 
 
 ### Skeleton
-* [Back to top](#milestone-project-1---my-website-as-a-musician)
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
 
 The overall plan is to have a Single Page Application with a fixed navigation at the top. This allows the user to reach all main sections of the site.
 
@@ -141,7 +141,7 @@ Priority was given to the various activities that I engage in, followed by the b
 
 
 ### Surface
-* [Back to top](#milestone-project-1---my-website-as-a-musician)
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
 
 The overall design is unified by the alternating dark triangle background with the greyish gradient background sections. The color scheme is monochromatic with some contrasting collors for CTA (buttons). 
         
@@ -191,7 +191,8 @@ Fonts used are from [google fonts](https://fonts.google.com/). The main font is 
 
 
 ## WIREFRAMES
-* [Back to top](#milestone-project-1---my-website-as-a-musician)
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)  
+* [Back to Skeleton](#skeleton)
 
 Wireframes for mobile, tablet and desktop views have been prepared using  
 ![Pencil](img/Pencil-logo-shadow.png)[**Pencil Project**](https://pencil.evolus.vn/)
@@ -203,7 +204,7 @@ Please note that a copy of the files for this wireframe are in this repository t
 
 
 ## FEATURES
-* [Back to top](#milestone-project-1---my-website-as-a-musician)
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
 
 ### Existing Features
 
@@ -235,7 +236,7 @@ Please note: Since I am actually using this project on my site, I did make the c
 
 
 ## TECHNOLOGIES USED
-* [Back to top](#milestone-project-1---my-website-as-a-musician)
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
 
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - used to build the sctructure and the content of this project.
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - used for styling this project.
@@ -247,7 +248,7 @@ Please note: Since I am actually using this project on my site, I did make the c
 - [jasmine v2.4.1](https://github.com/jasmine/jasmine) - behavior-driven development framework, used to unit test the functions related to form validation.
 
 ## TESTING
-* [Back to top](#milestone-project-1---my-website-as-a-musician)
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
 
 ### Final check on desktop
 
@@ -456,7 +457,7 @@ Note: *Linter complains that there are 2 undefined variables, namely* **$** *and
 
 
 ## DEPLOYMENT
-* [Back to top](#milestone-project-1---my-website-as-a-musician)
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
 
 The repository of this project is at [**github repository**](https://github.com/abonello/project-1),  
 and it is deployed as a github page [**here**](https://abonello.github.io/project-1/).
@@ -465,7 +466,7 @@ I am also deploying this website as my [live site](http://www.anthonybonello.co.
 
 
 ## CREDITS
-* [Back to top](#milestone-project-1---my-website-as-a-musician)
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
 
 ### Code from other sources
 Apart from some code based on examples in Bootstrap, I am using code provided by soundcloud and youtube to access the material on these sites.  
