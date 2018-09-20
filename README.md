@@ -145,7 +145,7 @@ Priority was given to the various activities that I engage in, followed by the b
 
 The overall design is unified by the alternating dark triangle background with the greyish gradient background sections. The color scheme is monochromatic with some contrasting collors for CTA (buttons). 
         
-The use of parallax background in alternating sections creates an interesting break to the grey gradient background as well as to give this SPA a structure (form).
+The use of parallax background in alternating sections creates an interesting break to the grey gradient background as well as to give this SPA a structure (form). The grey gradient background is enhanced with an image which sits in the ::before selector.
 
 All navigation is animated and controlled by javascript to give a smooth scroll effect. This enables the users to feel that they are like moving on a map rather than thrown from one place to another without knowing where they landed. The navigation acts as a sort of breadcrumbs as javascript keeps track of the page position and highlight the appropriate menu item.
 
@@ -166,7 +166,8 @@ The quote was added to facilitate the flow of the overall structure of the page 
 rgb(255, 233, 184) is taken from music background image.  
 
 * **Background color** (For non-parallax sections):  
-Using a gradient (from [colorzilla](http://www.colorzilla.com/gradient-editor/)) which I like better. (*changed from a fixed #50596d*)
+Using a gradient (from [colorzilla](http://www.colorzilla.com/gradient-editor/)) which I like better. (*changed from a fixed #50596d*).  
+    This is used in conjunction to the slightly opaque background image which is placed in the ::before selector. The overall effect is one where the gradient lets more of the background image passing through towards the top and bottom of the section. It also colors the image since it is blended (mode: color-dodge) within the ::before.
 
 * **Text color**:  
 rgb(0, 0, 0) (*changed from #D5D5D5*) for grey gradient backgrounds and color: rgb(255, 233, 184) (same as header) for text on triangular background, including about me, quote and footer. 
