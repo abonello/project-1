@@ -115,9 +115,16 @@ p {
     color: ivory;
 }
 
-.navbar-brand {
+.navbar-brand>a {
     margin-left: 0px;
     font-family: 'Lobster', cursive;
+    transition: 0.5s;
+}
+
+.navbar-brand>a:hover {
+    color:red;
+    filter: hue-rotate(-50deg);
+    font-size: 1.2em;
 }
 
 @media only screen and (min-width: 768px) {
