@@ -165,6 +165,9 @@ The quote was added to facilitate the flow of the overall structure of the page 
 * **Heading color**:  
 rgb(255, 233, 184) is taken from music background image.  
 
+* **Logo Color / Brand**:  
+rgb(255, 255, 240) with a transition to red with a hue-rotate of -50deg to reach rgb(217, 40, 188) #d928bc, the same colour used by for the hover of the secondary CTA. The reason why this color is initially set to red is to get the color transition to work over the range of colors I wanted.
+
 * **Background color** (For non-parallax sections):  
 Using a gradient (from [colorzilla](http://www.colorzilla.com/gradient-editor/)) which I like better. (*changed from a fixed #50596d*).  
     This is used in conjunction to the slightly opaque background image which is placed in the ::before selector. The overall effect is one where the gradient lets more of the background image passing through towards the top and bottom of the section. It also colors the image since it is blended (mode: color-dodge) within the ::before.
@@ -182,9 +185,9 @@ Same colors are used for links in **About Me**.
 
 * **Button colors** (complementary colors):  
     * **Primary CTA** : rgb(253, 134, 29) #fd861d
-    * **Secondary CTA** : rgb(92, 123, 128) #5c7b80
-
-* Set all buttons in soundcloud to value %2364746c (a sort of green). This color code is one of the standard soundcloud colors.
+    * **Secondary CTA** :rgb(99, 40, 217) #6328d9 with a hover color of rgb(217, 40, 188)
+#d928bc
+* Set all buttons in soundcloud to value %23ff5500 (orange). This color code is one of the standard soundcloud colors.
 
 #### Typography
 
