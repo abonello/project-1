@@ -200,7 +200,7 @@ Wireframes for mobile, tablet and desktop views have been prepared using
 
 
 You can reach these [here](https://abonello.github.io/project-1_wireframe/)  
-Please note that a copy of the files for this wireframe are in this repository too at wireframe/version2/index_v2.html
+Please note that a copy of the files for this wireframe are in this repository too at [wireframe/version2/index_v2.html](https://github.com/abonello/project-1/tree/master/wireframe/version2)
 
 
 
