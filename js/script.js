@@ -74,10 +74,13 @@ $(document).ready(function() {
     // SCROLLING
     var scrollLink = $(".scroll");
     scrollLink.click(function(e) {
-        e.preventDefault();
-        $("body,html").animate({
-            scrollTop:$(this.hash).offset().top - 40 
-        }, 1000);
+        // only on index.html
+        if (document.location.pathname.match(/[^\/]+$/)[0] === "index.html") {
+            e.preventDefault();
+            $("body,html").animate({
+                scrollTop:$(this.hash).offset().top - 40 
+            }, 1000);
+        }
     });
 
     $(window).scroll(function() {
