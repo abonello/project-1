@@ -83,7 +83,20 @@ $(document).ready(function() {
         }
     });
 
+    var dlBtn = $("#downloadBtnID");
     $(window).scroll(function() {
+        var scrollbarLocation = $(this).scrollTop();
+        dlBtn.each(function() {
+            // var sectionOffset = $(this.hash).offset().top - 40;
+            if (scrollbarLocation < 500) {
+                $(this).addClass("hideDownloadBtn");
+            } else if (scrollbarLocation > 500) {
+                $(this).removeClass("hideDownloadBtn");
+            }
+        });
+    });
+
+    $(window).downloadBtnDisplay(function() {
         var scrollbarLocation = $(this).scrollTop();
         scrollLink.each(function() {
             var sectionOffset = $(this.hash).offset().top - 40;

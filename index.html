@@ -60,6 +60,51 @@
                 padding: 30px;
             }
         }
+        /* top download button in navbar */
+        .navDownloadBtn {
+            font-family: Arial; /* Fix this later */
+            color: blue;
+            /* position: absolute; */
+            float: left;
+            margin: 10px 0 0 10px;
+            color: black;
+            background: red;
+            border: 1px solid red;
+            border-radius: 10px;
+            /* left: 160px; 300 */
+            /* right: 20px; */
+            /* top: 5px; */
+            /* bottom: 44px; */
+            padding: 5px 10px 5px 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            opacity: 1;
+            transition: all 2s;
+        }
+
+        .hideDownloadBtn {
+            opacity: 0;
+            transition: all 1s;
+        }
+        .btnTextHide {
+            display: none;
+        }
+        @media screen and (min-width: 400px) {
+            .btnTextHide {
+                display: inline;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            .btnTextHide {
+                display: none;
+            }
+        } 
+        @media screen and (min-width: 992px) {
+            .btnTextHide {
+                display: inline;
+            }
+        }
     </style>
 </head>
 
@@ -70,6 +115,7 @@
             <div class="navbar-brand">
                 <a class="scroll" href="#home" id="home1">Anthony Bonello</a>
             </div>
+            <a class="navDownloadBtn hideDownloadBtn" href="music_download.html" id="downloadBtnID"><i class="fa fa-download" aria-hidden="true"></i><span class="btnTextHide"> Download</span></a>
             <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" id="btn-menu" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
             </button>
@@ -79,7 +125,6 @@
                     <li class="nav-item"><a class="nav-link scroll" href="#activities" id="activitiesNav">Activities</a></li>
                     <li class="nav-item"><a class="nav-link scroll" href="#bio" id="bioNav">About Me</a></li>
                     <li class="nav-item"><a class="nav-link scroll" href="#portfolio" id="portfolioNav">Portfolio</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link scroll" href="music_download.html" id="downloadNav">Download Music</a></li> -->
                     <li class="nav-item"><a class="nav-link scroll" href="#contact" id="contactNav">Contact</a></li>
                 </ul>
             </div>
