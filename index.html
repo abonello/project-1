@@ -10,6 +10,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .jumbotron {
+            position: relative;
+        }
+        .downloadBtn {
+            position: absolute;
+            color: black;
+            background: red;
+            border: 1px solid red;
+            border-radius: 10px;
+            left: 20px;
+            right: 20px;
+            bottom: 44px;
+            padding: 20px 0 20px 0;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        @media only screen and (min-width: 600px) {
+            .downloadBtn {
+                /* position: absolute; */
+                /* color: black; */
+                /* background: red; */
+                /* border: 1px solid red; */
+                /* border-radius: 10px; */
+                left: auto;
+                right: 200px;
+                top: 145px;
+                bottom: auto;
+                padding: 30px;
+                /* font-size: 30px;
+                font-weight: 600; */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -28,6 +63,7 @@
                     <li class="nav-item"><a class="nav-link scroll" href="#activities" id="activitiesNav">Activities</a></li>
                     <li class="nav-item"><a class="nav-link scroll" href="#bio" id="bioNav">About Me</a></li>
                     <li class="nav-item"><a class="nav-link scroll" href="#portfolio" id="portfolioNav">Portfolio</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link scroll" href="music_download.html" id="downloadNav">Download Music</a></li> -->
                     <li class="nav-item"><a class="nav-link scroll" href="#contact" id="contactNav">Contact</a></li>
                 </ul>
             </div>
@@ -39,6 +75,7 @@
             <h1>Anthony Bonello</h1>
             <h2>Independent Music Professional</h2>
         </div>
+        <a class="downloadBtn" href="music_download.html" id="">Download Music</a>
     </header>
 
     <!-- Activities -->
