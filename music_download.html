@@ -40,13 +40,101 @@
             <h1>Anthony Bonello</h1>
             <h2>Independent Music Professional<br><br>Downloads</h2>
         </div>
-        <!-- <a class="downloadBtn" href="music_download.html" id="">Download Music</a> -->
     </header>
-    <p></p>
-    <p></p>
-    <p>
-        Music Download Page
-    </p>
+    <div class="container-fluid bgColor1">
+        <!-- ANGULAR JS CONTAINER -->
+        <div class="container padding textColor1" ng-controller="ctrl">
+            <div class="row main-header">
+                <div class="col col-sm-12">
+                    <h1>
+                        <span style="font-size:48px;">Music Download</span>
+                    </h1>
+                    <h2>Follow the instructions below:</h2>
+                </div>
+            </div>
+            <div class="row chunk">
+                <span class="numbering col col-sm-12 col-md-1">
+                    1
+                </span>
+                <div class="col col-sm-12 col-md-4">
+                    <p class="instruction">
+                        Select a composer
+                    </p>
+                </div>
+                <div class="col col-sm-12 col-md-7">
+                    <select class="select-css" name="" id="" ng-model="selectedComposer"
+                        ng-change="selectedComposerChanged()">
+                        <option ng-repeat="composer in data" value="{{ composer.composer }}">{{
+                            composer.composer
+                          }}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row chunk" ng-repeat="thisComposer in data | filter: selectedComposer" ng-if="selectedComposer">
+                <span class="numbering col col-sm-12 col-md-1">
+                    2
+                </span>
+                <div class="col col-sm-12 col-md-4">
+                    <p class="instruction ">Select a piece</p>
+                </div>
+                <div class="col col-sm-12 col-md-7">
+                    <select class="select-css" name="" id="" ng-model="selectedPiece"
+                        ng-change="selectedPieceChanged(selectedPiece)">
+                        <option ng-repeat="piece in thisComposer.pieces" value="{{ piece.name }}">{{ piece.name }}</option>
+                    </select>
+                </div>
+            </div>
+    
+            <!-- Select Part -->
+            <div class="row chunk" ng-repeat="thisComposer in data | filter: selectedComposer"
+                ng-model="piecesOfThisComposer" ng-if="listOfParts.length > 0">
+                <span class="numbering col col-sm-12 col-md-1">
+                    3
+                </span>
+                <div class="col col-sm-12 col-md-4">
+                    <p class="instruction ">Select a piece</p>
+                </div>
+                <div class="col col-sm-12 col-md-7">
+                    <select class="select-css" name="" id="" ng-model="selectedPart"
+                        ng-change="selectedPartChanged(selectedPart)">
+                        <option ng-repeat="part in listOfParts" value="{{ part.part }}">{{
+                              part.part
+                            }}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row chunk" ng-if="partSelected" ng-repeat="part in listOfParts | filter: partSelected">
+                <div class="row">
+                    <span class="partHeading">{{ selectedComposer }} - {{ selectedPiece }},
+                        {{ selectedPieceInfo }} </span><br>
+                    <span class="downloadInfo">
+                        Click the download button to download the part. If your browser opens the file in a different tab
+                        then follow the instructions of your browser to save the file to your computer. Usually in such
+                        cases there will be a download button which might look like a down-pointing arrow.
+                    </span>
+    
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 bottomDistance">
+                        <span class="partTitle">{{ part.part }}</span></div>
+                    <div class="col-sm-3 bottomDistance">
+                        <a ng-href="assets/pdf/{{ part.fileName }}" target="_blank">
+                            <span class="downloadLink">
+                                Download
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <img ng-if="part.image" ng-src="assets/images/{{ part.image }}" alt="image for {{ part.part }}"
+                            width="200" onerror="this.style.display='none'" />
+                    </div>
+                </div>
+            </div>
+            </span>
+        </div>
+        <!-- END ANGULAR JS CONTAINER -->
+    </div>
+
     <!-- Footer -->
     <footer class="bgColor2 padding textColor2" id="footer">
         <div class="container">
