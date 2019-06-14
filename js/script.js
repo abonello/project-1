@@ -83,28 +83,22 @@ $(document).ready(function() {
         }
     });
 
-    var dlBtn = $("#downloadBtnID");
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var scrollbarLocation = $(this).scrollTop();
-        dlBtn.each(function() {
-            // var sectionOffset = $(this.hash).offset().top - 40;
-            if (scrollbarLocation < 500) {
-                $(this).addClass("hideDownloadBtn");
-            } else if (scrollbarLocation > 500) {
-                $(this).removeClass("hideDownloadBtn");
-            }
-        });
-    });
-
-    $(window).downloadBtnDisplay(function() {
-        var scrollbarLocation = $(this).scrollTop();
-        scrollLink.each(function() {
-            var sectionOffset = $(this.hash).offset().top - 40;
-            if (sectionOffset <= scrollbarLocation) {
-                $(this).parent().addClass("active");
-                $(this).parent().siblings().removeClass("active");
-            }
-        });
+        if (document.location.pathname.match(/[^\/]+$/)[0] === "index.html") {
+            scrollLink.each(function () {
+                var sectionOffset = $(this.hash).offset().top - 40;
+                if (sectionOffset <= scrollbarLocation) {
+                    $(this)
+                        .parent()
+                        .addClass("active");
+                    $(this)
+                        .parent()
+                        .siblings()
+                        .removeClass("active");
+                }
+            });
+        }
     });
 
     // Form Validation and alert
@@ -216,4 +210,16 @@ $(document).ready(function() {
             return false;
         } else { return true; }
     }
+
+    var dlBtn = $("#downloadBtnID");
+    $(window).scroll(function () {
+        var scrollbarLocation = $(this).scrollTop();
+        dlBtn.each(function () {
+            if (scrollbarLocation < 500) {
+                $(this).addClass("hideDownloadBtn");
+            } else if (scrollbarLocation > 500) {
+                $(this).removeClass("hideDownloadBtn");
+            }
+        });
+    });
 });
