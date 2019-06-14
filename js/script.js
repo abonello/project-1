@@ -70,11 +70,6 @@ $(document).ready(function() {
         }, 1000);
     });
 
-    // Debugging
-    (function () {
-        console.log(document.location.pathname);
-    })();
-
 
     // SCROLLING
     var scrollLink = $(".scroll");
@@ -88,7 +83,6 @@ $(document).ready(function() {
                 }, 1000);
             }
         } catch(err) {
-            console.log(err);
             e.preventDefault();
             $("body,html").animate({
                 scrollTop: $(this.hash).offset().top - 40
@@ -114,7 +108,6 @@ $(document).ready(function() {
                 });
             }
         } catch (err) {
-            console.log(err);
             scrollLink.each(function () {
                 var sectionOffset = $(this.hash).offset().top - 40;
                 if (sectionOffset <= scrollbarLocation) {
