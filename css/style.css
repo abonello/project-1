@@ -157,6 +157,11 @@ p {
   filter: hue-rotate(-50deg);
   font-size: 1.2em;
 }
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #000;
+    background-color: #9d9d9d;
+}
 
 @media only screen and (min-width: 768px) {
   .navbar-brand {
