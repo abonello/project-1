@@ -70,22 +70,51 @@ $(document).ready(function() {
         }, 1000);
     });
 
+    // Debugging
+    (function () {
+        console.log(document.location.pathname);
+    })();
+
 
     // SCROLLING
     var scrollLink = $(".scroll");
     scrollLink.click(function(e) {
         // only on index.html
-        if (document.location.pathname.match(/[^\/]+$/)[0] === "index.html") {
+        try {
+            if (document.location.pathname.match(/[^\/]+$/)[0] === "index.html") {
+                e.preventDefault();
+                $("body,html").animate({
+                    scrollTop:$(this.hash).offset().top - 40 
+                }, 1000);
+            }
+        } catch(err) {
+            console.log(err);
             e.preventDefault();
             $("body,html").animate({
-                scrollTop:$(this.hash).offset().top - 40 
+                scrollTop: $(this.hash).offset().top - 40
             }, 1000);
         }
     });
 
     $(window).scroll(function () {
         var scrollbarLocation = $(this).scrollTop();
-        if (document.location.pathname.match(/[^\/]+$/)[0] === "index.html") {
+        try {
+            if (document.location.pathname.match(/[^\/]+$/)[0] === "index.html") {
+                scrollLink.each(function () {
+                    var sectionOffset = $(this.hash).offset().top - 40;
+                    if (sectionOffset <= scrollbarLocation) {
+                        $(this)
+                            .parent()
+                            .addClass("active");
+                        $(this)
+                            .parent()
+                            .siblings()
+                            .removeClass("active");
+                    }
+                });
+            }
+        } catch (err) {
+            console.log(err);
             scrollLink.each(function () {
                 var sectionOffset = $(this.hash).offset().top - 40;
                 if (sectionOffset <= scrollbarLocation) {
