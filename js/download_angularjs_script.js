@@ -175,6 +175,7 @@ app.controller("ctrl", [
 
     $.getJSON("../assets/data/info.json", function(data) {
       //   $scope.data = data;
+    //   Make sure $scope.data is ready to populate options in html
       $scope.$apply(function() {
         $scope.data = data;
       });
