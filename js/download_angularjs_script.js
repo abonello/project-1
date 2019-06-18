@@ -175,10 +175,13 @@ app.controller("ctrl", [
 
     $.getJSON("../assets/data/info.json", function(data) {
       //   $scope.data = data;
-    //   Make sure $scope.data is ready to populate options in html
+      //   Make sure $scope.data is ready to populate options in html
       $scope.$apply(function() {
         $scope.data = data;
       });
+      //   OR
+      // $scope.data = data;
+      // $scope.$apply();
       $scope.selectedComposer = "";
       $scope.selectedPiece = "";
       $scope.thisComposerPieces = "";
@@ -188,7 +191,7 @@ app.controller("ctrl", [
       $scope.partSelected = "";
       $scope.selectedPieceInfo = "";
     }).then(function() {
-      console.log($scope.data);
+      //   console.log($scope.data);
       $scope.selectedComposerChanged = function() {
         $scope.listOfPieces = [];
         $scope.selectedPiece = "";
