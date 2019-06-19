@@ -1,8 +1,14 @@
 var app = angular.module("app", []);
 
 app.controller("ctrl", [
-  "$scope",
-  function($scope) {
+  "$scope", "$http",
+  function($scope, $http) {
+    $scope.data = [];
+    $http.get("../assets/data/info.json").then(function(data) {
+        $scope.data = data.data;
+        // console.log(data);
+        // console.log($scope.data);
+    });
     // $scope.data = [
     //     {
     //         composer: "Puccini",
@@ -173,15 +179,17 @@ app.controller("ctrl", [
     //     }
     // ];
 
-    $.getJSON("../assets/data/info.json", function(data) {
+    // $.getJSON("../assets/data/info.json", function(data) {
       //   $scope.data = data;
       //   Make sure $scope.data is ready to populate options in html
-      $scope.$apply(function() {
-        $scope.data = data;
-      });
+    //   $scope.$apply(function() {
+    //     $scope.data = data;
+    //   });
       //   OR
       // $scope.data = data;
       // $scope.$apply();
+
+
       $scope.selectedComposer = "";
       $scope.selectedPiece = "";
       $scope.thisComposerPieces = "";
@@ -190,8 +198,12 @@ app.controller("ctrl", [
       $scope.listOfParts = [];
       $scope.partSelected = "";
       $scope.selectedPieceInfo = "";
-    }).then(function() {
+
+
+    // }).then(function() {
       //   console.log($scope.data);
+
+
       $scope.selectedComposerChanged = function() {
         $scope.listOfPieces = [];
         $scope.selectedPiece = "";
@@ -212,7 +224,7 @@ app.controller("ctrl", [
         $scope.listOfParts = [];
         $scope.data.forEach(element => {
           element.pieces.forEach(piece => {
-            // console.log(piece.name);
+                        // console.log(piece.name);
             if (piece.name === thisPiece) {
               $scope.selectedPieceInfo = piece.info;
               piece.parts.forEach(part => {
@@ -226,6 +238,6 @@ app.controller("ctrl", [
           $scope.partSelected = e;
         };
       };
-    });
+                    // });
   }
 ]);
