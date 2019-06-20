@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app" ng-cloak>
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,17 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .partsDisplay {
+            list-style: none;
+        }
+        .partId {
+            width: 30px;
+        }
+        .partName {
+            width: 150px;
+        }
+    </style>
 </head>
 
 <body>
@@ -51,9 +62,55 @@
 
     <!-- Activities -->
     <section class="section bgColor1 padding textColor1" id="activities">
-        <div class="container">
-            
-        </div>
+        <div class="container"  ng-controller="ctrl">
+            <!-- Nested accordion panels -->
+            <div ng-repeat="composer in data track by $index">
+                <div class="panel panel-default">
+                    <!-- Composer panel heading -->
+                    <div class="panel-heading">
+                        <h4 class="panel-title accordion-toggle" data-target="#panel{{ $index }}" data-toggle="collapse">Composer: {{ composer.composer }}</h4><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                    </div> <!-- End composer heading-->
+                    <!-- Composer panel content -->
+                    <div id="panel{{ $index }}" class="panel-collapse collapse">
+                        <div class="panel-body panel-size">
+                            <div ng-repeat="piece in composer.pieces">
+                                <div class="panel panel-default">
+                                    <!-- Piece panel heading -->
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title accordion-toggle" data-target="#panel{{ composer.id }}{{ piece.id }}" data-toggle="collapse">Piece: {{ piece.name }}</h4><i
+                                            class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                                    </div> <!-- End Piece heading-->  
+                                    <!-- Piece panel content -->
+                                    <div id="panel{{ composer.id }}{{ piece.id }}" class="panel-collapse collapse">
+                                        <div class="panel-body panel-size">
+                                            <ul class="partsDisplay">
+                                                <li ng-repeat="part in piece.parts">
+                                                    <table>
+                                                        <tr>
+                                                            <td class="partId">
+                                                                {{ part.id }}
+                                                            </td>
+                                                            <td class="partName">{{ part.part }}</td>
+                                                            <td>{{ part.fileName }}</td>
+                                                        </tr>
+                                                    </table>
+                                                </li>
+                                            </ul>
+                                            Add a part to this piece
+                                        </div>
+                                    </div> <!-- End piece content -->
+                                </div>
+                            </div>
+                            <p>
+                                Add a piece to this composer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End composer ng-repeat -->
+
+            Here need to add mechanism to add new piece/parts and composer if necessary.
+        </div> <!-- End ng-controller -->
     </section>
 
     <!-- Bio -->
@@ -118,7 +175,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/add_music_angularjs_script.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 
