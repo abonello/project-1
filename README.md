@@ -14,6 +14,7 @@
     * [Surface](#surface)
 * [WIREFRAMES](#wireframes)
 * [FEATURES](#features)
+* [ADDING BACKEND](#adding-backend)
 * [TECHNOLOGIES USED](#technologies-used)
 * [TESTING](#testing)
 * [DEPLOYMENT](#deployment)
@@ -237,6 +238,64 @@ Please note: Since I am actually using this project on my site, I did make the c
 3. Add current and future activities.
 4. Fix parallax for mobiles
 
+
+## ADDING BACKEND
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
+
+The reason for adding this backend is to handle the contact form. I wanted a way to remove the EmailJS keys from the frontend.
+
+The following commands are for my development environment - macOS
+
+```bash
+cd api
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install python-dotenv
+python -m pip list
+python -m pip freeze > requirements.txt
+python app.py
+
+```
+
+The next time I work on the project I only need to do:
+```bash
+cd api
+source .venv/bin/activate
+python app.py
+```
+
+To get out of the virtual environment use:
+
+```bash
+deactivate
+```
+
+Since the virtual environment will not be committed to the repository, if you clone this project you will need to create a new one:
+```bash
+cd api
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+### Store secret values in .env
+
+For local development, the EmailJS credentials are stored in a .env file in the api folder.
+
+The following values are required:
+
+```bash
+# Get these values from your EmailJS account and add them to your .env file in the api folder.
+EMAILJS_SERVICE_ID=
+EMAILJS_TEMPLATE_ID=
+EMAILJS_PUBLIC_KEY=
+EMAILJS_PRIVATE_KEY=
+```
+**The .env file must not be committed to the repository.**
+
+For production, I am deploying to cPanel using `Passenger`. Passenger allows environment variables to be configured separately from the application files.
+
+If deploying to another hosting service, use that service's mechanism for setting environment variables.
 
 
 ## TECHNOLOGIES USED
