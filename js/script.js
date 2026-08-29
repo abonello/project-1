@@ -141,6 +141,7 @@ $(document).ready(function() {
         console.log("Sending to Python:", params);
 
         $("#btn-submit").text("Sending...");
+        $("#btn-submit").prop("disabled", true);
 
         try {
 
@@ -157,6 +158,7 @@ $(document).ready(function() {
             console.log("Response from Python:", result);
 
             $("#btn-submit").text("Submit");
+            $("#btn-submit").prop("disabled", false);
 
             if (result.success) {
                 alert(result.message);
@@ -164,10 +166,6 @@ $(document).ready(function() {
             } else {
                 alert("Send email failed.");
             }
-
-            // alert(result.message);
-
-
         } catch (error) {
 
             $("#btn-submit").text("Submit");
