@@ -1,9 +1,14 @@
 $(document).ready(function() {
 
     // Code from email.js
-    (function(){
-        emailjs.init("user_MV94f6Xs0GmNusEwKfXoL");
-    })();
+    // (function(){
+    //     emailjs.init("user_MV94f6Xs0GmNusEwKfXoL");
+    // })();
+
+    const API_URL = window.location.hostname === "localhost" ||
+                window.location.hostname === "127.0.0.1"
+    ? "http://localhost:8000"
+    : "/api";
 
     // Responsive Menu Button collapse the menu when selection made.
     $(document).on('click','.navbar-collapse.in',function(e) {
@@ -124,6 +129,7 @@ $(document).ready(function() {
     });
 
     // Form Validation and alert
+    /**
     $("#btn-submit").on("click", function() {
         if (validateForm()) {
             var params = {};
@@ -162,6 +168,67 @@ $(document).ready(function() {
         }
         
     }); 
+    */
+
+
+    // $("#btn-submit").on("click", async function() {
+    $("#contactForm").on("submit", async function(event) {
+        event.preventDefault()
+
+        if (!validateForm()) {
+            alert("Please check the form. There is an error that needs fixing.");
+            return false;
+        }
+
+        const params = {};
+
+        $('#contact :input').each(function() {
+            params[this.name] = this.value;
+        });
+
+        console.log("Sending to Python:", params);
+
+        $("#btn-submit").text("Sending...");
+
+        try {
+
+            const response = await fetch(API_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(params)
+            });
+
+            const result = await response.json();
+
+            console.log("Response from Python:", result);
+
+            $("#btn-submit").text("Submit");
+
+            if (result.success) {
+                alert(result.message);
+                this.reset();
+            } else {
+                alert("Send email failed.");
+            }
+
+            // alert(result.message);
+
+
+        } catch (error) {
+
+            $("#btn-submit").text("Submit");
+
+            console.error(error);
+            alert("Something went wrong: " + error.message);
+        }
+
+        return false;
+    });
+
+
+
     
     function validateForm(){
         var name = $('#name').val();

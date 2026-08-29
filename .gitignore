@@ -3,3 +3,7 @@
 /working_files
 settings.json
 /assets/*
+
+.env
+/api/.env
+api/.venv/
