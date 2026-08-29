@@ -1,10 +1,5 @@
 $(document).ready(function() {
 
-    // Code from email.js
-    // (function(){
-    //     emailjs.init("user_MV94f6Xs0GmNusEwKfXoL");
-    // })();
-
     const API_URL = window.location.hostname === "localhost" ||
                 window.location.hostname === "127.0.0.1"
     ? "http://localhost:8000"
@@ -128,50 +123,7 @@ $(document).ready(function() {
         }
     });
 
-    // Form Validation and alert
-    /**
-    $("#btn-submit").on("click", function() {
-        if (validateForm()) {
-            var params = {};
-            $('#contact :input').each(function() {
-                params[this.name] = this.value;
-            });
 
-            // Change to your service ID, or keep using the default service
-            var service_id = "default_service";
-            var template_id = "template1";
-
-            (function(){
-                $("#btn-submit").text("Sending...");
-                emailjs.init("user_MV94f6Xs0GmNusEwKfXoL");
-                emailjs.send(service_id,template_id,params)
-                    .then(function(){ 
-                        alert("Message sent!");
-                        $("#btn-submit").text("Submit");
-                        $("#name").val("");
-                        $("#email").val("");
-                        $("#subject").val("");
-                        $("#message").val("");
-                    }, function(err) {
-                        $("#btn-submit").text("Submit");
-                        $("#name").val("");
-                        $("#email").val("");
-                        $("#subject").val("");
-                        $("#message").val("");
-                        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-                    });
-            })();
-            return false;
-        } else {
-            alert("Please check the form. There is an error that needs fixing.");
-            return false;
-        }
-        
-    }); 
-    */
-
-
-    // $("#btn-submit").on("click", async function() {
     $("#contactForm").on("submit", async function(event) {
         event.preventDefault()
 

@@ -87,11 +87,6 @@ def application(environ, start_response):
         with urllib.request.urlopen(request) as response:
             result = response.read()
 
-        # response_body = json.dumps({
-        #     "success": True,
-        #     "emailjs_response": result.decode("utf-8")
-        # }).encode("utf-8")
-
         response_body = json.dumps({
             "success": True,
             "emailjs_response": result.decode("utf-8"),
@@ -129,28 +124,6 @@ def application(environ, start_response):
     )
 
     return [response_body]
-
-
-
-    # For now, simply send the received data back
-    # response_data = {
-    #     "success": True,
-    #     "message": "Python received your message",
-    #     "data": data
-    # }
-
-#     response = json.dumps(response_data).encode("utf-8")
-# 
-#     start_response(
-#         "200 OK",
-#         [
-#             ("Content-Type", "application/json"),
-#             ("Content-Length", str(len(response))),
-#             ("Access-Control-Allow-Origin", "*")
-#         ]
-#     )
-# 
-#     return [response]
 
 
 if __name__ == "__main__":
