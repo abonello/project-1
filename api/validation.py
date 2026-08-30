@@ -1,10 +1,12 @@
 # from html.parser import HTMLParser
 import re
 import html
+import unicodedata
 
 MIN_NAME_LENGTH = 3
 MAX_NAME_LENGTH = 100
 MAX_EMAIL_LENGTH = 254
+MIN_SUBJECT_LENGTH = 3
 MAX_SUBJECT_LENGTH = 200
 MAX_MESSAGE_LENGTH = 5000
 EMAIL_PATTERN = re.compile(
@@ -45,10 +47,14 @@ def validate_form_data(data):
         return None, "Name is too long."
 
     if sum(character.isalpha() for character in name) < MIN_NAME_LENGTH:
-      return None, "Name must contain at least 3 letters."
+        return None, "Name must contain at least 3 letters."
     
     if not valid_name(name):
-      return None, "Name contains invalid characters."
+        return None, "Name contains invalid characters."  
+
+    # Reject control characters for Name
+    if contains_control_characters(name):
+        return None, "Name contains invalid characters."
     
 
     # Check email length and format
@@ -57,10 +63,22 @@ def validate_form_data(data):
 
     if not EMAIL_PATTERN.fullmatch(email):
         return None, "Please enter a valid email address."
-    
 
+    # Reject control characters for Email
+    if contains_control_characters(email):
+            return None, "Email contains invalid characters."
+
+    
+    # Check subject length
     if len(subject) > MAX_SUBJECT_LENGTH:
         return None, "Subject is too long."
+
+    if len(subject) < MIN_SUBJECT_LENGTH:
+        return None, "Subject must contain at least 3 characters."
+
+    # Reject control characters for Subject
+    if contains_control_characters(subject):
+        return None, "Subject contains invalid characters."
     
 
     if len(message) > MAX_MESSAGE_LENGTH:
@@ -98,6 +116,12 @@ def valid_name(name):
     return all(
         character.isalpha() or character in allowed_punctuation
         for character in name
+    )
+
+def contains_control_characters(value):
+    return any(
+        unicodedata.category(character) in {"Cc", "Cf"}
+        for character in value
     )
 
 

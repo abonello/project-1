@@ -260,18 +260,40 @@ $(document).ready(function() {
     }
 
     function validateSubject(subject) {
-        var subjectReg = /^[A-Za-z0-9 ]+$/;
+        // var subjectReg = /^[A-Za-z0-9 ]+$/;
+
+        var trimmedSubject = subject.trim();
+
+        if (trimmedSubject == "") {
+            $('#subjectLabel').after('<span class="error"> Please enter a subject for your message</span>');
+            return false;
+
+        } else if (trimmedSubject.length < 3) {
+            $('#subjectLabel').after('<span class="error"> Subject must contain at least 3 characters</span>');
+            return false;
+
+        } else if (trimmedSubject.length > 200) {
+            $('#subjectLabel').after('<span class="error"> Subject must be 200 characters or fewer</span>');
+            return false;
+
+        } else if ([...trimmedSubject].some(character => character.charCodeAt(0) < 32)) {
+            $('#subjectLabel').after('<span class="error"> Subject contains invalid characters</span>');
+            return false;
+
+        } else {
+            return true;
+        }
     
-        if(subject == ""){
-            $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
-            return false;
-        }  else if(subject.replace(/\s+/g, ' ') == " ") {
-            $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
-            return false;
-        } else if(!subjectReg.test(subject)){
-            $('#subjectLabel').after('<span class="error"> Letters or numbers only</span>');
-            return false;
-        } else { return true; }
+        // if(subject == ""){
+        //     $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
+        //     return false;
+        // }  else if(subject.replace(/\s+/g, ' ') == " ") {
+        //     $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
+        //     return false;
+        // } else if(!subjectReg.test(subject)){
+        //     $('#subjectLabel').after('<span class="error"> Letters or numbers only</span>');
+        //     return false;
+        // } else { return true; }
     }
 
     function validateMessage(message) {
