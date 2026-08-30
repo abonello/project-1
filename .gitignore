@@ -10,3 +10,9 @@ api/.venv/
 
 __pycache__/
 *.pyc
+
+media/video/*
+media/audio/*
+
+!media/video/.gitkeep
+!media/audio/.gitkeep
