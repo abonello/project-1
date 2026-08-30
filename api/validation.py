@@ -1,6 +1,7 @@
 # from html.parser import HTMLParser
 import html
 
+MIN_NAME_LENGTH = 3
 MAX_NAME_LENGTH = 100
 MAX_EMAIL_LENGTH = 254
 MAX_SUBJECT_LENGTH = 200
@@ -31,15 +32,24 @@ def validate_form_data(data):
         return None, "All form fields must contain a value."
 
 
-    # Check maximum lengths
+    # Check name length and character requirements
     if len(name) > MAX_NAME_LENGTH:
         return None, "Name is too long."
 
+    if sum(character.isalpha() for character in name) < MIN_NAME_LENGTH:
+      return None, "Name must contain at least 3 letters."
+    
+    if not valid_name(name):
+      return None, "Name contains invalid characters."
+    
+
     if len(email) > MAX_EMAIL_LENGTH:
         return None, "Email address is too long."
+    
 
     if len(subject) > MAX_SUBJECT_LENGTH:
         return None, "Subject is too long."
+    
 
     if len(message) > MAX_MESSAGE_LENGTH:
         return None, "Message is too long."
@@ -68,6 +78,16 @@ def validate_form_data(data):
     }
 
     return template_params_data, None
+
+def valid_name(name):
+
+    allowed_punctuation = {" ", "'", "-", "."}
+
+    return all(
+        character.isalpha() or character in allowed_punctuation
+        for character in name
+    )
+
 
 
 # class HTMLDetector(HTMLParser):

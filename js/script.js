@@ -198,18 +198,37 @@ $(document).ready(function() {
     }  
     
     function validateName(name) {
-        var nameReg = /^[A-Za-z ]+$/;
+        // var nameReg = /^[A-Za-z ]+$/;
+        var nameReg = /^[\p{L} .'-]+$/u;
+        var trimmedName = name.trim();
+        var letterCount = (trimmedName.match(/\p{L}/gu) || []).length;
 
-        if(name == ""){
+        if (trimmedName == "") {
             $('#nameLabel').after('<span class="error"> Please enter your name</span>');
             return false;
-        } else if(name.replace(/\s+/g, ' ') == " ") {
-            $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
+
+        } else if (letterCount < 3) {
+            $('#nameLabel').after('<span class="error"> Please enter at least 3 letters</span>');
             return false;
-        } else if(!nameReg.test(name)){
-            $('#nameLabel').after('<span class="error"> Letters only</span>');
+
+        } else if (!nameReg.test(trimmedName)) {
+            $('#nameLabel').after('<span class="error"> Letters, spaces, hyphens, apostrophes or periods only</span>');
             return false;
-        } else { return true; }
+
+        } else {
+            return true;
+        }
+
+        // if(name == ""){
+        //     $('#nameLabel').after('<span class="error"> Please enter your name</span>');
+        //     return false;
+        // } else if(name.replace(/\s+/g, ' ') == " ") {
+        //     $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
+        //     return false;
+        // } else if(!nameReg.test(name)){
+        //     $('#nameLabel').after('<span class="error"> Letters only</span>');
+        //     return false;
+        // } else { return true; }
     }
 
     function validateEmail(email) {
