@@ -8,7 +8,9 @@ MAX_NAME_LENGTH = 100
 MAX_EMAIL_LENGTH = 254
 MIN_SUBJECT_LENGTH = 3
 MAX_SUBJECT_LENGTH = 200
+MIN_MESSAGE_LENGTH = 10
 MAX_MESSAGE_LENGTH = 5000
+
 EMAIL_PATTERN = re.compile(
     r"^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+"
     r"@"
@@ -81,8 +83,17 @@ def validate_form_data(data):
         return None, "Subject contains invalid characters."
     
 
+    # Check message length
     if len(message) > MAX_MESSAGE_LENGTH:
         return None, "Message is too long."
+
+    if len(message) < MIN_MESSAGE_LENGTH:
+        return None, "Message must contain at least 10 characters."
+
+    # Reject Unicode control/format characters
+    # if contains_control_characters(message):
+    if contains_control_characters(message, allow_message_whitespace=True):
+        return None, "Message contains invalid characters."
 
 
     # if (
@@ -118,11 +129,25 @@ def valid_name(name):
         for character in name
     )
 
-def contains_control_characters(value):
-    return any(
-        unicodedata.category(character) in {"Cc", "Cf"}
-        for character in value
-    )
+# def contains_control_characters(value):
+#     return any(
+#         unicodedata.category(character) in {"Cc", "Cf"}
+#         for character in value
+#     )
+
+def contains_control_characters(value, allow_message_whitespace=False):
+    allowed = {"Cc", "Cf"}
+
+    for character in value:
+        category = unicodedata.category(character)
+
+        if category in allowed:
+            if allow_message_whitespace and character in "\n\r\t":
+                continue
+
+            return True
+
+    return False
 
 
 

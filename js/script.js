@@ -276,7 +276,10 @@ $(document).ready(function() {
             $('#subjectLabel').after('<span class="error"> Subject must be 200 characters or fewer</span>');
             return false;
 
-        } else if ([...trimmedSubject].some(character => character.charCodeAt(0) < 32)) {
+        } else if ([...trimmedSubject].some(character => character.charCodeAt(0) < 32 &&
+                                                        character !== "\n" &&
+                                                        character !== "\r" &&
+                                                        character !== "\t")) {
             $('#subjectLabel').after('<span class="error"> Subject contains invalid characters</span>');
             return false;
 
@@ -297,13 +300,31 @@ $(document).ready(function() {
     }
 
     function validateMessage(message) {
-        if(message == ""){
+        var trimmedMessage = message.trim();
+
+        if (trimmedMessage == "") {
             $('#messageLabel').after('<span class="error"> Please enter your message</span>');
             return false;
-        } else if(message.replace(/\s+/g, ' ') == " ") {
-            $('#subjectLabel').after('<span class="error"> Please enter your message. Cannot read spaces alone!</span>');
+
+        } else if ([...trimmedMessage].length < 10) {
+            $('#messageLabel').after('<span class="error"> Message must contain at least 10 characters</span>');
             return false;
-        } else { return true; }
+
+        } else if ([...trimmedMessage].length > 5000) {
+            $('#messageLabel').after('<span class="error"> Message must be 5000 characters or fewer</span>');
+            return false;
+
+        } else {
+            return true;
+        }
+
+        // if(message == ""){
+        //     $('#messageLabel').after('<span class="error"> Please enter your message</span>');
+        //     return false;
+        // } else if(message.replace(/\s+/g, ' ') == " ") {
+        //     $('#subjectLabel').after('<span class="error"> Please enter your message. Cannot read spaces alone!</span>');
+        //     return false;
+        // } else { return true; }
     }
 
     var dlBtn = $("#downloadBtnID");
