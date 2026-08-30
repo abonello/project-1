@@ -232,16 +232,31 @@ $(document).ready(function() {
     }
 
     function validateEmail(email) {
-        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        // var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        var emailReg = /^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+$/;
 
-        if(email == ""){
+        var trimmedEmail = email.trim();
+
+        if (trimmedEmail == "") {
             $('#emailLabel').after('<span class="error"> Please enter your email</span>');
             return false;
-        } 
-        else if(!emailReg.test(email)){
+
+        } else if (!emailReg.test(trimmedEmail)) {
             $('#emailLabel').after('<span class="error"> Please enter a valid email address</span>');
             return false;
-        } else { return true; }
+
+        } else {
+            return true;
+        }s
+
+        // if(email == ""){
+        //     $('#emailLabel').after('<span class="error"> Please enter your email</span>');
+        //     return false;
+        // } 
+        // else if(!emailReg.test(email)){
+        //     $('#emailLabel').after('<span class="error"> Please enter a valid email address</span>');
+        //     return false;
+        // } else { return true; }
     }
 
     function validateSubject(subject) {

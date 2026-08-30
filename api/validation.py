@@ -1,4 +1,5 @@
 # from html.parser import HTMLParser
+import re
 import html
 
 MIN_NAME_LENGTH = 3
@@ -6,6 +7,13 @@ MAX_NAME_LENGTH = 100
 MAX_EMAIL_LENGTH = 254
 MAX_SUBJECT_LENGTH = 200
 MAX_MESSAGE_LENGTH = 5000
+EMAIL_PATTERN = re.compile(
+    r"^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+"
+    r"@"
+    r"[A-Za-z0-9]"
+    r"(?:[A-Za-z0-9-]*[A-Za-z0-9])?"
+    r"(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+$"
+)
 
 def validate_form_data(data):
 
@@ -43,8 +51,12 @@ def validate_form_data(data):
       return None, "Name contains invalid characters."
     
 
+    # Check email length and format
     if len(email) > MAX_EMAIL_LENGTH:
         return None, "Email address is too long."
+
+    if not EMAIL_PATTERN.fullmatch(email):
+        return None, "Please enter a valid email address."
     
 
     if len(subject) > MAX_SUBJECT_LENGTH:

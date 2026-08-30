@@ -13,7 +13,7 @@ public_key = os.environ["EMAILJS_PUBLIC_KEY"]
 private_key = os.environ["EMAILJS_PRIVATE_KEY"]
 
 last_submission = {}
-RATE_LIMIT_SECONDS = 60
+RATE_LIMIT_SECONDS = 10 # make 60 for production
 # MAX_NAME_LENGTH = 100
 # MAX_EMAIL_LENGTH = 254
 # MAX_SUBJECT_LENGTH = 200
