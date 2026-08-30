@@ -13,7 +13,7 @@ public_key = os.environ["EMAILJS_PUBLIC_KEY"]
 private_key = os.environ["EMAILJS_PRIVATE_KEY"]
 
 last_submission = {}
-RATE_LIMIT_SECONDS = 10 # make 60 for production
+RATE_LIMIT_SECONDS = 60
 
 ALLOWED_ORIGINS = {
     "http://localhost:5500",
