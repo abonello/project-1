@@ -291,11 +291,22 @@ EMAILJS_TEMPLATE_ID=
 EMAILJS_PUBLIC_KEY=
 EMAILJS_PRIVATE_KEY=
 ```
+
 **The .env file must not be committed to the repository.**
 
 For production, I am deploying to cPanel using `Passenger`. Passenger allows environment variables to be configured separately from the application files.
 
 If deploying to another hosting service, use that service's mechanism for setting environment variables.
+
+
+
+Another variable is
+```bash
+PRIVATE_MEDIA_PATH=/Users/.../project-1/media
+```
+For production, get the correct value from cPanel. It needs to point to the folder holding the media files. For local point it to where you are storing the media files.
+
+
 
 
 ## TECHNOLOGIES USED

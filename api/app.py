@@ -3,9 +3,11 @@ import urllib.request
 from dotenv import load_dotenv
 import os
 import time
-from validation import validate_form_data
 
 load_dotenv()
+
+from validation import validate_form_data
+from media import serve_video
 
 service_id = os.environ["EMAILJS_SERVICE_ID"]
 template_id = os.environ["EMAILJS_TEMPLATE_ID"]
@@ -25,7 +27,11 @@ ALLOWED_ORIGINS = {
 def application(environ, start_response):
 
     method = environ["REQUEST_METHOD"]
+    path = environ.get("PATH_INFO", "")
     origin = environ.get("HTTP_ORIGIN", "")
+
+    if path == "/video/SlideShow_Slide2.mp4":
+        return serve_video(environ, start_response)
 
     client_ip = environ.get("REMOTE_ADDR", "")
     now = time.time()
