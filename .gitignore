@@ -14,5 +14,7 @@ __pycache__/
 media/video/*
 media/audio/*
 
-!media/video/.gitkeep
+!media/audio/
 !media/audio/.gitkeep
+!media/video/
+!media/video/.gitkeep
