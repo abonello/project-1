@@ -138,13 +138,10 @@ $(document).ready(function() {
             params[this.name] = this.value;
         });
 
-        console.log("Sending to Python:", params);
-
         $("#btn-submit").text("Sending...");
         $("#btn-submit").prop("disabled", true);
 
         try {
-
             const response = await fetch(API_URL, {
                 method: "POST",
                 headers: {
@@ -154,8 +151,6 @@ $(document).ready(function() {
             });
 
             const result = await response.json();
-
-            console.log("Response from Python:", result);
 
             $("#btn-submit").text("Submit");
             $("#btn-submit").prop("disabled", false);
@@ -170,15 +165,11 @@ $(document).ready(function() {
 
             $("#btn-submit").text("Submit");
 
-            console.error(error);
             alert("Something went wrong: " + error.message);
         }
 
         return false;
     });
-
-
-
     
     function validateForm(){
         var name = $('#name').val();
@@ -198,7 +189,6 @@ $(document).ready(function() {
     }  
     
     function validateName(name) {
-        // var nameReg = /^[A-Za-z ]+$/;
         var nameReg = /^[\p{L} .'-]+$/u;
         var trimmedName = name.trim();
         var letterCount = (trimmedName.match(/\p{L}/gu) || []).length;
@@ -218,21 +208,9 @@ $(document).ready(function() {
         } else {
             return true;
         }
-
-        // if(name == ""){
-        //     $('#nameLabel').after('<span class="error"> Please enter your name</span>');
-        //     return false;
-        // } else if(name.replace(/\s+/g, ' ') == " ") {
-        //     $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
-        //     return false;
-        // } else if(!nameReg.test(name)){
-        //     $('#nameLabel').after('<span class="error"> Letters only</span>');
-        //     return false;
-        // } else { return true; }
     }
 
     function validateEmail(email) {
-        // var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         var emailReg = /^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+$/;
 
         var trimmedEmail = email.trim();
@@ -247,21 +225,10 @@ $(document).ready(function() {
 
         } else {
             return true;
-        }s
-
-        // if(email == ""){
-        //     $('#emailLabel').after('<span class="error"> Please enter your email</span>');
-        //     return false;
-        // } 
-        // else if(!emailReg.test(email)){
-        //     $('#emailLabel').after('<span class="error"> Please enter a valid email address</span>');
-        //     return false;
-        // } else { return true; }
+        }
     }
 
     function validateSubject(subject) {
-        // var subjectReg = /^[A-Za-z0-9 ]+$/;
-
         var trimmedSubject = subject.trim();
 
         if (trimmedSubject == "") {
@@ -286,17 +253,6 @@ $(document).ready(function() {
         } else {
             return true;
         }
-    
-        // if(subject == ""){
-        //     $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
-        //     return false;
-        // }  else if(subject.replace(/\s+/g, ' ') == " ") {
-        //     $('#subjectLabel').after('<span class="error"> Please enter a Subject for your message</span>');
-        //     return false;
-        // } else if(!subjectReg.test(subject)){
-        //     $('#subjectLabel').after('<span class="error"> Letters or numbers only</span>');
-        //     return false;
-        // } else { return true; }
     }
 
     function validateMessage(message) {
@@ -317,14 +273,6 @@ $(document).ready(function() {
         } else {
             return true;
         }
-
-        // if(message == ""){
-        //     $('#messageLabel').after('<span class="error"> Please enter your message</span>');
-        //     return false;
-        // } else if(message.replace(/\s+/g, ' ') == " ") {
-        //     $('#subjectLabel').after('<span class="error"> Please enter your message. Cannot read spaces alone!</span>');
-        //     return false;
-        // } else { return true; }
     }
 
     var dlBtn = $("#downloadBtnID");

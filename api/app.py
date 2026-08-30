@@ -14,67 +14,12 @@ private_key = os.environ["EMAILJS_PRIVATE_KEY"]
 
 last_submission = {}
 RATE_LIMIT_SECONDS = 10 # make 60 for production
-# MAX_NAME_LENGTH = 100
-# MAX_EMAIL_LENGTH = 254
-# MAX_SUBJECT_LENGTH = 200
-# MAX_MESSAGE_LENGTH = 5000
 
 ALLOWED_ORIGINS = {
     "http://localhost:5500",
     "http://127.0.0.1:5500",
     "https://anthonybonello.co.uk"
 }
-
-
-# def validate_form_data(data):
-# 
-#     if not isinstance(data, dict):
-#         return None, "Invalid request data."
-# 
-#     name = data.get("name")
-#     email = data.get("email")
-#     subject = data.get("subject")
-#     message = data.get("message")
-# 
-#     # All fields must be strings
-#     if not all(isinstance(value, str) for value in [name, email, subject, message]):
-#         return None, "All form fields are required."
-# 
-#     # Remove leading/trailing whitespace
-#     name = name.strip()
-#     email = email.strip()
-#     subject = subject.strip()
-#     message = message.strip()
-# 
-#     # Fields cannot be empty
-#     if not name or not email or not subject or not message:
-#         return None, "All form fields must contain a value."
-# 
-#     # Check maximum lengths
-#     if len(name) > MAX_NAME_LENGTH:
-#         return None, "Name is too long."
-# 
-#     if len(email) > MAX_EMAIL_LENGTH:
-#         return None, "Email address is too long."
-# 
-#     if len(subject) > MAX_SUBJECT_LENGTH:
-#         return None, "Subject is too long."
-# 
-#     if len(message) > MAX_MESSAGE_LENGTH:
-#         return None, "Message is too long."
-# 
-#     template_params_data = {
-#         "from_name": name,
-#         "to_name": "Anthony Bonello",
-#         "email": email,
-#         "subject": subject,
-#         "message": message
-#     }
-# 
-#     return template_params_data, None
-
-
-
 
 
 def application(environ, start_response):
@@ -161,9 +106,6 @@ def application(environ, start_response):
     content_length = int(environ.get("CONTENT_LENGTH", 0))
     body = environ["wsgi.input"].read(content_length)
 
-    # Convert JSON into a Python dictionary
-    # data = json.loads(body)
-
 
     try:
         data = json.loads(body)
@@ -184,60 +126,6 @@ def application(environ, start_response):
 
         return [response]
     
-
-#     if not isinstance(data, dict):
-#         response = json.dumps({
-#             "success": False,
-#             "message": "Invalid request data."
-#         }).encode("utf-8")
-# 
-#         start_response(
-#             "400 Bad Request",
-#             [
-#                 ("Content-Type", "application/json"),
-#                 ("Content-Length", str(len(response))),
-#                 ("Access-Control-Allow-Origin", origin)
-#             ]
-#         )
-# 
-#         return [response]
-# 
-#     name = data.get("name")
-#     email = data.get("email")
-#     subject = data.get("subject")
-#     message = data.get("message")
-# 
-#     name = name.strip()
-#     email = email.strip()
-#     subject = subject.strip()
-#     message = message.strip()
-# 
-# 
-#     if not all(isinstance(value, str) for value in [name, email, subject, message]):
-#         response = json.dumps({
-#             "success": False,
-#             "message": "All form fields are required."
-#         }).encode("utf-8")
-# 
-#         start_response(
-#             "400 Bad Request",
-#             [
-#                 ("Content-Type", "application/json"),
-#                 ("Content-Length", str(len(response))),
-#                 ("Access-Control-Allow-Origin", origin)
-#             ]
-#         )
-# 
-#         return [response]
-# 
-# 
-#     template_params_data = {
-#         "from_name": name,
-#         "to_name": "Anthony Bonello",
-#         "email": email,
-#         "subject": subject,
-#         "message": message
-#     }
 
     template_params_data, validation_error = validate_form_data(data)
 

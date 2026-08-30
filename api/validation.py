@@ -19,6 +19,7 @@ EMAIL_PATTERN = re.compile(
     r"(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+$"
 )
 
+
 def validate_form_data(data):
 
     if not isinstance(data, dict):
@@ -90,19 +91,10 @@ def validate_form_data(data):
     if len(message) < MIN_MESSAGE_LENGTH:
         return None, "Message must contain at least 10 characters."
 
-    # Reject Unicode control/format characters
-    # if contains_control_characters(message):
+    # Reject Unicode control/format characters for Message
     if contains_control_characters(message, allow_message_whitespace=True):
         return None, "Message contains invalid characters."
-
-
-    # if (
-    #     contains_html(name) or
-    #     contains_html(email) or
-    #     contains_html(subject) or
-    #     contains_html(message)
-    # ):
-    #     return None, "HTML is not allowed."
+    
 
     # Escape HTML
     name = html.escape(name)
@@ -120,6 +112,7 @@ def validate_form_data(data):
 
     return template_params_data, None
 
+
 def valid_name(name):
 
     allowed_punctuation = {" ", "'", "-", "."}
@@ -129,11 +122,6 @@ def valid_name(name):
         for character in name
     )
 
-# def contains_control_characters(value):
-#     return any(
-#         unicodedata.category(character) in {"Cc", "Cf"}
-#         for character in value
-#     )
 
 def contains_control_characters(value, allow_message_whitespace=False):
     allowed = {"Cc", "Cf"}
@@ -148,26 +136,3 @@ def contains_control_characters(value, allow_message_whitespace=False):
             return True
 
     return False
-
-
-
-# class HTMLDetector(HTMLParser):
-# 
-#     def __init__(self):
-#         super().__init__()
-#         self.found_html = False
-# 
-#     def handle_starttag(self, tag, attrs):
-#         self.found_html = True
-# 
-#     def handle_startendtag(self, tag, attrs):
-#         self.found_html = True
-# 
-#     def handle_endtag(self, tag):
-#         self.found_html = True
-# 
-# 
-# def contains_html(value):
-#     parser = HTMLDetector()
-#     parser.feed(value)
-#     return parser.found_html
