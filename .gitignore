@@ -7,3 +7,6 @@ settings.json
 .env
 /api/.env
 api/.venv/
+
+__pycache__/
+*.pyc
