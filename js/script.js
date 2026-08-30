@@ -134,7 +134,7 @@ $(document).ready(function() {
 
         const params = {};
 
-        $('#contact :input').each(function() {
+        $('#contact :input[name]').each(function() {
             params[this.name] = this.value;
         });
 
