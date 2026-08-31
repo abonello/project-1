@@ -1,4 +1,5 @@
 import os
+from urllib.parse import parse_qs
 
 PRIVATE_MEDIA_PATH = os.getenv("PRIVATE_MEDIA_PATH")
 
@@ -18,10 +19,22 @@ def serve_video(environ, start_response):
 
         return [response]
 
+
+    params = parse_qs(environ.get("QUERY_STRING", ""))
+
+    media_type = params.get("type", [None])[0]
+    filename = params.get("file", [None])[0]
+
+
+    if media_type != "video" or not filename:
+        start_response("400 Bad Request", [])
+        return [b"Invalid media request"]
+
+
     video_path = os.path.join(
         PRIVATE_MEDIA_PATH,
         "video",
-        "SlideShow_Slide2.mp4"
+        filename
     )
 
     if not os.path.isfile(video_path):

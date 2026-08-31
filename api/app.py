@@ -1,5 +1,6 @@
 import json
 import urllib.request
+from urllib.parse import parse_qs
 from dotenv import load_dotenv
 import os
 import time
@@ -30,7 +31,9 @@ def application(environ, start_response):
     path = environ.get("PATH_INFO", "")
     origin = environ.get("HTTP_ORIGIN", "")
 
-    if path == "/video/SlideShow_Slide2.mp4":
+    params = parse_qs(environ.get("QUERY_STRING", ""))
+    
+    if params.get("type") == ["video"]:
         return serve_video(environ, start_response)
 
     client_ip = environ.get("REMOTE_ADDR", "")
