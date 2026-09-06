@@ -5,12 +5,12 @@ import json
 TOOL_DIR = Path(__file__).resolve().parent
 
 # Input waveform JSON
-# INPUT_FILE = TOOL_DIR / "waveform" / "Alla_Guerra.json"
-INPUT_FILE = TOOL_DIR / "waveform" / "Una_Fantasia_Animata.json"
+INPUT_FILE = TOOL_DIR / "waveform" / "Alla_Guerra.json"
+# INPUT_FILE = TOOL_DIR / "waveform" / "Una_Fantasia_Animata.json"
 
 # Output SVG
-# OUTPUT_FILE = TOOL_DIR / "output" / "Alla_Guerra.svg"
-OUTPUT_FILE = TOOL_DIR / "output" / "Una_Fantasia_Animata.svg"
+OUTPUT_FILE = TOOL_DIR / "output" / "Alla_Guerra.svg"
+# OUTPUT_FILE = TOOL_DIR / "output" / "Una_Fantasia_Animata.svg"
 
 # Read the JSON file
 with INPUT_FILE.open("r", encoding="utf-8") as file:
@@ -26,11 +26,13 @@ print("Number of windows:", len(data["windows"]))
 # 
 # print("Test window:", window)
 
-windows = [
-    data["windows"][1000],
-    data["windows"][1100],
-    data["windows"][1200],
-]
+# windows = [
+#     data["windows"][1000],
+#     data["windows"][1100],
+#     data["windows"][1200],
+# ]
+
+windows = data["windows"]
 
 for i, window in enumerate(windows):
     print(f"Test window {i}:", window)
@@ -41,10 +43,12 @@ svg_width = 1000
 svg_height = 200
 
 
-left = window["left"]
+# left = window["left"]
+# right = window["right"]
 
 left_centre = 50
-amplitude_scale = 100
+right_centre = 150
+amplitude_scale = 50
 
 # y_max = left_centre - left["max"] * amplitude_scale
 # y_min = left_centre - left["min"] * amplitude_scale
@@ -53,12 +57,30 @@ lines = ""
 
 for i, window in enumerate(windows):
 
+    # x = 250 + i * 250
+    x = i * svg_width / (len(windows) - 1)
+
+    # Left channel
     left = window["left"]
 
     y_max = left_centre - left["max"] * amplitude_scale
     y_min = left_centre - left["min"] * amplitude_scale
 
-    x = 250 + i * 250
+    lines += f'''
+    <line
+        x1="{x}"
+        y1="{y_max}"
+        x2="{x}"
+        y2="{y_min}"
+        stroke="red"
+        stroke-width="2" />
+    '''
+
+    # Right channel
+    right = window["right"]
+
+    y_max = right_centre - right["max"] * amplitude_scale
+    y_min = right_centre - right["min"] * amplitude_scale
 
     lines += f'''
     <line
@@ -79,6 +101,7 @@ svg = f'''<svg
 
     <rect width="100%" height="100%" fill="black" />
 
+    <!-- Reference lines -->
     <line
         x1="0"
         y1="50"
@@ -86,6 +109,16 @@ svg = f'''<svg
         y2="50"
         stroke="white"
         stroke-width="1" />
+
+    <line
+        x1="0"
+        y1="150"
+        x2="1000"
+        y2="150"
+        stroke="white"
+        stroke-width="1" />
+
+
 
     <!--
     <line
