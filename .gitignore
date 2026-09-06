@@ -22,7 +22,13 @@ media/waveform/*
 !media/video/
 !media/video/.gitkeep
 
-/tools/input_audio/*
+tools/input_audio/*
+tools/waveform/*
+tools/output/*
 
 !tools/output_audio/
-!/tools/input_audio/.gitkeep
+!tools/input_audio/.gitkeep
+!tools/waveform/
+!tools/waveform/.gitkeep
+!tools/output/
+!tools/output/.gitkeep
