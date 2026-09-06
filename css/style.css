@@ -542,6 +542,17 @@ audio {
   max-width: 100%;
 }
 
+.waveform {
+    width: 100%;
+    height: 100px;
+}
+
+.waveform img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 /* Form */
 /* Code from https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation */
 input[type="text"],
