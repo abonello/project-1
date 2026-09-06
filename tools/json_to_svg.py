@@ -66,13 +66,14 @@ for i, window in enumerate(windows):
     y_max = left_centre - left["max"] * amplitude_scale
     y_min = left_centre - left["min"] * amplitude_scale
 
+    # stroke="red"
     lines += f'''
     <line
         x1="{x}"
         y1="{y_max}"
         x2="{x}"
         y2="{y_min}"
-        stroke="red"
+        stroke="#FFFFF0"
         stroke-width="2" />
     '''
 
@@ -88,7 +89,7 @@ for i, window in enumerate(windows):
         y1="{y_max}"
         x2="{x}"
         y2="{y_min}"
-        stroke="red"
+        stroke="#FFFFF0"
         stroke-width="2" />
     '''
 
