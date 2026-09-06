@@ -9,6 +9,7 @@ load_dotenv()
 
 from validation import validate_form_data
 from media import serve_video
+from media import serve_audio
 
 service_id = os.environ["EMAILJS_SERVICE_ID"]
 template_id = os.environ["EMAILJS_TEMPLATE_ID"]
@@ -35,6 +36,9 @@ def application(environ, start_response):
     
     if params.get("type") == ["video"]:
         return serve_video(environ, start_response)
+
+    if params.get("type") == ["audio"]:
+        return serve_audio(environ, start_response)
 
     client_ip = environ.get("REMOTE_ADDR", "")
     now = time.time()

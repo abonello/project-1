@@ -535,6 +535,13 @@ blockquote footer {
   margin: 0 auto;
 }
 
+audio {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
 /* Form */
 /* Code from https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation */
 input[type="text"],
