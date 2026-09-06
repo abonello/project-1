@@ -7,8 +7,9 @@ players.forEach(player => {
     const playPosition = player.querySelector(".play-position");
     const waveformOverlay = player.querySelector(".waveform-overlay");
     const waveform = player.querySelector(".waveform");
+    let scrubbing = false;
 
-    // audio.currentTime
+    // Control Progress Bar
     audio.addEventListener("timeupdate", () => {
         // console.log(audio.currentTime);
         const progress = audio.currentTime / audio.duration;
@@ -29,6 +30,29 @@ players.forEach(player => {
         console.log("display width:", playPosition.parentElement.clientWidth);
     });
 
+    // START SCRUBBING
+    waveform.addEventListener("pointerdown", () => {
+        scrubbing = true;
+    });
+
+    waveform.addEventListener("pointermove", (event) => {
+
+        if (!scrubbing) return;
+
+        const rect = waveform.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const progress = x / rect.width;
+
+        audio.currentTime = progress * audio.duration;
+
+    });
+
+    document.addEventListener("pointerup", () => {
+        scrubbing = false;
+    });
+    // END SCRUBBING
+
+    // SKIP TO POSITION ON CLICK
     waveform.addEventListener("click", (event) => {
 
         const rect = waveform.getBoundingClientRect();
@@ -42,6 +66,7 @@ players.forEach(player => {
 
     });
 
+    // PLAY / PAUSE BUTTON
     playButton.addEventListener("click", () => {
 
         if (audio.paused) {
@@ -60,5 +85,7 @@ players.forEach(player => {
     audio.addEventListener("ended", () => {
         playButton.textContent = "▶";
     });
+
+
 
 });
