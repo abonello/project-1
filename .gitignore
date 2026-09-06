@@ -13,8 +13,16 @@ __pycache__/
 
 media/video/*
 media/audio/*
+media/waveform/*
 
 !media/audio/
 !media/audio/.gitkeep
+!media/waveform/
+!media/waveform/.gitkeep
 !media/video/
 !media/video/.gitkeep
+
+/tools/input_audio/*
+
+!tools/output_audio/
+!/tools/input_audio/.gitkeep
