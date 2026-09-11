@@ -3,6 +3,8 @@
 /working_files
 settings.json
 /assets/*
+.DS_Store
+/media/.DS_Store
 
 .env
 /api/.env
