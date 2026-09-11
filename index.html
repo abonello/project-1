@@ -230,7 +230,7 @@
     <!-- Portfolio -->
     <section class="bgColor1 textColor1" id="portfolio">
         <div class="container">
-            <section class="row padding">
+            <!-- <section class="row padding">
                 <div class="hidden-xs col-sm-6">
                     <img src="img/fast-min.jpg" alt="Fast image" class="img-circle img-responsive center-block" />
                 </div>
@@ -241,8 +241,8 @@
                     <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/166773238&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
                 </div>
             </section>
-            <hr>
-            <section class="row padding">
+            <hr> -->
+            <!-- <section class="row padding">
                 <div class="col-sm-6 textBG">
                     <h2 class="text-center">Show Reel</h2>
                     <span class="decorator"></span>
@@ -253,7 +253,7 @@
                     <img src="img/Ringtone.jpg" alt="Ringtone Image" class="img-circle img-responsive center-block">
                 </div>
             </section>
-            <hr>
+            <hr> -->
             <section class="row padding">
                 <div class="hidden-xs col-sm-6">
                     <img src="img/battle-min.jpg" alt="SlideShow Image" class="img-circle img-responsive center-block">
@@ -265,11 +265,37 @@
                          from myself. Below you can hear a computer generated rendition of two movements. Go to soundcloud to hear the rest.</p>
                     <h3 class="text-center">Una Fantasia Animata</h3>
                     <!-- <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/58476081&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe> -->
-                    <audio controls controlsList="nodownload noplaybackrate">
-                        <source src="/api?type=audio&file=Una_Fantasia_Animata.flac" type="audio/flac">
-                        <source src="http://localhost:8000/api?type=audio&file=Una_Fantasia_Animata.flac" type="audio/flac">
-                        Your browser does not support the audio element.
-                    </audio>
+                    <div class="audio-player">
+                        <!-- <audio controls controlsList="nodownload noplaybackrate"> -->
+                        <audio class="audio" preload="auto">
+                            <!-- <source src="/api?type=audio&file=Una_Fantasia_Animata.flac" type="audio/flac"> -->
+                            <!-- <source src="http://localhost:8000/api?type=audio&file=Una_Fantasia_Animata.flac" type="audio/flac"> -->
+                            <source src="http://192.168.0.13:8000/api?type=audio&file=Una_Fantasia_Animata.flac" type="audio/flac">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <div class="play-button-container">
+                            <button class="play-button">▶</button>
+                        </div>
+                        
+                        <div class="waveform">
+                            <img
+                                src="media/waveform/Una_Fantasia_Animata.svg"
+                                alt="">
+                            <div class="waveform-overlay"></div>
+                            <div class="play-position"></div>
+                        </div>
+
+                        <div class="volume-button-container">
+                            <button class="volume-button">🔊</button>
+                            <input
+                                class="volume-slider"
+                                type="range"
+                                min="0"
+                                max="1"
+                                step="0.01"
+                                value="1">
+                        </div>
+                    </div>
                     <h3 class="text-center">Alla Guerra!</h3>
                     <!-- <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/58475647&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe> -->
                     <!-- <audio controls controlsList="nodownload noplaybackrate"> -->
@@ -283,7 +309,7 @@
                     </div> -->
 
                     <div class="audio-player">
-                        <audio class="audio">
+                        <audio class="audio" preload="auto">
                             <!-- <source src="/api?type=audio&file=Alla_Guerra.flac" type="audio/flac"> -->
                             <!-- <source src="http://localhost:8000/api?type=audio&file=Alla_Guerra.flac" type="audio/flac"> -->
                             <source src="http://192.168.0.13:8000/api?type=audio&file=Alla_Guerra.flac" type="audio/flac">
@@ -298,12 +324,19 @@
                             <img
                                 src="media/waveform/Alla_Guerra.svg"
                                 alt="">
-                            <div class="play-position"></div>
                             <div class="waveform-overlay"></div>
+                            <div class="play-position"></div>
                         </div>
 
                         <div class="volume-button-container">
                             <button class="volume-button">🔊</button>
+                            <input
+                                class="volume-slider"
+                                type="range"
+                                min="0"
+                                max="1"
+                                step="0.01"
+                                value="1">
                         </div>
 
                     </div>
@@ -311,7 +344,7 @@
             </section>
             <hr>
 
-            <section class="row padding">
+            <!-- <section class="row padding">
                 <div class="hidden-xs col-sm-6">
                     <img src="img/battle-min.jpg" alt="SlideShow Image" class="img-circle img-responsive center-block">
                 </div>
@@ -325,7 +358,7 @@
                     </div>
                 </div>
             </section>
-            <hr>
+            <hr> -->
 
 
             <section class="row padding">

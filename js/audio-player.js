@@ -7,6 +7,9 @@ players.forEach(player => {
     const playPosition = player.querySelector(".play-position");
     const waveformOverlay = player.querySelector(".waveform-overlay");
     const waveform = player.querySelector(".waveform");
+    const volumeButton = player.querySelector(".volume-button");
+    const volumeSlider = player.querySelector(".volume-slider");
+
     let scrubbing = false;
 
     // Control Progress Bar
@@ -70,6 +73,19 @@ players.forEach(player => {
     playButton.addEventListener("click", () => {
 
         if (audio.paused) {
+
+            players.forEach(otherPlayer => {
+
+                const otherAudio = otherPlayer.querySelector(".audio");
+                const otherPlayButton = otherPlayer.querySelector(".play-button");
+
+                if (otherAudio !== audio) {
+                    otherAudio.pause();
+                    otherPlayButton.textContent = "▶";
+                }
+
+            });
+
             // audio.play();
             audio.play().catch(error => {
                 console.log("Audio play failed:", error);
@@ -85,6 +101,72 @@ players.forEach(player => {
     audio.addEventListener("ended", () => {
         playButton.textContent = "▶";
     });
+
+    // VOLUME BUTTON
+    volumeButton.addEventListener("click", () => {
+        volumeSlider.value = audio.volume;
+
+        volumeButton.style.display = "none";
+        volumeSlider.style.display = "block";
+
+        resetVolumeTimeout();
+    });
+
+    let volumeAnimation;
+
+    volumeSlider.addEventListener("input", () => {
+
+        cancelAnimationFrame(volumeAnimation);
+        resetVolumeTimeout();
+
+        const target = Number(volumeSlider.value);
+        const start = audio.volume;
+        const startTime = performance.now();
+        const duration = 200;
+
+        function ramp(time) {
+
+            const progress = Math.min((time - startTime) / duration, 1);
+
+            // audio.volume = start + (target - start) * progress;
+
+            // const newVolume = start + (target - start) * progress;
+            const newVolume = Math.max(0, Math.min(1,
+                start + (target - start) * progress
+            ));
+            audio.volume = newVolume;
+            console.log("Volume:", newVolume);
+
+            if (progress < 1) {
+                // requestAnimationFrame(ramp);
+                volumeAnimation = requestAnimationFrame(ramp);
+            }
+
+        }
+
+        // requestAnimationFrame(ramp);
+        volumeAnimation = requestAnimationFrame(ramp);
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!player.querySelector(".volume-button-container").contains(event.target)) {
+            volumeSlider.style.display = "none";
+            volumeButton.style.display = "block";
+        }
+    });
+
+    let volumeTimeout;
+
+    function resetVolumeTimeout() {
+
+        clearTimeout(volumeTimeout);
+
+        volumeTimeout = setTimeout(() => {
+            volumeSlider.style.display = "none";
+            volumeButton.style.display = "block";
+        }, 3000);
+
+    }
 
 
 

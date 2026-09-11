@@ -5,12 +5,12 @@ import json
 TOOL_DIR = Path(__file__).resolve().parent
 
 # Input waveform JSON
-INPUT_FILE = TOOL_DIR / "waveform" / "Alla_Guerra.json"
-# INPUT_FILE = TOOL_DIR / "waveform" / "Una_Fantasia_Animata.json"
+# INPUT_FILE = TOOL_DIR / "waveform" / "Alla_Guerra.json"
+INPUT_FILE = TOOL_DIR / "waveform" / "Una_Fantasia_Animata.json"
 
 # Output SVG
-OUTPUT_FILE = TOOL_DIR / "output" / "Alla_Guerra.svg"
-# OUTPUT_FILE = TOOL_DIR / "output" / "Una_Fantasia_Animata.svg"
+# OUTPUT_FILE = TOOL_DIR / "output" / "Alla_Guerra.svg"
+OUTPUT_FILE = TOOL_DIR / "output" / "Una_Fantasia_Animata.svg"
 
 # Read the JSON file
 with INPUT_FILE.open("r", encoding="utf-8") as file:

@@ -559,6 +559,8 @@ audio {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: visible;
+    max-height: 60px;
 }
 
 .play-button,
@@ -566,6 +568,13 @@ audio {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+.volume-button-container .volume-slider {
+    display: none;
+    writing-mode: vertical-lr;
+    direction: rtl;
+    height: 80px;
 }
 
 /* .waveform {
@@ -579,6 +588,7 @@ audio {
     position: relative;
     cursor: text;
     touch-action: none;
+    isolation: isolate;
 }
 
 .waveform img {
