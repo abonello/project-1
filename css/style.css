@@ -700,3 +700,100 @@ input:invalid {
   font-size: 1.6em;
   padding-right: 10px;
 }
+
+
+/* COOKIES MODAL */
+
+#cookieModal .modal-dialog {
+  width: 600px;
+  max-width: 90%;
+}
+
+#cookieModal .modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px;
+  text-align: center;
+
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.20),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.95),
+    inset 0 0 18px rgba(0, 0, 0, 0.08),
+    inset 0 -12px 25px rgba(0, 0, 0, 0.10);
+}
+
+#cookieModal .modal-content::before {
+    content: "";
+    position: absolute;
+    inset: 15%;
+    border-radius: 50%;
+    pointer-events: none;
+
+    box-shadow:
+        inset 10px 10px 18px rgba(0, 0, 0, 0.10),
+        inset 2px 2px 18px rgba(0, 0, 0, 0.10),
+        inset -1px -1px 18px rgba(0, 0, 0, 0.10),
+        inset -10px -10px 18px rgba(255, 255, 255, 0.95),
+        2px 2px 18px rgb(29 30 29 / 2%),
+        -2px -2px 59px rgb(29 30 29 / 24%),
+        20px 20px 18px 2px rgba(247, 247, 247, 0.888);
+}
+
+#cookieModal .modal-content::after {
+    content: "";
+    position: absolute;
+    inset: 0%;
+    border-radius: 50%;
+    pointer-events: none;
+
+    box-shadow:
+        inset 0 0 4px rgba(255, 255, 255, 1),
+        inset 0 0 12px rgba(255, 255, 255, 0.8),
+        5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+#cookieModal .modal-header {
+  border: none;
+  width: 100%;
+  padding: 6px;
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+  align-items: center;
+  text-align: center;
+
+  .space,
+  .close {
+    width: 10%;
+    opacity: 1;
+    color: black;
+  }
+
+  .modal-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+  }
+
+  &::before,
+  &::after {
+    content:none;
+  }
+}
+
+#cookieModal .modal-body {
+  padding: 30px;
+  text-align: center;
+  font-size: 1.2em;
+  font-style: italic;
+}
