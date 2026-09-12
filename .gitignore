@@ -3,6 +3,8 @@
 /working_files
 settings.json
 /assets/*
+.DS_Store
+/media/.DS_Store
 
 .env
 /api/.env
@@ -10,3 +12,25 @@ api/.venv/
 
 __pycache__/
 *.pyc
+
+media/video/*
+media/audio/*
+media/waveform/*
+
+!media/audio/
+!media/audio/.gitkeep
+!media/waveform/
+!media/waveform/.gitkeep
+!media/video/
+!media/video/.gitkeep
+
+tools/input_audio/*
+tools/waveform/*
+tools/output/*
+
+!tools/output_audio/
+!tools/input_audio/.gitkeep
+!tools/waveform/
+!tools/waveform/.gitkeep
+!tools/output/
+!tools/output/.gitkeep
