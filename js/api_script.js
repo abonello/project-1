@@ -1,3 +1,12 @@
+/* 
+ * OBSOLETE / DEVELOPMENT TEST * 
+ * This script was used to test the contact form with the local *
+ * Python backend running on localhost:8000. *
+ * The contact form is now handled by the production Python API. *
+ * This file is retained temporarily for reference and can be *
+ * removed once no longer needed. 
+ */
+
 const form = document.getElementById("contactForm");
 const result = document.getElementById("result");
 
