@@ -14,23 +14,13 @@ players.forEach(player => {
 
     // Control Progress Bar
     audio.addEventListener("timeupdate", () => {
-        // console.log(audio.currentTime);
         const progress = audio.currentTime / audio.duration;
         const width = playPosition.parentElement.clientWidth;
 
-        // console.log(progress);
         const x = progress * 1000;
 
-        // playPosition.style.left = x + "px";
-        // playPosition.style.left = progress * 263 + "px";
         playPosition.style.left = progress * width + "px";
         waveformOverlay.style.width = progress * width + "px";
-
-        // console.log(x);
-
-        console.log("progress:", progress);
-        console.log("SVG x:", x);
-        console.log("display width:", playPosition.parentElement.clientWidth);
     });
 
     // START SCRUBBING
@@ -62,9 +52,6 @@ players.forEach(player => {
         const x = event.clientX - rect.left;
 
         const progress = x / rect.width;
-        
-        console.log(x);
-        console.log(progress);
         audio.currentTime = progress * audio.duration;
 
     });
@@ -86,9 +73,8 @@ players.forEach(player => {
 
             });
 
-            // audio.play();
             audio.play().catch(error => {
-                console.log("Audio play failed:", error);
+                console.error("Audio play failed:", error);
             });
             playButton.textContent = "Ⅱ";
         } else {
@@ -128,23 +114,16 @@ players.forEach(player => {
 
             const progress = Math.min((time - startTime) / duration, 1);
 
-            // audio.volume = start + (target - start) * progress;
-
-            // const newVolume = start + (target - start) * progress;
             const newVolume = Math.max(0, Math.min(1,
                 start + (target - start) * progress
             ));
             audio.volume = newVolume;
-            console.log("Volume:", newVolume);
 
             if (progress < 1) {
-                // requestAnimationFrame(ramp);
                 volumeAnimation = requestAnimationFrame(ramp);
             }
-
         }
 
-        // requestAnimationFrame(ramp);
         volumeAnimation = requestAnimationFrame(ramp);
     });
 
@@ -165,9 +144,5 @@ players.forEach(player => {
             volumeSlider.style.display = "none";
             volumeButton.style.display = "block";
         }, 3000);
-
     }
-
-
-
 });

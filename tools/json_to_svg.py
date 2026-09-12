@@ -16,48 +16,22 @@ OUTPUT_FILE = TOOL_DIR / "output" / "Una_Fantasia_Animata.svg"
 with INPUT_FILE.open("r", encoding="utf-8") as file:
     data = json.load(file)
 
-
-# Test that we have loaded the expected data
-print("Title:", data["title"])
-print("Duration:", data["duration"])
-print("Number of windows:", len(data["windows"]))
-
-# window = data["windows"][1000]
-# 
-# print("Test window:", window)
-
-# windows = [
-#     data["windows"][1000],
-#     data["windows"][1100],
-#     data["windows"][1200],
-# ]
-
 windows = data["windows"]
 
 for i, window in enumerate(windows):
     print(f"Test window {i}:", window)
 
-
 # SVG dimensions
 svg_width = 1000
 svg_height = 200
-
-
-# left = window["left"]
-# right = window["right"]
 
 left_centre = 50
 right_centre = 150
 amplitude_scale = 50
 
-# y_max = left_centre - left["max"] * amplitude_scale
-# y_min = left_centre - left["min"] * amplitude_scale
-
 lines = ""
 
 for i, window in enumerate(windows):
-
-    # x = 250 + i * 250
     x = i * svg_width / (len(windows) - 1)
 
     # Left channel
@@ -118,18 +92,6 @@ svg = f'''<svg
         y2="150"
         stroke="white"
         stroke-width="1" />
-
-
-
-    <!--
-    <line
-        x1="500"
-        y1="{y_max}"
-        x2="500"
-        y2="{y_min}"
-        stroke="red"
-        stroke-width="1" />
-    -->
 
     {lines}
 </svg>
