@@ -230,7 +230,7 @@
     <!-- Portfolio -->
     <section class="bgColor1 textColor1" id="portfolio">
         <div class="container">
-            <section class="row padding">
+            <!-- <section class="row padding">
                 <div class="hidden-xs col-sm-6">
                     <img src="img/fast-min.jpg" alt="Fast image" class="img-circle img-responsive center-block" />
                 </div>
@@ -241,8 +241,8 @@
                     <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/166773238&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
                 </div>
             </section>
-            <hr>
-            <section class="row padding">
+            <hr> -->
+            <!-- <section class="row padding">
                 <div class="col-sm-6 textBG">
                     <h2 class="text-center">Show Reel</h2>
                     <span class="decorator"></span>
@@ -253,7 +253,7 @@
                     <img src="img/Ringtone.jpg" alt="Ringtone Image" class="img-circle img-responsive center-block">
                 </div>
             </section>
-            <hr>
+            <hr> -->
             <section class="row padding">
                 <div class="hidden-xs col-sm-6">
                     <img src="img/battle-min.jpg" alt="SlideShow Image" class="img-circle img-responsive center-block">
@@ -264,9 +264,69 @@
                     <p class="text-justify">This is a piece for Symphonic Band in 5 movements. Score and parts are available for performance
                          from myself. Below you can hear a computer generated rendition of two movements. Go to soundcloud to hear the rest.</p>
                     <h3 class="text-center">Una Fantasia Animata</h3>
-                    <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/58476081&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
+                    <div class="audio-player">
+                        <audio class="audio" preload="auto">
+                            <!-- <source src="/api?type=audio&file=Una_Fantasia_Animata.flac" type="audio/flac"> -->
+                            <!-- <source src="http://localhost:8000/api?type=audio&file=Una_Fantasia_Animata.flac" type="audio/flac"> -->
+                            <source src="http://192.168.0.13:8000/api?type=audio&file=Una_Fantasia_Animata.flac" type="audio/flac">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <div class="play-button-container">
+                            <button class="play-button">▶</button>
+                        </div>
+                        
+                        <div class="waveform">
+                            <img
+                                src="media/waveform/Una_Fantasia_Animata.svg"
+                                alt="">
+                            <div class="waveform-overlay"></div>
+                            <div class="play-position"></div>
+                        </div>
+
+                        <div class="volume-button-container">
+                            <button class="volume-button">🔊</button>
+                            <input
+                                class="volume-slider"
+                                type="range"
+                                min="0"
+                                max="1"
+                                step="0.01"
+                                value="1">
+                        </div>
+                    </div>
                     <h3 class="text-center">Alla Guerra!</h3>
-                    <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/58475647&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
+                    <div class="audio-player">
+                        <audio class="audio" preload="auto">
+                            <!-- <source src="/api?type=audio&file=Alla_Guerra.flac" type="audio/flac"> -->
+                            <!-- <source src="http://localhost:8000/api?type=audio&file=Alla_Guerra.flac" type="audio/flac"> -->
+                            <source src="http://192.168.0.13:8000/api?type=audio&file=Alla_Guerra.flac" type="audio/flac">
+                            Your browser does not support the audio element.
+                        </audio>
+                        
+                        <div class="play-button-container">
+                            <button class="play-button">▶</button>
+                        </div>
+                        
+                        <div class="waveform">
+                            <img
+                                src="media/waveform/Alla_Guerra.svg"
+                                alt="">
+                            <div class="waveform-overlay"></div>
+                            <div class="play-position"></div>
+                        </div>
+
+                        <div class="volume-button-container">
+                            <button class="volume-button">🔊</button>
+                            <input
+                                class="volume-slider"
+                                type="range"
+                                min="0"
+                                max="1"
+                                step="0.01"
+                                value="1">
+                        </div>
+
+                    </div>
                 </div>
             </section>
             <hr>
@@ -279,14 +339,39 @@
                         Here, accents move around. Phasing has been explored in styles related to minimalism, and electronic music. A classical example of of phasing is Gy&ouml;rgy Ligeti's <em>Po&egrave;me Symphonique for 100 metronomes</em>. Other composers have battled the tyranny of the barline. Some names to 
                         mention include Stravinsky and Carter, who is renowned for his metric modulations.
                     </p>
-                    <p>In slide 2 I wanted to juxtapose the different positions of the accents, and in fact, the piece start with the accent misplaced when compared to the meter of the music.
+                    <p>In slide 2 I wanted to juxtapose the different positions of the accents, and in fact, the piece starts with the accent misplaced when compared to the meter of the music.
                     </p>
                     <div id="slideShowVideo">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/kF42sK-Paf0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <video width="100%" controls>
+                            <!-- <source src="/api?type=video&file=SlideShow_Slide2.mp4" type="video/mp4"> -->
+                            <source src="http://localhost:8000/api?type=video&file=SlideShow_Slide2.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
                     </div>
                 </div>
                 <div class="hidden-xs col-sm-6">
                     <img src="img/Slideshow.jpg" alt="SlideShow Image" class="img-circle img-responsive center-block">
+                </div>
+            </section>
+            <hr>
+            <section class="row padding">
+                <div class="hidden-xs col-sm-6">
+                    <img src="img/Slideshow.jpg" alt="SlideShow Image" class="img-circle img-responsive center-block">
+                </div>
+                <div class="col-sm-6 textBG">
+                    <h2 class="text-center">Refractions of Cerulean Memories</h2>
+                    <span class="decorator"></span>
+                    <p class="text-justify">
+                        Please note, the score shown in this video is in C. The score (and parts) supplied for anyone interested in playing this piece will be transposed.
+                    </p>
+                    <!--p>------ Add more text here ------</p-->
+                    <div id="slideShowVideo">
+                        <video width="100%" controls>
+                            <!-- <source src="/api?type=video&file=Refractions_of_Cerulean_Memories.mp4" type="video/mp4"> -->
+                            <source src="http://localhost:8000/api?type=video&file=Refractions_of_Cerulean_Memories.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
                 </div>
             </section>
             <hr>
@@ -376,5 +461,6 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/audio-player.js"></script>
 </body>
 </html>

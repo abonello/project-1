@@ -15,6 +15,7 @@
 * [WIREFRAMES](#wireframes)
 * [FEATURES](#features)
 * [ADDING BACKEND](#adding-backend)
+* [REMOVING THIRD-PARTY SERVICES](#removing-third-party-services)
 * [TECHNOLOGIES USED](#technologies-used)
 * [TESTING](#testing)
 * [DEPLOYMENT](#deployment)
@@ -291,11 +292,43 @@ EMAILJS_TEMPLATE_ID=
 EMAILJS_PUBLIC_KEY=
 EMAILJS_PRIVATE_KEY=
 ```
+
 **The .env file must not be committed to the repository.**
 
 For production, I am deploying to cPanel using `Passenger`. Passenger allows environment variables to be configured separately from the application files.
 
 If deploying to another hosting service, use that service's mechanism for setting environment variables.
+
+
+
+Another variable is
+```bash
+PRIVATE_MEDIA_PATH=/Users/.../project-1/media
+```
+For production, get the correct value from cPanel. It needs to point to the folder holding the media files. For local point it to where you are storing the media files.
+
+## Removing third-party services
+* [Back to TOP](#milestone-project-1---my-website-as-a-musician)
+
+I am in the process of replacing third-party services used to serve video and audio, due to concerns about cookies, tracking and data collection.
+
+I do not condone the collection of data or tracking of users. For this reason, I am going to start serving media files myself.
+
+I have already replaced YouTube; SoundCloud is next.
+
+
+The `<video>` element uses src. At first, I was going to use `/api/video/filename.mp4`, but I ran into a problem with Passenger, which handles Python applications on cPanel. Passenger accepts `/api`, which I already use to handle the contact form, but will not recognise `/api/video`. This is then handled by Apache instead. The problem is that `/api/video` does not exist as a file structure.
+
+To cut a long story short, after a substantial period of debugging, I found that I can use URL query parameters instead. For this reason, `<video>` will have a source as follows:
+
+```html
+<source src="/api?type=video&file=<filename>.mp4" type="video/mp4">
+```
+
+For local development use:
+```html
+<source src="http://localhost:8000/api?type=video&file=<filename>.mp4" type="video/mp4">
+```
 
 
 ## TECHNOLOGIES USED

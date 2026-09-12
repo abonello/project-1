@@ -1,11 +1,15 @@
 import json
 import urllib.request
+from urllib.parse import parse_qs
 from dotenv import load_dotenv
 import os
 import time
-from validation import validate_form_data
 
 load_dotenv()
+
+from validation import validate_form_data
+from media import serve_video
+from media import serve_audio
 
 service_id = os.environ["EMAILJS_SERVICE_ID"]
 template_id = os.environ["EMAILJS_TEMPLATE_ID"]
@@ -25,7 +29,16 @@ ALLOWED_ORIGINS = {
 def application(environ, start_response):
 
     method = environ["REQUEST_METHOD"]
+    path = environ.get("PATH_INFO", "")
     origin = environ.get("HTTP_ORIGIN", "")
+
+    params = parse_qs(environ.get("QUERY_STRING", ""))
+    
+    if params.get("type") == ["video"]:
+        return serve_video(environ, start_response)
+
+    if params.get("type") == ["audio"]:
+        return serve_audio(environ, start_response)
 
     client_ip = environ.get("REMOTE_ADDR", "")
     now = time.time()
@@ -212,7 +225,8 @@ def application(environ, start_response):
 if __name__ == "__main__":
     from wsgiref.simple_server import make_server
 
-    server = make_server("localhost", 8000, application)
+    # server = make_server("localhost", 8000, application)
+    server = make_server("0.0.0.0", 8000, application)
 
     print("Serving on http://localhost:8000")
 
